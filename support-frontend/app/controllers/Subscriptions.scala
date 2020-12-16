@@ -101,4 +101,26 @@ class Subscriptions(
     }).withSettingsSurrogateKey
   }
 
+  def quickLanding(countryCode: String): Action[AnyContent] = CachedAction() { implicit request =>
+    implicit val settings: AllSettings = settingsProvider.getAllSettings()
+    val title = "Support the Guardian | Get a Subscription"
+    val mainElement = EmptyDiv("subscriptions-quick-landing-page")
+    val js = "quickSubscriptionsLandingPage.js"
+    val pricingCopy = CountryGroup.byId(countryCode).map(getLandingPrices)
+
+    Ok(views.html.main(
+      title,
+      mainElement,
+      Left(RefPath(js)),
+      Left(RefPath("subscriptionsLandingPage.css")),
+      fontLoaderBundle,
+      description = stringsConfig.subscriptionsLandingDescription
+    ){
+      Html(
+        s"""<script type="text/javascript">
+              window.guardian.pricingCopy = ${outputJson(pricingCopy)}
+            </script>""")
+    }).withSettingsSurrogateKey
+  }
+
 }

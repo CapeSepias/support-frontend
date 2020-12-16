@@ -3,6 +3,7 @@ module.exports = {
     favicons: 'images/favicons.js',
     showcasePage: 'pages/showcase/showcase.jsx',
     subscriptionsLandingPage: 'pages/subscriptions-landing/subscriptionsLanding.jsx',
+    quickSubscriptionsLandingPage: 'pages/quick-subscriptions-landing/quickSubscriptionsLanding.jsx',
     contributionsLandingPage: 'pages/contributions-landing/contributionsLanding.jsx',
     fontLoader: 'helpers/fontLoader.js',
     digitalSubscriptionLandingPage: 'pages/digital-subscription-landing/digitalSubscriptionLanding.jsx',
