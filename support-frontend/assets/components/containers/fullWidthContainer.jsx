@@ -4,7 +4,7 @@ import React, { type Node } from 'react';
 import { css } from '@emotion/core';
 import { brand, neutral } from '@guardian/src-foundations/palette';
 
-type Theme = 'light' | 'dark' | 'white';
+type Theme = 'light' | 'dark' | 'white' | 'brand';
 
 type PropTypes = {|
   cssOverrides?: string;
@@ -25,6 +25,10 @@ const containerThemes: { [key: Theme]: string } = {
   white: css`
     background-color: ${neutral[100]};
     color: ${neutral[7]};
+  `,
+  brand: css`
+    background-color: ${brand[400]};
+    color: ${neutral[100]};
   `,
 };
 
