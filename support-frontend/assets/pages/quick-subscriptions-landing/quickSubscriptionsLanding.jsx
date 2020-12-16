@@ -78,6 +78,7 @@ const content = (
                 offer={product.offer || null}
                 isFeature={false}
                 classModifier={product.classModifier || []}
+                detail={product.detail}
               />
             </Block>
           ))}

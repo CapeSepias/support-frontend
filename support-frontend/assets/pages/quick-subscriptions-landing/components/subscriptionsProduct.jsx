@@ -18,20 +18,25 @@ type PropTypes = {
   offer?: Option<string>,
   isFeature?: Option<boolean>,
   classModifier: string[],
+  detail?: Node,
 }
 
 const subProduct = css`
   background-color: white;
 
   .subscriptions__copy-wrapper {
-    padding: 0 12px;
+    padding: 0 12px 12px;
   }
 `;
 
 const SubscriptionsProduct = ({
   classModifier, productImage, isFeature, ...props
 }: PropTypes) => (
-  <div className={cx('subscriptions__product', { 'subscriptions__product--feature': isFeature }, classModifier)} css={subProduct}>
+  <div
+    className={cx('subscriptions__product', { 'subscriptions__product--feature': isFeature }, classModifier)}
+    css={subProduct}
+    id={props.title.replace(/\s/g, '')}
+  >
 
     <div className={cx('subscriptions__image-container', { 'subscriptions__product--feature': isFeature })}>
       <div className={isFeature ? 'subscriptions__feature-image-wrapper' : 'subscriptions-packshot'}>
@@ -45,6 +50,7 @@ const SubscriptionsProduct = ({
           {...props}
           isFeature={isFeature}
         />
+        {props.detail}
       </div>
     </div>
   </div>
@@ -53,6 +59,7 @@ const SubscriptionsProduct = ({
 SubscriptionsProduct.defaultProps = {
   offer: null,
   isFeature: false,
+  detail: null,
 };
 
 export default SubscriptionsProduct;
