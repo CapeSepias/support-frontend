@@ -65,8 +65,10 @@ const content = (
       <Hero />
       <FullWidthContainer>
         <CentredContainer>
-          <Block>
-            {subscriptionCopy.map(product => (
+          {subscriptionCopy.map(product => (
+            <Block
+              className={product.classModifier && product.classModifier.length ? product.classModifier[0] : ''}
+            >
               <SubscriptionsProduct
                 title={product.title}
                 subtitle={product.subtitle || ''}
@@ -77,8 +79,8 @@ const content = (
                 isFeature={false}
                 classModifier={product.classModifier || []}
               />
+            </Block>
           ))}
-          </Block>
         </CentredContainer>
       </FullWidthContainer>
     </Page>

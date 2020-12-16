@@ -2,6 +2,7 @@
 
 import React from 'react';
 import type { Node } from 'react';
+import { css } from '@emotion/core';
 import cx from 'classnames';
 import { type Option } from 'helpers/types/option';
 
@@ -19,10 +20,18 @@ type PropTypes = {
   classModifier: string[],
 }
 
+const subProduct = css`
+  background-color: white;
+
+  .subscriptions__copy-wrapper {
+    padding: 0 12px;
+  }
+`;
+
 const SubscriptionsProduct = ({
   classModifier, productImage, isFeature, ...props
 }: PropTypes) => (
-  <div className={cx('subscriptions__product', { 'subscriptions__product--feature': isFeature }, classModifier)}>
+  <div className={cx('subscriptions__product', { 'subscriptions__product--feature': isFeature }, classModifier)} css={subProduct}>
 
     <div className={cx('subscriptions__image-container', { 'subscriptions__product--feature': isFeature })}>
       <div className={isFeature ? 'subscriptions__feature-image-wrapper' : 'subscriptions-packshot'}>

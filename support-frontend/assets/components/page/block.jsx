@@ -8,6 +8,7 @@ import { from } from '@guardian/src-foundations/mq';
 
 type PropTypes = {|
   children: Node;
+  className?: string;
 |};
 
 const block = css`
@@ -25,10 +26,14 @@ const block = css`
 
 function Block(props: PropTypes) {
   return (
-    <div css={block}>
+    <div className={props.className} css={block}>
       {props.children}
     </div>
   );
 }
+
+Block.defaultProps = {
+  className: '',
+};
 
 export default Block;

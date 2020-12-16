@@ -49,12 +49,14 @@ import {
   fromCountryGroupId,
   glyph,
 } from 'helpers/internationalisation/currency';
+import { getOrigin } from 'helpers/url';
 
 import type { State, PriceCopy } from '../quickSubscriptionsLandingReducer';
 import type { BillingPeriod } from 'helpers/billingPeriods';
 import {
   digitalSubscriptionLanding,
-  guardianWeeklyLanding, paperSubsUrl,
+  guardianWeeklyLanding,
+  paperCheckoutUrl,
 } from 'helpers/routes';
 import type { ReferrerAcquisitionData } from 'helpers/tracking/acquisitions';
 import type { Participations } from 'helpers/abTests/abtest';
@@ -128,12 +130,12 @@ const digital = (countryGroupId: CountryGroupId, priceCopy: PriceCopy, isTop: bo
   offer: priceCopy.discountCopy,
   buttons: [{
     ctaButtonText: 'Subscribe now',
-    link: digitalSubscriptionLanding(countryGroupId, false),
+    link: `${getOrigin()}/subscribe/digital/checkout?period=Monthly`,
     analyticsTracking: sendTrackingEventsOnClick('digipack_cta', 'DigitalPack', abTest, 'digital-subscription'),
   },
   {
     ctaButtonText: 'Buy as a gift',
-    link: digitalSubscriptionLanding(countryGroupId, true),
+    link: `${getOrigin()}/subscribe/digital/checkout/gift?period=Quarterly`,
     analyticsTracking: sendTrackingEventsOnClick('digipack_cta_gift', 'DigitalPack', abTest, 'digital-subscription'),
     modifierClasses: '',
   }],
@@ -154,12 +156,12 @@ const guardianWeekly = (countryGroupId: CountryGroupId, priceCopy: PriceCopy, is
   buttons: [
     {
       ctaButtonText: 'Subscribe now',
-      link: guardianWeeklyLanding(countryGroupId, false),
+      link: `${getOrigin()}/subscribe/weekly/checkout?period=SixWeekly`,
       analyticsTracking: sendTrackingEventsOnClick('weekly_cta', 'GuardianWeekly', abTest),
     },
     {
       ctaButtonText: 'Buy as a gift',
-      link: guardianWeeklyLanding(countryGroupId, true),
+      link: `${getOrigin()}/subscribe/weekly/checkout/gift?period=Quarterly`,
       analyticsTracking: sendTrackingEventsOnClick('weekly_cta_gift', 'GuardianWeekly', abTest),
       modifierClasses: '',
     },
@@ -180,7 +182,7 @@ const paper = (countryGroupId: CountryGroupId, priceCopy: PriceCopy, isTop: bool
   description: 'Save on The Guardian and The Observer\'s newspaper retail price all year round',
   buttons: [{
     ctaButtonText: 'Subscribe now',
-    link: paperSubsUrl(false),
+    link: paperCheckoutUrl('Collection', 'Everyday'),
     analyticsTracking: sendTrackingEventsOnClick('paper_cta', Paper, abTest, 'paper-subscription'),
   }],
   productImage: getPaperImage(isTop),
