@@ -1,7 +1,10 @@
+const path = require('path');
+const nodeExternals = require('webpack-node-externals');
+
 module.exports = {
   mode: 'development',
   entry: {
-    ssrServer: './ssrServer.jsx',
+    ssrServer: './assets/ssrServer.jsx',
   },
   output: {
     filename: '[name].js',
@@ -10,6 +13,7 @@ module.exports = {
     pathinfo: true,
   },
   target: 'node',
+  externals: [nodeExternals()],
   optimization: {
     minimize: false,
     namedModules: true,
@@ -34,5 +38,12 @@ module.exports = {
         loader: 'file-loader?name=[path][name].[hash].[ext]',
       },
     ],
+  },
+  resolve: {
+    modules: [
+      path.resolve(__dirname, 'assets'),
+      path.resolve(__dirname, 'node_modules'),
+    ],
+    extensions: ['.js', '.jsx'],
   },
 };

@@ -139,26 +139,26 @@ function init<S, A>(
      * on condition we're not server side rendering (ssr) the page.
      * @guardian/consent-management-platform breaks ssr otherwise.
      */
-    if (!getGlobal('ssr') && !isPostDeployUser()) {
-      import('@guardian/consent-management-platform').then(({ cmp }) => {
-        cmp.init({
-          country: countryId,
-        });
-      });
-    }
+    // if (!getGlobal('ssr') && !isPostDeployUser()) {
+    //   import('@guardian/consent-management-platform').then(({ cmp }) => {
+    //     cmp.init({
+    //       country: countryId,
+    //     });
+    //   });
+    // }
 
-    const settings = getSettings();
-    const countryGroupId: CountryGroupId = detectCountryGroup();
-    const currencyId: IsoCurrency = detectCurrency(countryGroupId);
-    const participations: Participations = abTest.init(countryId, countryGroupId, settings);
-    analyticsInitialisation(participations);
+    // const settings = getSettings();
+    // const countryGroupId: CountryGroupId = detectCountryGroup();
+    // const currencyId: IsoCurrency = detectCurrency(countryGroupId);
+    // const participations: Participations = abTest.init(countryId, countryGroupId, settings);
+    // analyticsInitialisation(participations);
 
     const initialState: CommonState = buildInitialState(
-      participations,
-      countryGroupId,
+      // participations,
+      // countryGroupId,
       countryId,
-      currencyId,
-      settings,
+      // currencyId,
+      // settings,
     );
     const commonReducer = createCommonReducer(initialState);
 
