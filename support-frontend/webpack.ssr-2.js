@@ -40,6 +40,11 @@ module.exports = {
     ],
   },
   resolve: {
+    alias: {
+      // react: 'preact/compat',
+      // 'react-dom': 'preact/compat',
+      ophan: 'ophan-tracker-js/build/ophan.support',
+    },
     modules: [
       path.resolve(__dirname, 'assets'),
       path.resolve(__dirname, 'node_modules'),

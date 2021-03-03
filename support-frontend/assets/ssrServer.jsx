@@ -7,6 +7,7 @@ import { cache } from 'emotion';
 import { CacheProvider } from '@emotion/core';
 import { Button } from '@guardian/src-button';
 import { HelloWorld } from './components/HelloWorld';
+import { ShowcasePage } from './pages/showcase/ShowcasePage';
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.get('/', (req, res) => {
   const App = (
     <CacheProvider value={cache}>
       <HelloWorld />
+      <ShowcasePage />
       <Button
         priority="primary"
         size="small"
