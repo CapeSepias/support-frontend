@@ -3,7 +3,7 @@
 // ----- Imports ----- //
 import * as React from 'react';
 import { Elements } from '@stripe/react-stripe-js';
-import StripeCardForm from './StripeCardForm';
+// import StripeCardForm from './StripeCardForm';
 import { getStripeKey, stripeAccountForContributionType, useStripeObjects } from 'helpers/stripe';
 import type { IsoCurrency } from 'helpers/internationalisation/currency';
 import type { IsoCountry } from 'helpers/internationalisation/country';
@@ -11,6 +11,7 @@ import type { ContributionType } from 'helpers/contributions';
 import { type PaymentMethod, Stripe } from 'helpers/paymentMethods';
 import AnimatedDots from 'components/spinners/animatedDots';
 import './stripeCardForm.scss';
+import StripeSepaCardForm from './StripeSepaCardForm';
 
 // ----- Types -----//
 
@@ -47,10 +48,7 @@ const StripeCardFormContainer = (props: PropTypes) => {
       return (
         <div className="stripe-card-element-container" key={stripeAccount}>
           <Elements stripe={stripeObjects[stripeAccount]} options={elementsOptions}>
-            <StripeCardForm
-              stripeKey={stripeKey}
-              isTestUser={props.isTestUser}
-            />
+            <StripeSepaCardForm stripeKey={stripeKey} />
           </Elements>
         </div>
       );

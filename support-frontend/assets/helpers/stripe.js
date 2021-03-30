@@ -3,16 +3,19 @@
 import { useEffect, useState } from 'react';
 import { loadStripe, type Stripe as StripeSDK } from '@stripe/stripe-js/pure';
 import { onConsentChange } from '@guardian/consent-management-platform';
-import { type PaymentMethod, Stripe } from 'helpers/paymentMethods';
+import { type PaymentMethod } from 'helpers/paymentMethods';
 import type { IsoCountry } from 'helpers/internationalisation/country';
 import type { ContributionType } from 'helpers/contributions';
 
 const stripeCardFormIsIncomplete = (
+  // eslint-disable-next-line no-unused-vars
   paymentMethod: PaymentMethod,
+  // eslint-disable-next-line no-unused-vars
   stripeCardFormComplete: boolean,
 ): boolean =>
-  paymentMethod === Stripe &&
-  !(stripeCardFormComplete);
+  false;
+  // paymentMethod === Stripe &&
+  // !(stripeCardFormComplete);
 
 export type StripeAccount = 'ONE_OFF' | 'REGULAR';
 
