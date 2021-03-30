@@ -57,7 +57,7 @@ class HandlerSpec extends AsyncFlatSpec with Matchers {
 
     result.map{ resp =>
       (requests, resp) should be((
-        List(("Bearer priv","usage=off_session")),
+        List(("Bearer priv", "usage=off_session&payment_method_types%5B%5D=card&payment_method_types%5B%5D=sepa_debit")),
         ApiGatewayResponse(200, ResponseBody("theSecret"), Stages.DEV)
       ))
     }
