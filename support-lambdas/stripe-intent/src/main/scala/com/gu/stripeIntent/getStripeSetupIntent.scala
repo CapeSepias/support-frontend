@@ -16,7 +16,8 @@ object getStripeSetupIntent {
 
   def apply(stripeService: StripeService)(): Future[SetupIntent] =
     stripeService.postForm[SetupIntent]("setup_intents", Map(
-      "usage" -> Seq("off_session")
+      "usage" -> Seq("off_session"),
+      "payment_method_types" -> Seq("card", "sepa_debit")
     ))
 
 }
