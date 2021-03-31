@@ -5,7 +5,7 @@ import com.gu.support.catalog._
 import com.gu.support.promotions.{DefaultPromotions, PromoCode}
 import com.gu.support.workers.states.SendThankYouEmailState._
 import com.gu.support.workers.states.{SendAcquisitionEventState, SendThankYouEmailState}
-import com.gu.support.workers.{AcquisitionData, Annual, BillingPeriod, ClonedDirectDebitPaymentMethod, Contribution, CreditCardReferenceTransaction, DigitalPack, DirectDebitPaymentMethod, GuardianWeekly, Monthly, Paper, PayPalReferenceTransaction, PaymentMethod, ProductType, Quarterly, RequestInfo, SixWeekly, StripePaymentType}
+import com.gu.support.workers.{AcquisitionData, Annual, BillingPeriod, ClonedDirectDebitPaymentMethod, Contribution, CreditCardReferenceTransaction, DigitalPack, DirectDebitPaymentMethod, GuardianWeekly, Monthly, Paper, PayPalReferenceTransaction, PaymentMethod, ProductType, Quarterly, RequestInfo, SixWeekly, StripePaymentType, SepaPaymentMethod}
 import com.gu.support.zuora.api.ReaderType.{Corporate, Direct, Gift}
 import org.joda.time.{DateTime, DateTimeZone}
 import com.gu.support.acquisitions
@@ -73,6 +73,7 @@ object AcquisitionDataRowBuilder {
         }
       case _: PayPalReferenceTransaction => PayPal
       case _: DirectDebitPaymentMethod | _: ClonedDirectDebitPaymentMethod => DirectDebit
+      case _: SepaPaymentMethod => Stripe
     }
 
   private def getAbTests(data: AcquisitionData) =

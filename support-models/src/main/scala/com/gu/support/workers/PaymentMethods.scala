@@ -32,6 +32,20 @@ object StripePaymentType {
   }
 }
 
+case class SepaPaymentMethod(
+// accountId: String,
+// bankTransferAccountNumber: String,
+// country: String,
+bankTransferAccountName: String,
+email: String,
+bankCode: String,
+firstName: String,
+lastName: String,
+paymentGateway: PaymentGateway,
+`type`: String = "BankTransfer",
+bankTransferType: String = "SEPA"
+) extends PaymentMethod
+
 case class CreditCardReferenceTransaction(
   tokenId: String, //Stripe Card id
   secondTokenId: String, //Stripe Customer Id
@@ -87,6 +101,7 @@ case class ClonedDirectDebitPaymentMethod(
 
 object PaymentMethod {
   import com.gu.support.encoding.CustomCodecs.{decodeCountry, encodeCountryAsAlpha2}
+  implicit val sepaPaymentMethodCodec: Codec[SepaPaymentMethod] = capitalizingCodec
   implicit val payPalReferenceTransactionCodec: Codec[PayPalReferenceTransaction] = capitalizingCodec
   implicit val creditCardReferenceTransactionCodec: Codec[CreditCardReferenceTransaction] = capitalizingCodec
   implicit val directDebitPaymentMethodCodec: Codec[DirectDebitPaymentMethod] = capitalizingCodec
@@ -94,6 +109,7 @@ object PaymentMethod {
 
   //Payment Methods are details from the payment provider
   implicit val encodePaymentMethod: Encoder[PaymentMethod] = Encoder.instance {
+    case sepa: SepaPaymentMethod => sepa.asJson
     case pp: PayPalReferenceTransaction => pp.asJson
     case card: CreditCardReferenceTransaction => card.asJson
     case dd: DirectDebitPaymentMethod => dd.asJson
@@ -102,6 +118,7 @@ object PaymentMethod {
 
   implicit val decodePaymentMethod: Decoder[PaymentMethod] =
     List[Decoder[PaymentMethod]](
+      Decoder[SepaPaymentMethod].widen,
       Decoder[PayPalReferenceTransaction].widen,
       Decoder[CreditCardReferenceTransaction].widen,
       Decoder[ClonedDirectDebitPaymentMethod].widen, // ordering is significant (at least between direct debit variants)

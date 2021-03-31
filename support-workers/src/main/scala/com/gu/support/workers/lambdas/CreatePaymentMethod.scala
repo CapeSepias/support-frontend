@@ -15,6 +15,8 @@ import com.gu.support.workers.states.{CreatePaymentMethodState, CreateSalesforce
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
+import com.gu.stripe.getPaymentMethod.StripeCardPaymentMethod
+import com.gu.stripe.getPaymentMethod.StripeSepaPaymentMethod
 
 class CreatePaymentMethod(servicesProvider: ServiceProvider = ServiceProvider)
     extends ServicesHandler[CreatePaymentMethodState, CreateSalesforceContactState](servicesProvider) {
@@ -50,7 +52,7 @@ class CreatePaymentMethod(servicesProvider: ServiceProvider = ServiceProvider)
   ): Future[PaymentMethod] =
     paymentFields match {
       case stripe: StripePaymentFields =>
-        createStripePaymentMethod(stripe, services.stripeService, currency)
+        createStripePaymentMethod(stripe, services.stripeService, currency, user)
       case paypal: PayPalPaymentFields =>
         createPayPalPaymentMethod(paypal, services.payPalService)
       case dd: DirectDebitPaymentFields =>
@@ -75,8 +77,9 @@ class CreatePaymentMethod(servicesProvider: ServiceProvider = ServiceProvider)
   def createStripePaymentMethod(
     stripe: StripePaymentFields,
     stripeService: StripeService,
-    currency: Currency
-  ): Future[CreditCardReferenceTransaction] = {
+    currency: Currency,
+    user: User,
+  ): Future[PaymentMethod] = {
     val stripeServiceForCurrency = stripeService.withCurrency(currency)
     stripe match {
       case StripeSourcePaymentFields(source, stripePaymentType) =>
@@ -99,18 +102,29 @@ class CreatePaymentMethod(servicesProvider: ServiceProvider = ServiceProvider)
           stripeCustomer <- stripeServiceForCurrency.createCustomerFromPaymentMethod(paymentMethod)
           stripePaymentMethod <- stripeServiceForCurrency.getPaymentMethod(paymentMethod)
         } yield {
-          val card = stripePaymentMethod.card
-          CreditCardReferenceTransaction(
-            paymentMethod.value,
-            stripeCustomer.id,
-            card.last4,
-            CountryGroup.countryByCode(card.country),
-            card.exp_month,
-            card.exp_year,
-            card.brand.zuoraCreditCardType,
-            paymentGateway = paymentIntentGateway(currency),
-            stripePaymentType = stripePaymentType
-          )
+          stripePaymentMethod match {
+            case StripeCardPaymentMethod(card) =>
+              CreditCardReferenceTransaction(
+                paymentMethod.value,
+                stripeCustomer.id,
+                card.last4,
+                CountryGroup.countryByCode(card.country),
+                card.exp_month,
+                card.exp_year,
+                card.brand.zuoraCreditCardType,
+                paymentGateway = paymentIntentGateway(currency),
+                stripePaymentType = stripePaymentType
+              )
+            case StripeSepaPaymentMethod(sepa_debit) =>
+              SepaPaymentMethod(
+                bankTransferAccountName = s"${ user.firstName } ${ user.lastName }",
+                bankCode = sepa_debit.bank_code,
+                email = user.primaryEmailAddress,
+                firstName = user.firstName,
+                lastName = user.lastName,
+                paymentGateway = paymentIntentGateway(currency),
+              )
+          }
         }
     }
   }

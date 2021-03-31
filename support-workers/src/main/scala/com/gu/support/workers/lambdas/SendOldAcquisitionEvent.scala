@@ -89,6 +89,7 @@ object SendOldAcquisitionEvent {
         }
       case _: PayPalReferenceTransaction => thrift.PaymentProvider.Paypal
       case _: DirectDebitPaymentMethod | _: ClonedDirectDebitPaymentMethod => thrift.PaymentProvider.Gocardless
+      case _: SepaPaymentMethod => thrift.PaymentProvider.Stripe // TODO: FIX THIS
     }
 
   // Typeclass instance used by the Ophan service to attempt to build a submission from the state.
