@@ -97,7 +97,7 @@ class CreatePaymentMethodSpec extends AsyncLambdaSpec with MockContext {
     val stripe = mock[StripeService]
     val stripeWithCurrency = mock[StripeServiceForCurrency]
     val card1 = getPaymentMethod.StripeCard(StripeBrand.Visa, "1234", 1, 2099, "GB")
-    val paymentMethod = getPaymentMethod.StripePaymentMethod(card1)
+    val paymentMethod = getPaymentMethod.StripeCardPaymentMethod(card1)
     when(stripeWithCurrency.getPaymentMethod).thenReturn(Function.const(Future(paymentMethod))_)
     val customer1 = createCustomerFromPaymentMethod.Customer("12345")
     when(stripeWithCurrency.createCustomerFromPaymentMethod).thenReturn(Function.const(Future(customer1))_)
