@@ -7,6 +7,7 @@ import com.gu.support.workers.{
   PayPalReferenceTransaction,
   PaymentMethod
 }
+import com.gu.support.workers.SepaPaymentMethod
 
 object PaymentMethodExtensions {
   implicit class PaymentMethodExtension[T <: PaymentMethod](self: T) {
@@ -14,6 +15,7 @@ object PaymentMethodExtensions {
       case _: CreditCardReferenceTransaction => "Stripe"
       case _: PayPalReferenceTransaction => "PayPal"
       case _: DirectDebitPaymentMethod | _: ClonedDirectDebitPaymentMethod => "DirectDebit"
+      case _: SepaPaymentMethod => "Sepa" // TODO FIX?
     }
   }
 }
