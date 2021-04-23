@@ -1,19 +1,24 @@
 const glob = require('glob');
 const { exec } = require('child_process');
 
-glob('../assets/**/*.{js,jsx}', (err, files) => {
+// copy assets to new folder called typescript and run this script
+
+glob('../typescript/**/*.{js,jsx}', (err, files) => {
   if (err) {
     console.log(err.message);
   } else {
-    files.forEach((filePath) => {
-      exec(`flow-to-ts --write --delete-source ${filePath} `, (error) => {
-        if (error) {
-          console.log(`Failed to migrate ${filePath}: ${error.message}`);
-          return;
-        }
+    files.reduce((accumulatorPromise, filePath) => accumulatorPromise.then(() =>
+      new Promise((resolve) => {
+        exec(`flow-to-ts --write --delete-source ${filePath} `, (error) => {
+          if (error) {
+            console.log(`Failed to migrate ${filePath}: ${error.message}`);
+            return;
+          }
 
-        console.log(`Successfully migrated ${filePath}`);
-      });
-    });
+          console.log(`Successfully migrated ${filePath}`);
+
+          resolve();
+        });
+      })), Promise.resolve());
   }
 });
