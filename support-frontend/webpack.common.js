@@ -123,6 +123,18 @@ module.exports = (cssFilename, outputFilename, minimizeCss) => ({
         loader: 'babel-loader',
       },
       {
+        test: /\.(ts|tsx)$/,
+        exclude: [
+          {
+            test: /node_modules/,
+            exclude: [
+              /@guardian\/(?!(automat-modules))/,
+            ],
+          },
+        ],
+        loader: 'babel-loader',
+      },
+      {
         test: /\.(png|jpg|gif|ico)$/,
         loader: 'file-loader?name=[path][name].[hash].[ext]',
       },
