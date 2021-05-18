@@ -1,13 +1,12 @@
 const glob = require('glob');
 const { exec } = require('child_process');
 
-// copy assets to new folder called typescript and run this script
-
-glob('../assets/helpers/abTests/**/*.{js,jsx}', (err, files) => {
+glob('../assets/**/*.{js,jsx}', (err, files) => {
   if (err) {
     console.log(err.message);
   } else {
     const failures = [];
+    let successCounter = 0;
 
     const result = files.reduce((accumulatorPromise, filePath) => accumulatorPromise.then(() =>
       new Promise((resolve) => {
@@ -16,6 +15,7 @@ glob('../assets/helpers/abTests/**/*.{js,jsx}', (err, files) => {
             failures.push(`Failed to migrate ${filePath}: ${error.message}`);
           } else {
             console.log(`Successfully migrated ${filePath}`);
+            successCounter += 1;
           }
 
           resolve();
@@ -23,12 +23,14 @@ glob('../assets/helpers/abTests/**/*.{js,jsx}', (err, files) => {
       })), Promise.resolve());
 
     result.then(() => {
+
+      console.log(`Successfully migrated ${successCounter} modules :)`);
+
       if (failures.length) {
+        console.log(`Failed to migrate ${failures.length} :(`);
         failures.forEach((failure) => {
           console.log(failure);
         });
-      } else {
-        console.log('All files successfully migrated!');
       }
     });
   }
