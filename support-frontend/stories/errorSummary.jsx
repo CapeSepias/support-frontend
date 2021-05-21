@@ -1,5 +1,3 @@
-// @flow
-
 import React from 'react';
 import { css } from '@emotion/core';
 import { storiesOf } from '@storybook/react';

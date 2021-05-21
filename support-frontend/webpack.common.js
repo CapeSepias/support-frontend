@@ -105,25 +105,13 @@ module.exports = (cssFilename, outputFilename, minimizeCss) => ({
       path.resolve(__dirname, 'assets'),
       path.resolve(__dirname, 'node_modules'),
     ],
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
 
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: [
-          {
-            test: /node_modules/,
-            exclude: [
-              /@guardian\/(?!(automat-modules))/,
-            ],
-          },
-        ],
-        loader: 'babel-loader',
-      },
-      {
-        test: /\.(ts|tsx)$/,
+        test: /\.(js|jsx|ts|tsx)$/,
         exclude: [
           {
             test: /node_modules/,
