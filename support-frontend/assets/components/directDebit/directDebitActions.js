@@ -18,6 +18,7 @@ export type Action =
   | { type: 'DIRECT_DEBIT_GUARANTEE_OPEN' }
   | { type: 'DIRECT_DEBIT_GUARANTEE_CLOSE' }
   | { type: 'DIRECT_DEBIT_UPDATE_SORT_CODE', index: SortCodeIndex, partialSortCode: string }
+  | { type: 'DIRECT_DEBIT_UPDATE_SORT_CODE_SEGMENTS', sortCodeSegments: string[] }
   | { type: 'DIRECT_DEBIT_UPDATE_SORT_CODE_STRING', sortCodeString: string }
   | { type: 'DIRECT_DEBIT_UPDATE_ACCOUNT_NUMBER', accountNumber: string }
   | { type: 'DIRECT_DEBIT_UPDATE_ACCOUNT_HOLDER_NAME', accountHolderName: string }
@@ -45,6 +46,9 @@ const closeDirectDebitGuarantee = (): Action =>
 
 const updateSortCode = (index: SortCodeIndex, partialSortCode: string): Action =>
   ({ type: 'DIRECT_DEBIT_UPDATE_SORT_CODE', index, partialSortCode });
+
+const updateSortCodeSegments = (sortCodeSegments: string[]): Action =>
+  ({ type: 'DIRECT_DEBIT_UPDATE_SORT_CODE_SEGMENTS', sortCodeSegments });
 
 const updateSortCodeString = (sortCodeString: string): Action =>
   ({ type: 'DIRECT_DEBIT_UPDATE_SORT_CODE_STRING', sortCodeString });
@@ -149,6 +153,7 @@ export {
   openDirectDebitGuarantee,
   closeDirectDebitGuarantee,
   updateSortCode,
+  updateSortCodeSegments,
   updateSortCodeString,
   updateAccountNumber,
   updateAccountHolderName,

@@ -25,7 +25,7 @@ import {
   setUseLocalCurrencyFlag,
 } from '../../../helpers/page/commonActions';
 import ProgressMessage from 'components/progressMessage/progressMessage';
-import { openDirectDebitPopUp } from 'components/directDebit/directDebitActions';
+import { openDirectDebitPopUp, updateAccountHolderConfirmation, updateAccountHolderName, updateAccountNumber, updateSortCodeSegments } from 'components/directDebit/directDebitActions';
 import TermsPrivacy from 'components/legal/termsPrivacy/termsPrivacy';
 
 import { onFormSubmit } from 'helpers/checkoutForm/onFormSubmit';
@@ -37,6 +37,7 @@ import { ContributionFormFields, EmptyContributionFormFields } from './Contribut
 import { ContributionTypeTabs, EmptyContributionTypeTabs } from './ContributionTypeTabs';
 import { ContributionAmount, EmptyContributionAmount } from './ContributionAmount';
 import { PaymentMethodSelector, EmptyPaymentMethodSelector } from './PaymentMethodSelector';
+import { DirectDebitForm } from './DirectDebitForm';
 import { ContributionSubmit, EmptyContributionSubmit } from './ContributionSubmit';
 
 import { type State } from 'pages/contributions-landing/contributionsLandingReducer';
@@ -94,6 +95,14 @@ type PropTypes = {|
   useLocalCurrency: boolean,
   setUseLocalCurrency: (boolean, ?LocalCurrencyCountry, ?number) => void,
   defaultOneOffAmount: number | null;
+  accountNumber: string;
+  accountHolderName: string;
+  accountHolderConfirmation: boolean;
+  sortCodeSegments: string[];
+  updateAccountNumber: (accountNumber: string) => void;
+  updateAccountHolderName: (accountHolderName: string) => void;
+  updateAccountHolderConfirmation: (accountHolderConfirmation: boolean) => void;
+  updateSortCodeSegments: (sortCodeSegments: string[]) => void;
 |};
 
 // We only want to use the user state value if the form state value has not been changed since it was initialised,
@@ -132,6 +141,10 @@ const mapStateToProps = (state: State) => ({
   currency: state.common.internationalisation.currencyId,
   amounts: state.common.amounts,
   defaultOneOffAmount: state.common.defaultAmounts.ONE_OFF.defaultAmount,
+  accountNumber: state.page.directDebit.accountNumber,
+  accountHolderName: state.page.directDebit.accountHolderName,
+  accountHolderConfirmation: state.page.directDebit.accountHolderConfirmation,
+  sortCodeSegments: state.page.directDebit.sortCodeArray,
 });
 
 
@@ -150,6 +163,18 @@ const mapDispatchToProps = (dispatch: Function) => ({
         : defaultOneOffAmount,
       'ONE_OFF',
     ));
+  },
+  updateAccountNumber: (accountNumber: string) => {
+    dispatch(updateAccountNumber(accountNumber));
+  },
+  updateAccountHolderName: (accountHolderName: string) => {
+    dispatch(updateAccountHolderName(accountHolderName));
+  },
+  updateAccountHolderConfirmation: (accountHolderConfirmation: boolean) => {
+    dispatch(updateAccountHolderConfirmation(accountHolderConfirmation));
+  },
+  updateSortCodeSegments: (sortCodeSegments: string[]) => {
+    dispatch(updateSortCodeSegments(sortCodeSegments));
   },
 });
 
@@ -295,6 +320,19 @@ function withProps(props: PropTypes) {
       <div className={classNameWithModifiers('form', ['content'])}>
         <ContributionFormFields />
         <PaymentMethodSelector />
+
+        {props.paymentMethod === DirectDebit && (
+          <DirectDebitForm
+            accountNumber={props.accountNumber}
+            accountHolderName={props.accountHolderName}
+            accountHolderConfirmation={props.accountHolderConfirmation}
+            sortCodeSegments={props.sortCodeSegments}
+            updateAccountNumber={props.updateAccountNumber}
+            updateAccountHolderName={props.updateAccountHolderName}
+            updateAccountHolderConfirmation={props.updateAccountHolderConfirmation}
+            updateSortCodeSegments={props.updateSortCodeSegments}
+          />
+        )}
 
         <StripeCardFormContainer
           currency={props.currency}

@@ -9,6 +9,8 @@ import { CardCvcElement, CardExpiryElement, CardNumberElement } from '@stripe/re
 import * as stripeJs from '@stripe/react-stripe-js';
 import { connect } from 'react-redux';
 import { TextInput } from '@guardian/src-text-input';
+import { headline } from '@guardian/src-foundations/typography';
+import { space } from '@guardian/src-foundations';
 import { fetchJson, requestOptions } from 'helpers/fetch';
 import type { State, Stripe3DSResult } from 'pages/contributions-landing/contributionsLandingReducer';
 import { Stripe } from 'helpers/paymentMethods';
@@ -121,6 +123,11 @@ const fieldStyle = {
     lineHeight: 1.5,
   },
 };
+
+const headerStyles = css`
+  ${headline.xxxsmall({ fontWeight: 'bold' })}
+  margin-bottom: ${space[4]}px;
+`;
 
 const zipCodeContainerStyles = css`
   margin-top: 0.65rem;
@@ -431,7 +438,7 @@ const CardForm = (props: PropTypes) => {
 
   return (
     <div>
-      <legend className="form__legend"><h3>Your card details</h3></legend>
+      <legend><h3 css={headerStyles}>Your card details</h3></legend>
       {errorMessage ?
         <InlineError> {errorMessage} </InlineError> : null
       }
