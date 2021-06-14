@@ -1,7 +1,7 @@
 const glob = require('glob');
 const { exec } = require('child_process');
 
-glob('../assets/**/*.{js,jsx}', (err, files) => {
+glob('../assets-ts/**/*.{js,jsx}', (err, files) => {
   if (err) {
     console.log(err.message);
   } else {
