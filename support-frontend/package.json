@@ -22,7 +22,8 @@
     "cache-ssr": "node scripts/ssrScript.js",
     "jest-update-snapshot": "echo 'Updating JS tests' && jest -u",
     "flow-typed-install": "flow-typed install -s -o --ignoreDeps peer bundle",
-    "orphans": "echo 'Checking for orphan modules' && node scripts/orphans.js"
+    "orphans": "echo 'Checking for orphan modules' && node scripts/orphans.js",
+    "tsc": "tsc"
   },
   "browserslist": [
     "Chrome >= 49",
@@ -137,6 +138,7 @@
     "@storybook/react": "^5.3.19",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
+    "@types/react": "16.9.5",
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "@typescript-eslint/parser": "^4.22.1",
     "autoprefixer": "^8.6.1",

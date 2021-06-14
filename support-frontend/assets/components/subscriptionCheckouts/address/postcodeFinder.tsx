@@ -121,7 +121,7 @@ class PostcodeFinder extends Component<PropTypes> {
   }
 }
 
-export const withStore = <GlobalState>(
+export const withStore = (
   scope: AddressType,
   traverseState: (GlobalState) => PostcodeFinderState
 ) =>

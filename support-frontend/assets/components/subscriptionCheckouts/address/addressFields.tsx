@@ -195,7 +195,7 @@ class AddressFields<GlobalState> extends Component<PropTypes<GlobalState>> {
   }
 }
 
-export const withStore = <GlobalState>(
+export const withStore = (
   countries: object,
   scope: AddressType,
   traverseState: (GlobalState) => AddressState,

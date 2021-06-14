@@ -1,4 +1,4 @@
-import { $Keys } from 'utility-types';
+// import { $Keys } from 'utility-types';
 // ----- Imports ----- //
 import { Node } from 'react';
 import React from 'react';
@@ -19,7 +19,7 @@ export const Sides = {
   right: 'right',
   left: 'left',
 };
-export type Appearance = $Keys<typeof Appearances>;
+export type Appearance = keyof Appearances;
 type PropTypes = {
   appearance: Appearance;
   id?: Option<string>;
