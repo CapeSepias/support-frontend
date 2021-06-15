@@ -1,7 +1,10 @@
+const path = require('path');
 const glob = require('glob');
 const { exec } = require('child_process');
 
-glob('../assets-ts/**/*.{js,jsx}', (err, files) => {
+const assetPath = path.resolve(__dirname, '../assets-ts');
+
+glob(`${assetPath}/**/*.{js,jsx}`, (err, files) => {
   if (err) {
     console.log(err.message);
   } else {
@@ -10,7 +13,7 @@ glob('../assets-ts/**/*.{js,jsx}', (err, files) => {
 
     const result = files.reduce((accumulatorPromise, filePath) => accumulatorPromise.then(() =>
       new Promise((resolve) => {
-        exec(`flow-to-ts --write ${filePath} `, (error) => {
+        exec(`flow-to-ts --delete-source --write --prettier --single-quote --bracket-spacing --tab-width 2 --semi ${filePath}`, (error) => {
           if (error) {
             failures.push(`Failed to migrate ${filePath}: ${error.message}`);
           } else {
