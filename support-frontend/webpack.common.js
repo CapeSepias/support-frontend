@@ -114,31 +114,6 @@ module.exports = (cssFilename, jsFilename, minimizeCss) => ({
     rules: [
       {
         test: /\.[jt]sx?|mjs$/,
-        use: [{
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-react',
-              [
-                '@babel/preset-env',
-                {
-                  bugfixes: true,
-                  targets: {
-                    esmodules: true,
-                  },
-                },
-              ],
-              '@emotion/babel-preset-css-prop',
-            ],
-          },
-        },
-        {
-          loader: 'ts-loader',
-          options: {
-            configFile: 'tsconfig.json',
-            transpileOnly: true,
-          },
-        }],
         exclude: [
           {
             test: /node_modules/,
@@ -147,6 +122,16 @@ module.exports = (cssFilename, jsFilename, minimizeCss) => ({
             ],
           },
         ],
+        use: [{
+          loader: 'babel-loader',
+        },
+        {
+          loader: 'ts-loader',
+          options: {
+            configFile: 'tsconfig.json',
+            transpileOnly: true,
+          },
+        }],
       },
       {
         test: /\.(png|jpg|gif|ico)$/,

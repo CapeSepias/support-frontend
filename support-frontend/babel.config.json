@@ -1,11 +1,13 @@
 {
   "presets": [
     "@babel/preset-react",
-    "@babel/preset-flow",
     [
       "@babel/preset-env",
       {
-        "modules": false
+        "bugfixes": true,
+        "targets": {
+          "esmodules": true
+        }
       }
     ],
     "@emotion/babel-preset-css-prop"
