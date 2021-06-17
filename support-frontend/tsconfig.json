@@ -24,11 +24,11 @@
     "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
     /** Custom Start **/
     "noImplicitAny": false, // Todo: Revert to true and fix resulting issues. This will temporarily allow implicit any.
-    "baseUrl": "./assets-ts" // The baseUrl to be used when resolving absolute module paths
+    "baseUrl": "./assets" // The baseUrl to be used when resolving absolute module paths
     /** Custom End **/
   },
   "include": [
-    "./assets-ts" // The files to type check
+    "./assets" // The files to type check
   ],
   "exclude": ["node_modules"] // The files to not type check
  }

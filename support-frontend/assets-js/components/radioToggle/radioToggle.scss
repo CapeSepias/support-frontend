@@ -1,0 +1,14 @@
+.component-radio-toggle {
+
+	input[type="radio"] {
+		position: absolute;
+		opacity: 0;
+	}
+
+	label {
+		border-radius: 600px;
+		border: none;
+		cursor: pointer;
+	}
+
+}

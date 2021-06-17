@@ -107,23 +107,63 @@ module.exports = (cssFilename, jsFilename, minimizeCss) => ({
       path.resolve(__dirname, 'assets'),
       path.resolve(__dirname, 'node_modules'),
     ],
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
 
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: [
-          {
-            test: /node_modules/,
-            exclude: [
-              /@guardian\/(?!(automat-modules))/,
+        test: /\.[jt]sx?|mjs$/,
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-react',
+              [
+                '@babel/preset-env',
+                {
+                  bugfixes: true,
+                  targets: {
+                    esmodules: true,
+                  },
+                },
+              ],
             ],
           },
-        ],
-        loader: 'babel-loader',
+        },
+        {
+          loader: 'ts-loader',
+          options: {
+            configFile: 'tsconfig.json',
+            transpileOnly: true,
+          },
+        }],
+        // exclude: [
+        //   {
+        //     test: /node_modules/,
+        //     exclude: [
+        //       /@guardian\/(?!(automat-modules))/,
+        //     ],
+        //   },
+        // ],
+        // loader: 'babel-loader',
       },
+      // {
+      //   test: /\.tsx?/,
+      //   exclude: [
+      //     {
+      //       test: /node_modules/,
+      //       exclude: [
+      //         /@guardian\/(?!(automat-modules))/,
+      //       ],
+      //     },
+      //   ],
+      //   loader: 'ts-loader',
+      //   options: {
+      //     transpileOnly: true,
+      //     configFile: 'tsconfig.json',
+      //   },
+      // },
       {
         test: /\.(png|jpg|gif|ico)$/,
         loader: 'file-loader?name=[path][name].[hash].[ext]',
