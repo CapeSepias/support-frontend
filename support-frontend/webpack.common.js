@@ -128,6 +128,7 @@ module.exports = (cssFilename, jsFilename, minimizeCss) => ({
                   },
                 },
               ],
+              '@emotion/babel-preset-css-prop',
             ],
           },
         },
@@ -138,32 +139,15 @@ module.exports = (cssFilename, jsFilename, minimizeCss) => ({
             transpileOnly: true,
           },
         }],
-        // exclude: [
-        //   {
-        //     test: /node_modules/,
-        //     exclude: [
-        //       /@guardian\/(?!(automat-modules))/,
-        //     ],
-        //   },
-        // ],
-        // loader: 'babel-loader',
+        exclude: [
+          {
+            test: /node_modules/,
+            exclude: [
+              /@guardian\/(?!(automat-modules))/,
+            ],
+          },
+        ],
       },
-      // {
-      //   test: /\.tsx?/,
-      //   exclude: [
-      //     {
-      //       test: /node_modules/,
-      //       exclude: [
-      //         /@guardian\/(?!(automat-modules))/,
-      //       ],
-      //     },
-      //   ],
-      //   loader: 'ts-loader',
-      //   options: {
-      //     transpileOnly: true,
-      //     configFile: 'tsconfig.json',
-      //   },
-      // },
       {
         test: /\.(png|jpg|gif|ico)$/,
         loader: 'file-loader?name=[path][name].[hash].[ext]',
