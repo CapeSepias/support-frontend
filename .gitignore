@@ -36,8 +36,8 @@ support-frontend/public/compiled-assets/
 support-frontend/tools/
 support-frontend/Brewfile.lock.json
 tools/
-support-frontend/assets-ts
 support-frontend/err.log
+support-frontend/tsconfig.tsbuildinfo
 
 conf/assets.map
 assets/images/inline-svgs/*.svg
