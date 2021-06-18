@@ -94,7 +94,7 @@ module.exports = (cssFilename, jsFilename, minimizeCss) => ({
     path: path.resolve(__dirname, 'public/compiled-assets'),
     chunkFilename: `webpack/${jsFilename}`,
     filename: `javascripts/${jsFilename}`,
-    publicPath: '/assets-ts/',
+    publicPath: '/assets/',
   },
 
   resolve: {
