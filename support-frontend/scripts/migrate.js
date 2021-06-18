@@ -2,7 +2,7 @@ const path = require('path');
 const glob = require('glob');
 const { exec } = require('child_process');
 
-const assetPath = path.resolve(__dirname, '../assets');
+const assetPath = path.resolve(__dirname, '../stories-ts');
 
 glob(`${assetPath}/**/*.{js,jsx}`, (err, files) => {
   console.log('***', files.length);
