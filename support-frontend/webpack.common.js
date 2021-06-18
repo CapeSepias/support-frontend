@@ -36,7 +36,7 @@ const cssLoaders = [{
       },
     ],
     includePaths: [
-      path.resolve(__dirname, 'assets'),
+      path.resolve(__dirname, 'assets-ts'),
       path.resolve(__dirname),
     ],
   },
@@ -86,7 +86,7 @@ module.exports = (cssFilename, jsFilename, minimizeCss) => ({
     new CleanUpStatsPlugin(),
   ],
 
-  context: path.resolve(__dirname, 'assets'),
+  context: path.resolve(__dirname, 'assets-ts'),
 
   entry: entryPoints.common,
 
@@ -94,7 +94,7 @@ module.exports = (cssFilename, jsFilename, minimizeCss) => ({
     path: path.resolve(__dirname, 'public/compiled-assets'),
     chunkFilename: `webpack/${jsFilename}`,
     filename: `javascripts/${jsFilename}`,
-    publicPath: '/assets/',
+    publicPath: '/assets-ts/',
   },
 
   resolve: {
@@ -104,7 +104,7 @@ module.exports = (cssFilename, jsFilename, minimizeCss) => ({
       ophan: 'ophan-tracker-js/build/ophan.support',
     },
     modules: [
-      path.resolve(__dirname, 'assets'),
+      path.resolve(__dirname, 'assets-ts'),
       path.resolve(__dirname, 'node_modules'),
     ],
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
