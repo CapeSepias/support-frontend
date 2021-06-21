@@ -1,15 +1,18 @@
 const path = require('path');
 const glob = require('glob');
 const { exec } = require('child_process');
+const yargs = require('yargs/yargs');
+const { hideBin } = require('yargs/helpers');
 
-const assetPath = path.resolve(__dirname, '../stories-ts');
+const { argv } = yargs(hideBin(process.argv));
+const assetPath = path.resolve(__dirname, `../${argv.dir}`);
 
 glob(`${assetPath}/**/*.{js,jsx}`, (err, files) => {
-  console.log('***', files.length);
-
   if (err) {
     console.log(err.message);
   } else {
+    console.log(`There are ${files.length} files to migrate in ${assetPath}.`);
+
     const failures = [];
     let successCounter = 0;
 
@@ -28,7 +31,6 @@ glob(`${assetPath}/**/*.{js,jsx}`, (err, files) => {
       })), Promise.resolve());
 
     result.then(() => {
-
       console.log(`Successfully migrated ${successCounter} modules :)`);
 
       if (failures.length) {
