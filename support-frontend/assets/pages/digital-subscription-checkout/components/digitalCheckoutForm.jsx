@@ -183,6 +183,7 @@ function DigitalCheckoutForm(props: PropTypes) {
               lastName={props.lastName}
               setLastName={props.setLastName}
               email={props.email}
+              setEmail={props.setEmail}
               telephone={props.telephone}
               setTelephone={props.setTelephone}
               formErrors={props.formErrors}

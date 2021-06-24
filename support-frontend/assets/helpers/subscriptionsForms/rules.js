@@ -17,6 +17,10 @@ function applyCheckoutRules(fields: FormFields): FormError<FormField>[] {
       error: formError('lastName', 'Please enter a last name.'),
     },
     {
+      rule: nonEmptyString(fields.email), //TODO: email validation
+      error: formError('email', 'Please enter a valid email address.'),
+    },
+    {
       rule: notNull(fields.paymentMethod),
       error: formError('paymentMethod', 'Please select a payment method.'),
     },
