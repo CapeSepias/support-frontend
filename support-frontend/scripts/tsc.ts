@@ -1,9 +1,10 @@
-import lineReader from 'line-reader';
 import path from 'path';
+import fs from 'fs';
+import lineReader from 'line-reader';
 
 const logPath = path.resolve(__dirname, '../err.log');
 
-const errorMap: {
+const typescriptErrors: {
   [key: string]: {
     count: number,
     instances: Array<{
@@ -13,16 +14,28 @@ const errorMap: {
   }
 } = {};
 
-const addErrorToMap: (errorPath: string, errorCode: string, errorMessage: string) => void = (errorPath, errorCode, errorMessage) => {
-  if (!errorMap[errorCode]) {
-    errorMap[errorCode] = {
+let currentError: {
+  errorPath?: string,
+  errorCode?: string,
+  errorMessage?: string
+} = {};
+
+const addCurrentErrorToMap: () => void = () => {
+  const { errorPath, errorCode, errorMessage } = currentError;
+
+  if (!errorPath || !errorCode || !errorMessage) {
+    return;
+  }
+
+  if (!typescriptErrors[errorCode]) {
+    typescriptErrors[errorCode] = {
       count: 0,
       instances: [],
     };
   }
 
-  errorMap[errorCode].count += 1;
-  errorMap[errorCode].instances.push({
+  typescriptErrors[errorCode].count += 1;
+  typescriptErrors[errorCode].instances.push({
     path: errorPath,
     message: errorMessage,
   });
@@ -30,14 +43,24 @@ const addErrorToMap: (errorPath: string, errorCode: string, errorMessage: string
 
 const eachLineAsync = (): Promise<void> => new Promise((resolve) => {
   lineReader.eachLine(logPath, (line, lastLine) => {
-
     const capturedGroups = (/^(?<errorPath>[^(]*(\.tsx|\.ts)).*?(?<errorCode>TS\d+):\s(?<errorMessage>.*)$/gm.exec(line));
 
     if (capturedGroups && capturedGroups.groups) {
       const { errorPath, errorCode, errorMessage } = capturedGroups.groups;
 
-      addErrorToMap(errorPath, errorCode, errorMessage);
+      currentError = {
+        errorPath,
+        errorCode,
+        errorMessage,
+      };
+    } else {
+      currentError = {
+        ...currentError,
+        errorMessage: line.trim(),
+      };
     }
+
+    addCurrentErrorToMap();
 
     if (lastLine) {
       resolve();
@@ -46,7 +69,7 @@ const eachLineAsync = (): Promise<void> => new Promise((resolve) => {
 });
 
 eachLineAsync().then(() => {
-  console.log('errorMap --->', errorMap);
+  fs.writeFileSync('typescript-errors.json', JSON.stringify(typescriptErrors, null, 4));
 }).catch((err) => {
   console.error(err);
 });
