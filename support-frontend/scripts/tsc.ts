@@ -1,10 +1,7 @@
-import path from 'path';
 import fs from 'fs';
-import lineReader from 'line-reader';
+import { exec } from 'child_process';
 
-const logPath = path.resolve(__dirname, '../err.log');
-
-const typescriptErrors: {
+interface TypescriptErrors {
   [key: string]: {
     count: number,
     instances: Array<{
@@ -12,7 +9,7 @@ const typescriptErrors: {
       message: string
     }>
   }
-} = {};
+}
 
 let currentError: {
   errorPath?: string,
@@ -20,11 +17,11 @@ let currentError: {
   errorMessage?: string
 } = {};
 
-const addCurrentErrorToMap: () => void = () => {
+const updateTypescriptErrors: (typescriptErrors: TypescriptErrors) => TypescriptErrors = (typescriptErrors) => {
   const { errorPath, errorCode, errorMessage } = currentError;
 
   if (!errorPath || !errorCode || !errorMessage) {
-    return;
+    return typescriptErrors;
   }
 
   if (!typescriptErrors[errorCode]) {
@@ -39,10 +36,21 @@ const addCurrentErrorToMap: () => void = () => {
     path: errorPath,
     message: errorMessage,
   });
+
+  return {
+    ...typescriptErrors,
+  };
 };
 
-const eachLineAsync = (): Promise<void> => new Promise((resolve) => {
-  lineReader.eachLine(logPath, (line, lastLine) => {
+exec('yarn tsc', (error, stdout) => {
+  if (error && error.code && error.code !== 1) {
+    console.error(`exec error: ${error}`);
+    return;
+  }
+
+  const lines = stdout.split(/(\r?\n)/g);
+
+  const typescriptErrors: TypescriptErrors = lines.reduce((accumulator, line) => {
     const capturedGroups = (/^(?<errorPath>[^(]*(\.tsx|\.ts)).*?(?<errorCode>TS\d+):\s(?<errorMessage>.*)$/gm.exec(line));
 
     if (capturedGroups && capturedGroups.groups) {
@@ -60,16 +68,8 @@ const eachLineAsync = (): Promise<void> => new Promise((resolve) => {
       };
     }
 
-    addCurrentErrorToMap();
+    return updateTypescriptErrors(accumulator);
+  }, {});
 
-    if (lastLine) {
-      resolve();
-    }
-  });
-});
-
-eachLineAsync().then(() => {
   fs.writeFileSync('typescript-errors.json', JSON.stringify(typescriptErrors, null, 4));
-}).catch((err) => {
-  console.error(err);
 });

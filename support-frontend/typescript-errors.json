@@ -3298,7 +3298,7 @@
         ]
     },
     "TS2339": {
-        "count": 172,
+        "count": 171,
         "instances": [
             {
                 "path": "assets-ts/components/directDebit/directDebitForm/directDebitForm.tsx",
@@ -3979,10 +3979,6 @@
             {
                 "path": "assets-ts/pages/weekly-subscription-landing/weeklySubscriptionLandingReducer.ts",
                 "message": "Property 'guardian' does not exist on type 'Window & typeof globalThis'."
-            },
-            {
-                "path": "assets-ts/pages/weekly-subscription-landing/weeklySubscriptionLandingReducer.ts",
-                "message": "error Command failed with exit code 1."
             },
             {
                 "path": "assets-ts/pages/weekly-subscription-landing/weeklySubscriptionLandingReducer.ts",
