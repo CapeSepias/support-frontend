@@ -1,23 +1,9 @@
-import fs from 'fs';
-import { exec } from 'child_process';
+const fs = require('fs');
+const { exec } = require('child_process');
 
-interface TypescriptErrors {
-  [key: string]: {
-    count: number,
-    instances: Array<{
-      path: string,
-      message: string
-    }>
-  }
-}
+let currentError = {};
 
-let currentError: {
-  errorPath?: string,
-  errorCode?: string,
-  errorMessage?: string
-} = {};
-
-const updateTypescriptErrors: (typescriptErrors: TypescriptErrors) => TypescriptErrors = (typescriptErrors) => {
+const updateTypescriptErrors = (typescriptErrors) => {
   const { errorPath, errorCode, errorMessage } = currentError;
 
   if (!errorPath || !errorCode || !errorMessage) {
@@ -32,6 +18,7 @@ const updateTypescriptErrors: (typescriptErrors: TypescriptErrors) => Typescript
   }
 
   typescriptErrors[errorCode].count += 1;
+
   typescriptErrors[errorCode].instances.push({
     path: errorPath,
     message: errorMessage,
@@ -50,7 +37,7 @@ exec('yarn tsc', (error, stdout) => {
 
   const lines = stdout.split(/(\r?\n)/g);
 
-  const typescriptErrors: TypescriptErrors = lines.reduce((accumulator, line) => {
+  const typescriptErrors = lines.reduce((accumulator, line) => {
     const capturedGroups = (/^(?<errorPath>[^(]*(\.tsx|\.ts)).*?(?<errorCode>TS\d+):\s(?<errorMessage>.*)$/gm.exec(line));
 
     if (capturedGroups && capturedGroups.groups) {

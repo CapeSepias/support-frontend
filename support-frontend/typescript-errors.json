@@ -1,4 +1,938 @@
 {
+    "TS7053": {
+        "count": 53,
+        "instances": [
+            {
+                "path": "assets-ts/__mocks__/stripeMock.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+            },
+            {
+                "path": "assets-ts/__mocks__/stripeMock.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+            },
+            {
+                "path": "assets-ts/__mocks__/stripeMock.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Readonly<PropTypes> & Readonly<{ children?: ReactNode; }>'."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type 'Readonly<PropTypes> & Readonly<{ children?: ReactNode; }>'."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/components/headers/roundelHeader/header.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'CountryGroups'."
+            },
+            {
+                "path": "assets-ts/components/headers/roundelHeader/header.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type 'CountryGroups'."
+            },
+            {
+                "path": "assets-ts/components/page/heroStyles.ts",
+                "message": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'BreakpointMap'."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'CardFieldsData'."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'CardFieldsData'."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'CardFieldsData'."
+            },
+            {
+                "path": "assets-ts/helpers/abTests/abtest.ts",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'."
+            },
+            {
+                "path": "assets-ts/helpers/abTests/abtest.ts",
+                "message": "No index signature with a parameter of type 'string' was found on type '{}'."
+            },
+            {
+                "path": "assets-ts/helpers/contributions.ts",
+                "message": "Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{ '1': string; '2': string; '5': string; '6': string; '7': string; '10': string; '15': string; '20': string; '25': string; '30': string; '35': string; '40': string; '50': string; '75': string; '100': string; '125': string; '166': string; '200': string; ... 7 more ...; '16000': string; }'."
+            },
+            {
+                "path": "assets-ts/helpers/contributions.ts",
+                "message": "No index signature with a parameter of type 'number' was found on type '{ '1': string; '2': string; '5': string; '6': string; '7': string; '10': string; '15': string; '20': string; '25': string; '30': string; '35': string; '40': string; '50': string; '75': string; '100': string; '125': string; '166': string; '200': string; ... 7 more ...; '16000': string; }'."
+            },
+            {
+                "path": "assets-ts/helpers/internationalisation/countryGroup.ts",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'CountryGroups'."
+            },
+            {
+                "path": "assets-ts/helpers/internationalisation/countryGroup.ts",
+                "message": "No index signature with a parameter of type 'string' was found on type 'CountryGroups'."
+            },
+            {
+                "path": "assets-ts/helpers/internationalisation/countryGroup.ts",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'CountryGroups'."
+            },
+            {
+                "path": "assets-ts/helpers/internationalisation/countryGroup.ts",
+                "message": "No index signature with a parameter of type 'string' was found on type 'CountryGroups'."
+            },
+            {
+                "path": "assets-ts/pages/aus-moment-map/components/testimonialsContainer.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ QLD: string; NSW: string; NT: string; SA: string; TAS: string; VIC: string; WA: string; ACT: string; }'."
+            },
+            {
+                "path": "assets-ts/pages/aus-moment-map/components/testimonialsContainer.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type '{ QLD: string; NSW: string; NT: string; SA: string; TAS: string; VIC: string; WA: string; ACT: string; }'."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/contributionsLandingInit.ts",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'ContributionAmounts'."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/contributionsLandingInit.ts",
+                "message": "No index signature with a parameter of type 'string' was found on type 'ContributionAmounts'."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/productBlock/productBlock.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/productBlock/productBlock.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/productBlock/productBlock.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/productBlock/productBlock.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/productBlock/productBlockAus.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/productBlock/productBlockAus.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/productBlock/productBlockAus.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/productBlock/productBlockAus.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type 'Readonly<StateTypes>'."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.test.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ SixdayPlus: { Monthly: { GBP: { price: number; savingVsRetail: number; currency: string; fixedTerm: boolean; promotions: never[]; }; }; }; SundayPlus: { Monthly: { GBP: { price: number; savingVsRetail: number; currency: string; fixedTerm: boolean; promotions: never[]; }; }; }; ... 7 more ...; EverydayPlus: { ...; ...'."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.test.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type '{ SixdayPlus: { Monthly: { GBP: { price: number; savingVsRetail: number; currency: string; fixedTerm: boolean; promotions: never[]; }; }; }; SundayPlus: { Monthly: { GBP: { price: number; savingVsRetail: number; currency: string; fixedTerm: boolean; promotions: never[]; }; }; }; ... 7 more ...; EverydayPlus: { ...; ...'."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/thankYou.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Record<FulfilmentOptions, string[]>'."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-landing/components/tabs.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Record<PaperFulfilmentOptions, TabOptions>'."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-landing/components/tabs.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type 'Record<PaperFulfilmentOptions, TabOptions>'."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-landing/components/tabs.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Record<PaperFulfilmentOptions, TabOptions>'."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-landing/components/tabs.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type 'Record<PaperFulfilmentOptions, TabOptions>'."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-landing/components/tabs.tsx",
+                "message": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Record<PaperFulfilmentOptions, TabOptions>'."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-landing/components/tabs.tsx",
+                "message": "No index signature with a parameter of type 'string' was found on type 'Record<PaperFulfilmentOptions, TabOptions>'."
+            }
+        ]
+    },
+    "TS7006": {
+        "count": 178,
+        "instances": [
+            {
+                "path": "assets-ts/__mocks__/stripeMock.tsx",
+                "message": "Parameter 'elementType' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/__mocks__/stripeMock.tsx",
+                "message": "Parameter 'evt' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/datePicker/datePickerHelpers.test.ts",
+                "message": "Parameter 'param' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitForm/directDebitForm.tsx",
+                "message": "Parameter 'state' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitPopUpForm/directDebitPopUpForm.tsx",
+                "message": "Parameter 'state' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Parameter 'state' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Parameter 'field' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Parameter 'dispatchUpdate' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Parameter 'event' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Parameter 'event' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Parameter 'event' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/marketingConsent/marketingConsentPaper.tsx",
+                "message": "Parameter 'state' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/page/heroStyles.ts",
+                "message": "Parameter 'breakpoint' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/signout/signout.tsx",
+                "message": "Parameter 'state' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/address/postcodeFinder.tsx",
+                "message": "Parameter 'e' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/address/postcodeFinder.tsx",
+                "message": "Parameter 'r' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/address/postcodeFinder.tsx",
+                "message": "Parameter 'result' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/address/postcodeFinder.tsx",
+                "message": "Parameter 'key' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/personalDetails.tsx",
+                "message": "Parameter 'e' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.tsx",
+                "message": "Parameter 'result' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.tsx",
+                "message": "Parameter 'token' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.tsx",
+                "message": "Parameter 'token' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.tsx",
+                "message": "Parameter 'event' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.tsx",
+                "message": "Parameter 'event' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.tsx",
+                "message": "Parameter 'e' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.tsx",
+                "message": "Parameter 'e' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.tsx",
+                "message": "Parameter 'e' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/summary.tsx",
+                "message": "Parameter 'props' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/thankYou/marketingConsentContainer.ts",
+                "message": "Parameter 'state' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/thankYou/marketingConsentContainerGift.ts",
+                "message": "Parameter 'state' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/thankYou/optInCopy.tsx",
+                "message": "Parameter 'subscriptionProduct' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionsProductDescription/subscriptionsProductDescription.tsx",
+                "message": "Parameter 'isFeature' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionsProductDescription/subscriptionsProductDescription.tsx",
+                "message": "Parameter 'index' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionsProductDescription/subscriptionsProductDescription.tsx",
+                "message": "Parameter 'hierarchy' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/__tests__/checkoutsTest.ts",
+                "message": "Parameter 'key' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/__tests__/promiseTest.ts",
+                "message": "Parameter 'done' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/__tests__/promiseTest.ts",
+                "message": "Parameter 'fail' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/forms/paymentIntegrations/payPalRecurringCheckout.ts",
+                "message": "Parameter 'resolve' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/forms/paymentIntegrations/payPalRecurringCheckout.ts",
+                "message": "Parameter 'reject' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/forms/paymentIntegrations/payPalRecurringCheckout.ts",
+                "message": "Parameter 'actions' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/forms/paymentIntegrations/payPalRecurringCheckout.ts",
+                "message": "Parameter 'actions' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/forms/paymentIntegrations/payPalRecurringCheckout.ts",
+                "message": "Parameter 'data' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/forms/paymentIntegrations/readerRevenueApis.ts",
+                "message": "Parameter 'json' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/forms/paymentIntegrations/readerRevenueApis.ts",
+                "message": "Parameter 'error' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/productPrice/promotions.tsx",
+                "message": "Parameter 'promotion' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/productPrice/promotions.tsx",
+                "message": "Parameter 'promotion' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/rendering/fontLoader.ts",
+                "message": "Parameter 'font' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/rendering/render.ts",
+                "message": "Parameter 'opts' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/rendering/ssrPages.ts",
+                "message": "Parameter 'content' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/storage/storage.ts",
+                "message": "Parameter 'storage' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/subscriptionsForms/formReducer.ts",
+                "message": "Parameter 'action' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/subscriptionsForms/formReducer.ts",
+                "message": "Parameter 'currentOption' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/subscriptionsForms/submit.ts",
+                "message": "Parameter 'product' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/subscriptionsForms/submit.ts",
+                "message": "Parameter 'addresses' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/subscriptionsForms/subscriptionCheckoutReducer.ts",
+                "message": "Parameter 'addressReducers' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Parameter 'callback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Parameter 'callback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Parameter 'callback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Parameter 'callback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Parameter 'callback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/user/__tests__/userTest.ts",
+                "message": "Parameter 'values' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/user/user.ts",
+                "message": "Parameter 'x' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/aus-moment-map/ausMomentMap.tsx",
+                "message": "Parameter 'e' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/aus-moment-map/ausMomentMap.tsx",
+                "message": "Parameter 'territory' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/aus-moment-map/ausMomentMap.tsx",
+                "message": "Parameter 'territory' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/aus-moment-map/utils.ts",
+                "message": "Parameter 'componentId' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/AmazonPay/AmazonPayLoginButton.tsx",
+                "message": "Parameter 'response' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/AmazonPay/AmazonPayWallet.tsx",
+                "message": "Parameter 'error' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/AmazonPay/AmazonPayWallet.tsx",
+                "message": "Parameter 'billingAgreement' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/AmazonPay/AmazonPayWallet.tsx",
+                "message": "Parameter 'orderReference' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/AmazonPay/AmazonPayWallet.tsx",
+                "message": "Parameter 'billingAgreementConsentStatus' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/AmazonPay/AmazonPayWallet.tsx",
+                "message": "Parameter 'billingAgreementConsentStatus' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/AmazonPay/AmazonPayWallet.tsx",
+                "message": "Parameter 'error' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionAmount.tsx",
+                "message": "Parameter 'amount' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionAmount.tsx",
+                "message": "Parameter 'countryGroupId' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionAmount.tsx",
+                "message": "Parameter 'contributionType' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionAmount.tsx",
+                "message": "Parameter 'amount' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionAmount.tsx",
+                "message": "Parameter 'countryGroupId' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionAmount.tsx",
+                "message": "Parameter 'contributionType' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionForm.tsx",
+                "message": "Parameter 'isWaiting' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionForm.tsx",
+                "message": "Parameter 'useLocalCurrency' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionForm.tsx",
+                "message": "Parameter 'localCurrencyCountry' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionForm.tsx",
+                "message": "Parameter 'defaultOneOffAmount' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionFormContainer.tsx",
+                "message": "Parameter 'isWaiting' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionFormContainer.tsx",
+                "message": "Parameter 'token' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionFormFields.tsx",
+                "message": "Parameter 'event' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionFormFields.tsx",
+                "message": "Parameter 'event' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionFormFields.tsx",
+                "message": "Parameter 'event' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionFormFields.tsx",
+                "message": "Parameter 'event' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionFormFields.tsx",
+                "message": "Parameter 'event' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionThankYou/ContributionThankYou.tsx",
+                "message": "Parameter 'state' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionThankYou/ContributionThankYouArticleShare.tsx",
+                "message": "Parameter 'article' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionThankYou/ContributionThankYouSignUp.tsx",
+                "message": "Parameter 'state' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionThankYou/ContributionThankYouSignUp.tsx",
+                "message": "Parameter 'event' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionThankYou/ContributionThankYouSupportReminder.tsx",
+                "message": "Parameter 'monthsUntilDate' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ExistingRecurringContributorErrorMessage.tsx",
+                "message": "Parameter 'event' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/MustSignIn.tsx",
+                "message": "Parameter 'event' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/SetPasswordForm.tsx",
+                "message": "Parameter 'state' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/StripeCardForm/StripeCardForm.tsx",
+                "message": "Parameter 'value' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/StripeCardForm/StripeCardForm.tsx",
+                "message": "Parameter 'event' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/StripeCardForm/StripeCardForm.tsx",
+                "message": "Parameter 'update' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/StripeCardForm/StripeCardForm.tsx",
+                "message": "Parameter 'token' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/StripeCardForm/StripeCardForm.tsx",
+                "message": "Parameter 'token' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/StripeCardForm/StripeCardForm.tsx",
+                "message": "Parameter 'result' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/StripePaymentRequestButton/StripePaymentRequestButton.tsx",
+                "message": "Parameter 'event' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/StripePaymentRequestButton/StripePaymentRequestButton.tsx",
+                "message": "Parameter 'confirmResult' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/StripePaymentRequestButton/StripePaymentRequestButton.tsx",
+                "message": "Parameter 'result' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/StripePaymentRequestButton/StripePaymentRequestButtonContainer.tsx",
+                "message": "Parameter 'prbObject' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/contributionsLanding.tsx",
+                "message": "Parameter 'props' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/contributionsLanding.tsx",
+                "message": "Parameter 'props' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/components/digitalCheckoutForm.tsx",
+                "message": "Parameter 'ev' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/components/digitalCheckoutFormGift.tsx",
+                "message": "Parameter 'ev' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/thankYouContainer.ts",
+                "message": "Parameter 'state' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/paymentSelection/helpers/paymentSelection.tsx",
+                "message": "Parameter 'price' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/paymentSelection/helpers/paymentSelection.tsx",
+                "message": "Parameter 'price' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.test.tsx",
+                "message": "Parameter 'searchText' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.test.tsx",
+                "message": "Parameter 'content' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.test.tsx",
+                "message": "Parameter 'node' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.test.tsx",
+                "message": "Parameter 'element' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.test.tsx",
+                "message": "Parameter 'originalState' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.test.tsx",
+                "message": "Parameter 'component' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/paperCheckoutForm.tsx",
+                "message": "Parameter 'setStartDate' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/paperCheckoutForm.tsx",
+                "message": "Parameter 'startDate' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/paperCheckoutForm.tsx",
+                "message": "Parameter 'ev' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/thankYou.tsx",
+                "message": "Parameter 'fulfilmentOption' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/thankYou.tsx",
+                "message": "Parameter 'item' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-landing/components/subscriptionsLandingContent.tsx",
+                "message": "Parameter 'index' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-redemption/components/redemptionForm.tsx",
+                "message": "Parameter 'ev' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/thankYou.tsx",
+                "message": "Parameter 'billingPeriod' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/thankYou.tsx",
+                "message": "Parameter 'billingPeriod' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/thankYou.tsx",
+                "message": "Parameter 'isPending' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/thankYou.tsx",
+                "message": "Parameter 'orderIsGift' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/thankYou.tsx",
+                "message": "Parameter 'state' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/weeklyCheckoutForm.tsx",
+                "message": "Parameter 'country' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/weeklyCheckoutForm.tsx",
+                "message": "Parameter 'newState' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/weeklyCheckoutForm.tsx",
+                "message": "Parameter 'ev' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/weeklyCheckoutFormGifting.tsx",
+                "message": "Parameter 'country' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/weeklyCheckoutFormGifting.tsx",
+                "message": "Parameter 'newState' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/weeklyCheckoutFormGifting.tsx",
+                "message": "Parameter 'ev' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-accordion/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-accordion/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-accordion/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-accordion/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-accordion/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-checkbox/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-checkbox/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-checkbox/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-checkbox/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-checkbox/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-choice-card/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-choice-card/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-choice-card/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-choice-card/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-choice-card/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-label/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-label/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-label/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-radio/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-radio/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-radio/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-radio/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-radio/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-select/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-select/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-select/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-select/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-select/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-text-area/node_modules/@guardian/src-user-feedback/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-text-area/node_modules/@guardian/src-user-feedback/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-text-input/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-text-input/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-text-input/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-text-input/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-text-input/node_modules/@guardian/src-user-feedback/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-text-input/node_modules/@guardian/src-user-feedback/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-user-feedback/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-user-feedback/index.tsx",
+                "message": "Parameter 'theme' implicitly has an 'any' type."
+            },
+            {
+                "path": "node_modules/@guardian/src-user-feedback/index.tsx",
+                "message": "info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command."
+            }
+        ]
+    },
     "TS1208": {
         "count": 1,
         "instances": [
@@ -258,7 +1192,7 @@
         ]
     },
     "TS2322": {
-        "count": 443,
+        "count": 437,
         "instances": [
             {
                 "path": "assets-ts/components/asyncronously/asyncronously.ts",
@@ -353,10 +1287,6 @@
                 "message": "Type 'string' is not assignable to type 'number | undefined'."
             },
             {
-                "path": "assets-ts/components/directDebit/directDebitPopUpForm/directDebitPopUpForm.tsx",
-                "message": "Type 'Element' is not assignable to type 'null'."
-            },
-            {
                 "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/components/form.tsx",
                 "message": "Type 'string' is not assignable to type 'number | undefined'."
             },
@@ -403,10 +1333,6 @@
             {
                 "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/components/form.tsx",
                 "message": "Type 'EventTarget & HTMLButtonElement' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 32 more."
-            },
-            {
-                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
-                "message": "Type 'any' is not assignable to type 'never'."
             },
             {
                 "path": "assets-ts/components/forms/customFields/error.tsx",
@@ -883,22 +1809,6 @@
             {
                 "path": "assets-ts/helpers/globalsAndSwitches/globals.ts",
                 "message": "Type 'unknown' is not assignable to type 'Settings'."
-            },
-            {
-                "path": "assets-ts/helpers/internationalisation/country.ts",
-                "message": "Type 'string | undefined' is not assignable to type 'null'."
-            },
-            {
-                "path": "assets-ts/helpers/internationalisation/country.ts",
-                "message": "Type 'undefined' is not assignable to type 'null'."
-            },
-            {
-                "path": "assets-ts/helpers/internationalisation/country.ts",
-                "message": "Type 'string' is not assignable to type 'null'."
-            },
-            {
-                "path": "assets-ts/helpers/internationalisation/country.ts",
-                "message": "Type 'null' is not assignable to type 'string'."
             },
             {
                 "path": "assets-ts/helpers/internationalisation/countryGroup.ts",
@@ -2035,7 +2945,7 @@
         ]
     },
     "TS2345": {
-        "count": 287,
+        "count": 286,
         "instances": [
             {
                 "path": "assets-ts/components/asyncronously/asyncronously.ts",
@@ -2500,10 +3410,6 @@
             {
                 "path": "assets-ts/helpers/internationalisation/__tests__/currencyTest.ts",
                 "message": "Argument of type '\"ZZ\"' is not assignable to parameter of type 'CountryGroupId'."
-            },
-            {
-                "path": "assets-ts/helpers/internationalisation/country.ts",
-                "message": "Argument of type 'null' is not assignable to parameter of type 'string'."
             },
             {
                 "path": "assets-ts/helpers/page/__tests__/pageTest.ts",
@@ -3297,8 +4203,645 @@
             }
         ]
     },
+    "TS7016": {
+        "count": 158,
+        "instances": [
+            {
+                "path": "assets-ts/components/countryGroupSwitcher/countryGroupSwitcherContainer.ts",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/countryGroupSwitcher/countryGroupSwitcherContainer.ts",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitForm/directDebitForm.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitForm/directDebitForm.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitPopUpForm/directDebitPopUpForm.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitPopUpForm/directDebitPopUpForm.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/components/footerCompliant/DigitalFooter.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/footerCompliant/DigitalFooter.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/components/footerCompliant/footerContainer.ts",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/footerCompliant/footerContainer.ts",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/components/headers/links/links.tsx",
+                "message": "Could not find a declaration file for module 'classnames'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/classnames/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/headers/links/links.tsx",
+                "message": "Try `npm i --save-dev @types/classnames` if it exists or add a new declaration (.d.ts) file containing `declare module 'classnames';`"
+            },
+            {
+                "path": "assets-ts/components/marketingConsent/marketingConsentPaper.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/marketingConsent/marketingConsentPaper.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/components/paypalExpressButton/PayPalExpressButton.tsx",
+                "message": "Could not find a declaration file for module 'react-dom'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-dom/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/paypalExpressButton/PayPalExpressButton.tsx",
+                "message": "Try `npm i --save-dev @types/react-dom` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-dom';`"
+            },
+            {
+                "path": "assets-ts/components/paypalExpressButton/PayPalExpressButton.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/paypalExpressButton/PayPalExpressButton.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/components/radioToggle/radioToggle.tsx",
+                "message": "Could not find a declaration file for module 'uuid'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/uuid/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/radioToggle/radioToggle.tsx",
+                "message": "Try `npm i --save-dev @types/uuid` if it exists or add a new declaration (.d.ts) file containing `declare module 'uuid';`"
+            },
+            {
+                "path": "assets-ts/components/signout/signout.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/signout/signout.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/address/addressFields.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/address/addressFields.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/address/postcodeFinder.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/address/postcodeFinder.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/headerWrapper.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/headerWrapper.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stage.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stage.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/thankYou/marketingConsentContainer.ts",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/thankYou/marketingConsentContainer.ts",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/thankYou/marketingConsentContainerGift.ts",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/thankYou/marketingConsentContainerGift.ts",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/helpers/page/page.ts",
+                "message": "Could not find a declaration file for module 'preact/debug'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/preact/debug/dist/debug.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/page/page.ts",
+                "message": "Try `npm i --save-dev @types/preact-debug` if it exists or add a new declaration (.d.ts) file containing `declare module 'preact/debug';`"
+            },
+            {
+                "path": "assets-ts/helpers/productPrice/promotions.tsx",
+                "message": "Could not find a declaration file for module 'dompurify'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/dompurify/dist/purify.cjs.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/productPrice/promotions.tsx",
+                "message": "Try `npm i --save-dev @types/dompurify` if it exists or add a new declaration (.d.ts) file containing `declare module 'dompurify';`"
+            },
+            {
+                "path": "assets-ts/helpers/rendering/render.ts",
+                "message": "Could not find a declaration file for module 'react-dom'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-dom/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/rendering/render.ts",
+                "message": "Try `npm i --save-dev @types/react-dom` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-dom';`"
+            },
+            {
+                "path": "assets-ts/helpers/rendering/render.ts",
+                "message": "Could not find a declaration file for module 'react-axe'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-axe/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/rendering/render.ts",
+                "message": "Try `npm i --save-dev @types/react-axe` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-axe';`"
+            },
+            {
+                "path": "assets-ts/helpers/rendering/ssrPages.ts",
+                "message": "Could not find a declaration file for module 'react-dom/server'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-dom/server.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/rendering/ssrPages.ts",
+                "message": "Try `npm i --save-dev @types/react-dom` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-dom/server';`"
+            },
+            {
+                "path": "assets-ts/helpers/tracking/googleTagManager.ts",
+                "message": "Could not find a declaration file for module 'uuid'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/uuid/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/googleTagManager.ts",
+                "message": "Try `npm i --save-dev @types/uuid` if it exists or add a new declaration (.d.ts) file containing `declare module 'uuid';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/AmazonPay/AmazonPayLoginButton.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/AmazonPay/AmazonPayLoginButton.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/AmazonPay/AmazonPayWallet.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/AmazonPay/AmazonPayWallet.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionAmount.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionAmount.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionErrorMessage.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionErrorMessage.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionForm.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionForm.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionFormContainer.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionFormContainer.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionFormContainer.tsx",
+                "message": "Could not find a declaration file for module 'react-router-dom'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-router-dom/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionFormContainer.tsx",
+                "message": "Try `npm i --save-dev @types/react-router-dom` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-router-dom';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionFormFields.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionFormFields.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionState.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionState.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionSubmit.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionSubmit.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionThankYou/ContributionThankYou.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionThankYou/ContributionThankYou.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionThankYou/ContributionThankYouMarketingConsent.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionThankYou/ContributionThankYouMarketingConsent.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionThankYou/ContributionThankYouSignUp.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionThankYou/ContributionThankYouSignUp.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionTypeTabs.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/ContributionTypeTabs.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/PaymentMethodSelector.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/PaymentMethodSelector.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/SetPasswordForm.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/SetPasswordForm.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/StripeCardForm/StripeCardForm.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/StripeCardForm/StripeCardForm.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/StripePaymentRequestButton/StripePaymentRequestButton.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/StripePaymentRequestButton/StripePaymentRequestButton.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/contributionsLanding.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/contributionsLanding.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/contributionsLanding.tsx",
+                "message": "Could not find a declaration file for module 'react-router-dom'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-router-dom/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/contributionsLanding.tsx",
+                "message": "Try `npm i --save-dev @types/react-router-dom` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-router-dom';`"
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/components/digitalCheckoutForm.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/components/digitalCheckoutForm.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/components/digitalCheckoutFormGift.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/components/digitalCheckoutFormGift.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/components/endSummary/endSummary.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/components/endSummary/endSummary.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/digitalSubscriptionCheckout.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/digitalSubscriptionCheckout.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/thankYouContainer.ts",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/thankYouContainer.ts",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/thankYouExisting.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/thankYouExisting.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/thankYouGift.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-checkout/thankYouGift.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/paymentSelection/paymentSelection.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/paymentSelection/paymentSelection.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/productBlock/productBlock.tsx",
+                "message": "Could not find a declaration file for module 'classnames'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/classnames/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/productBlock/productBlock.tsx",
+                "message": "Try `npm i --save-dev @types/classnames` if it exists or add a new declaration (.d.ts) file containing `declare module 'classnames';`"
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/productBlock/productBlockAus.tsx",
+                "message": "Could not find a declaration file for module 'classnames'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/classnames/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/productBlock/productBlockAus.tsx",
+                "message": "Try `npm i --save-dev @types/classnames` if it exists or add a new declaration (.d.ts) file containing `declare module 'classnames';`"
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/digitalSubscriptionLanding.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/digitalSubscriptionLanding.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.test.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.test.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/paperCheckoutForm.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/paperCheckoutForm.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/thankYou.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/thankYou.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/paperSubscriptionCheckout.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/paperSubscriptionCheckout.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-landing/components/paperPrices.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-landing/components/paperPrices.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-landing/components/tabs.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-landing/components/tabs.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-landing/paperSubscriptionLandingPage.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-landing/paperSubscriptionLandingPage.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/promotion-terms/promotionTerms.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/promotion-terms/promotionTerms.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/showcase/showcase.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/showcase/showcase.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-landing/components/subscriptionsLandingContent.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-landing/components/subscriptionsLandingContent.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-landing/components/subscriptionsProduct.tsx",
+                "message": "Could not find a declaration file for module 'classnames'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/classnames/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-landing/components/subscriptionsProduct.tsx",
+                "message": "Try `npm i --save-dev @types/classnames` if it exists or add a new declaration (.d.ts) file containing `declare module 'classnames';`"
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-landing/subscriptionsLanding.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-landing/subscriptionsLanding.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-redemption/components/redemptionForm.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-redemption/components/redemptionForm.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-redemption/components/stage.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-redemption/components/stage.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-redemption/marketingConsentContainer.ts",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-redemption/marketingConsentContainer.ts",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-redemption/subscriptionsRedemption.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-redemption/subscriptionsRedemption.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-redemption/thankYouContainer.ts",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/subscriptions-redemption/thankYouContainer.ts",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/thankYou.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/thankYou.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/weeklyCheckoutForm.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/weeklyCheckoutForm.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/weeklyCheckoutFormGifting.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/components/weeklyCheckoutFormGifting.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/weeklySubscriptionCheckout.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-checkout/weeklySubscriptionCheckout.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-landing/components/weeklyProductPrices.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-landing/components/weeklyProductPrices.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-landing/weeklySubscriptionLanding.tsx",
+                "message": "Could not find a declaration file for module 'react-redux'. '/Users/george_haberis/code/support-frontend/support-frontend/node_modules/react-redux/lib/index.js' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/weekly-subscription-landing/weeklySubscriptionLanding.tsx",
+                "message": "Try `npm i --save-dev @types/react-redux` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-redux';`"
+            }
+        ]
+    },
     "TS2339": {
-        "count": 171,
+        "count": 170,
         "instances": [
             {
                 "path": "assets-ts/components/directDebit/directDebitForm/directDebitForm.tsx",
@@ -3979,10 +5522,268 @@
             {
                 "path": "assets-ts/pages/weekly-subscription-landing/weeklySubscriptionLandingReducer.ts",
                 "message": "Property 'guardian' does not exist on type 'Window & typeof globalThis'."
+            }
+        ]
+    },
+    "TS7034": {
+        "count": 14,
+        "instances": [
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Variable 'cardErrors' implicitly has type 'any[]' in some locations where its type cannot be determined."
             },
             {
-                "path": "assets-ts/pages/weekly-subscription-landing/weeklySubscriptionLandingReducer.ts",
-                "message": "info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command."
+                "path": "assets-ts/components/footerCompliant/Footer.tsx",
+                "message": "Variable 'consentManagementPlatform' implicitly has type 'any' in some locations where its type cannot be determined."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'props' implicitly has type 'any' in some locations where its type cannot be determined."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'stripeForm' implicitly has type 'any' in some locations where its type cannot be determined."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'submitForm' implicitly has type 'any' in some locations where its type cannot be determined."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'validateForm' implicitly has type 'any' in some locations where its type cannot be determined."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'setStripePaymentMethod' implicitly has type 'any' in some locations where its type cannot be determined."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'errorProps' implicitly has type 'any' in some locations where its type cannot be determined."
+            },
+            {
+                "path": "assets-ts/helpers/internationalisation/country.ts",
+                "message": "Variable 'country' implicitly has type 'any' in some locations where its type cannot be determined."
+            },
+            {
+                "path": "assets-ts/helpers/timeBoundedCopy/timeBoundedCopy.test.ts",
+                "message": "Variable 'testCopy' implicitly has type 'any' in some locations where its type cannot be determined."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Variable 'dummyCallback' implicitly has type 'any' in some locations where its type cannot be determined."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/paymentSelection/__tests__/paymentSelectionTests.ts",
+                "message": "Variable 'productPrices' implicitly has type 'any' in some locations where its type cannot be determined."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/paymentSelection/__tests__/paymentSelectionTests.ts",
+                "message": "Variable 'productOptions' implicitly has type 'any' in some locations where its type cannot be determined."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.test.tsx",
+                "message": "Variable 'props' implicitly has type 'any' in some locations where its type cannot be determined."
+            }
+        ]
+    },
+    "TS7005": {
+        "count": 49,
+        "instances": [
+            {
+                "path": "assets-ts/components/directDebit/directDebitProgressiveDisclosure/directDebitForm.tsx",
+                "message": "Variable 'cardErrors' implicitly has an 'any[]' type."
+            },
+            {
+                "path": "assets-ts/components/footerCompliant/Footer.tsx",
+                "message": "Variable 'consentManagementPlatform' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/footerCompliant/Footer.tsx",
+                "message": "Variable 'consentManagementPlatform' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'props' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'validateForm' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'setStripePaymentMethod' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'submitForm' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'validateForm' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'setStripePaymentMethod' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'submitForm' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'props' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'setStripePaymentMethod' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'submitForm' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'validateForm' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'stripeForm' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'errorProps' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'stripeForm' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'errorProps' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'validateForm' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'setStripePaymentMethod' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'submitForm' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'stripeForm' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'errorProps' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'submitForm' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'stripeForm' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'props' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/stripeForm/stripeForm.test.tsx",
+                "message": "Variable 'submitForm' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/internationalisation/country.ts",
+                "message": "Variable 'country' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/timeBoundedCopy/timeBoundedCopy.test.ts",
+                "message": "Variable 'testCopy' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/timeBoundedCopy/timeBoundedCopy.test.ts",
+                "message": "Variable 'testCopy' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/timeBoundedCopy/timeBoundedCopy.test.ts",
+                "message": "Variable 'testCopy' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/timeBoundedCopy/timeBoundedCopy.test.ts",
+                "message": "Variable 'testCopy' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/timeBoundedCopy/timeBoundedCopy.test.ts",
+                "message": "Variable 'testCopy' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Variable 'dummyCallback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Variable 'dummyCallback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Variable 'dummyCallback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Variable 'dummyCallback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Variable 'dummyCallback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Variable 'dummyCallback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Variable 'dummyCallback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Variable 'dummyCallback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Variable 'dummyCallback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Variable 'dummyCallback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Variable 'dummyCallback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/helpers/tracking/__tests__/thirdPartyTrackingConsentTest.ts",
+                "message": "Variable 'dummyCallback' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/paymentSelection/__tests__/paymentSelectionTests.ts",
+                "message": "Variable 'productOptions' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/paymentSelection/__tests__/paymentSelectionTests.ts",
+                "message": "Variable 'productPrices' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/digital-subscription-landing/components/paymentSelection/__tests__/paymentSelectionTests.ts",
+                "message": "Variable 'productOptions' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.test.tsx",
+                "message": "Variable 'props' implicitly has an 'any' type."
             }
         ]
     },
@@ -4088,6 +5889,59 @@
             {
                 "path": "assets-ts/pages/weekly-subscription-checkout/components/weeklyCheckoutFormGifting.tsx",
                 "message": "'dispatch' is declared but its value is never read."
+            }
+        ]
+    },
+    "TS7031": {
+        "count": 12,
+        "instances": [
+            {
+                "path": "assets-ts/components/headers/header/header.tsx",
+                "message": "Binding element 'menuRef' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/headers/header/header.tsx",
+                "message": "Binding element 'logoRef' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/headers/header/header.tsx",
+                "message": "Binding element 'containerRef' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/address/addressFields.tsx",
+                "message": "Binding element 'lineOne' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/address/addressFields.tsx",
+                "message": "Binding element 'lineTwo' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/address/addressFields.tsx",
+                "message": "Binding element 'city' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/address/postcodeFinder.tsx",
+                "message": "Binding element 'onClick' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/components/subscriptionCheckouts/address/postcodeFinder.tsx",
+                "message": "Binding element 'isLoading' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/StripePaymentRequestButton/StripePaymentRequestButton.tsx",
+                "message": "Binding element 'complete' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/contributions-landing/components/StripePaymentRequestButton/StripePaymentRequestButton.tsx",
+                "message": "Binding element 'paymentMethod' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.test.tsx",
+                "message": "Binding element 'initialState' implicitly has an 'any' type."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.test.tsx",
+                "message": "Binding element 'children' implicitly has an 'any' type."
             }
         ]
     },
@@ -5270,7 +7124,7 @@
         ]
     },
     "TS2740": {
-        "count": 5,
+        "count": 6,
         "instances": [
             {
                 "path": "assets-ts/helpers/productPrice/productOptions.ts",
@@ -5283,6 +7137,10 @@
             {
                 "path": "assets-ts/helpers/productPrice/subscriptions.ts",
                 "message": "Type '{ GBPCountries: number; }' is missing the following properties from type 'Record<CountryGroupId, number>': Canada, UnitedStates, AUDCountries, EURCountries, and 2 more."
+            },
+            {
+                "path": "assets-ts/helpers/rendering/render.ts",
+                "message": "Type 'Element' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 107 more."
             },
             {
                 "path": "assets-ts/helpers/subscriptionsForms/validation.ts",
@@ -5351,6 +7209,23 @@
             {
                 "path": "assets-ts/pages/contributions-landing/components/StripePaymentRequestButton/StripePaymentRequestButton.tsx",
                 "message": "Namespace '\"/Users/george_haberis/code/support-frontend/support-frontend/node_modules/@stripe/react-stripe-js/dist/react-stripe\"' has no exported member 'Stripe'."
+            }
+        ]
+    },
+    "TS7022": {
+        "count": 3,
+        "instances": [
+            {
+                "path": "assets-ts/pages/aus-moment-map/components/map.tsx",
+                "message": "'Map' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer."
+            },
+            {
+                "path": "assets-ts/pages/aus-moment-map/components/testimonialsContainer.tsx",
+                "message": "'TestimonialsContainer' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer."
+            },
+            {
+                "path": "assets-ts/pages/paper-subscription-checkout/components/orderSummary/orderSummary.test.tsx",
+                "message": "'initialState' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer."
             }
         ]
     },

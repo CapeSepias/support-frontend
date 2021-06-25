@@ -1,11 +1,4 @@
 {
-  "ts-node": {
-    // these options are overrides used only by ts-node
-    // same as our --compilerOptions flag and our TS_NODE_COMPILER_OPTIONS environment variable
-    "compilerOptions": {
-      "module": "commonjs"
-    }
-  },
   "compilerOptions": {
     "target": "es5", // Specify ECMAScript target version
     "lib": [
@@ -29,10 +22,8 @@
     "noUnusedParameters": true, // Report errors on unused parameters
     "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
     "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
-    /** Custom Start **/
-    "noImplicitAny": false, // Todo: Revert to true and fix resulting issues. This will temporarily allow implicit any.
+    "noImplicitAny": true, // Enable error reporting for expressions and declarations with an implied any type
     "baseUrl": "./assets-ts" // The baseUrl to be used when resolving absolute module paths
-    /** Custom End **/
   },
   "include": [
     "./assets-ts" // The files to type check
