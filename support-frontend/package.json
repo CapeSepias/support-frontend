@@ -25,8 +25,8 @@
     "orphans": "echo 'Checking for orphan modules' && node scripts/orphans.js",
     "check-images": "echo 'Purging unused images' && node scripts/gridImages.js",
     "tsc": "tsc",
-    "prettier:check": "prettier --check assets-ts/**/*.{ts,tsx}",
-    "prettier:fix": "prettier --write assets-ts/**/*.{ts,tsx}"
+    "prettier:check": "prettier --check ./assets-ts",
+    "prettier:fix": "prettier --write ./assets-ts"
   },
   "browserslist": [
     "Chrome >= 49",

@@ -1,92 +1,110 @@
 // ----- Imports ----- //
-import { ContributionType } from "helpers/contributions";
+import { ContributionType } from 'helpers/contributions';
 // Copied from
 // https://github.com/playframework/playframework/blob/master/framework/src/play/
 // src/main/scala/play/api/data/validation/Validation.scala#L81
 // but with minor modification (last * becomes +) to enforce at least one dot in domain.  This is
 // for compatibility with Stripe
-export const emailRegexPattern = '^[a-zA-Z0-9\\.!#$%&\'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$';
+export const emailRegexPattern =
+	"^[a-zA-Z0-9\\.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$";
 export function patternIsValid(value: string, pattern: string): boolean {
-  const regex = new RegExp(pattern);
-  return regex.test(value);
+	const regex = new RegExp(pattern);
+	return regex.test(value);
 }
 export function emptyInputField(input: string | null | undefined): boolean {
-  return input === undefined || input === null || input === '' || input.trim().length === 0;
+	return (
+		input === undefined ||
+		input === null ||
+		input === '' ||
+		input.trim().length === 0
+	);
 }
 export type UserFormFieldAttribute = {
-  id: string;
-  value: string;
+	id: string;
+	value: string;
 };
 export function formFieldIsValid(id: string) {
-  const element = document.getElementById(id);
+	const element = document.getElementById(id);
 
-  if (element && element instanceof HTMLInputElement) {
-    return element.validity.valid;
-  }
+	if (element && element instanceof HTMLInputElement) {
+		return element.validity.valid;
+	}
 
-  return false;
+	return false;
 }
-export function shouldShowError(field: UserFormFieldAttribute, checkoutFormHasBeenSubmitted: boolean): boolean {
-  return checkoutFormHasBeenSubmitted && !formFieldIsValid(field.id);
+export function shouldShowError(
+	field: UserFormFieldAttribute,
+	checkoutFormHasBeenSubmitted: boolean,
+): boolean {
+	return checkoutFormHasBeenSubmitted && !formFieldIsValid(field.id);
 }
 export const formInputs = (formClassName: string): Array<HTMLInputElement> => {
-  const form = document.querySelector(`.${formClassName}`);
+	const form = document.querySelector(`.${formClassName}`);
 
-  if (form) {
-    return [...form.getElementsByTagName('input')];
-  }
+	if (form) {
+		return [...form.getElementsByTagName('input')];
+	}
 
-  return [];
+	return [];
 };
-export const getForm: (arg0: string) => Record<string, any> | null = (formName: string) => document.querySelector(`.${formName}`);
+export const getForm: (arg0: string) => Record<string, any> | null = (
+	formName: string,
+) => document.querySelector(`.${formName}`);
 
 const getInvalidReason = (validityState: ValidityState) => {
-  if (validityState.valueMissing) {
-    return '-value-missing';
-  } else if (validityState.patternMismatch) {
-    return '-pattern-mismatch';
-  }
+	if (validityState.valueMissing) {
+		return '-value-missing';
+	} else if (validityState.patternMismatch) {
+		return '-pattern-mismatch';
+	}
 
-  return '';
+	return '';
 };
 
 export const invalidReason = (form: Record<string, any> | null): string => {
-  try {
-    let invalidReasonString = '';
+	try {
+		let invalidReasonString = '';
 
-    if (form instanceof HTMLFormElement) {
-      [...form.elements].forEach(element => {
-        if ((element instanceof HTMLInputElement || element instanceof HTMLSelectElement) && !element.checkValidity()) {
-          invalidReasonString += `-${element.id}${getInvalidReason(element.validity)}`;
-        }
-      });
-    } else {
-      invalidReasonString = 'form-not-instance-of-html-element';
-    }
+		if (form instanceof HTMLFormElement) {
+			[...form.elements].forEach((element) => {
+				if (
+					(element instanceof HTMLInputElement ||
+						element instanceof HTMLSelectElement) &&
+					!element.checkValidity()
+				) {
+					invalidReasonString += `-${element.id}${getInvalidReason(
+						element.validity,
+					)}`;
+				}
+			});
+		} else {
+			invalidReasonString = 'form-not-instance-of-html-element';
+		}
 
-    return invalidReasonString;
-  } catch (e) {
-    return e;
-  }
+		return invalidReasonString;
+	} catch (e) {
+		return e;
+	}
 };
 export const formElementIsValid = (formElement: Record<string, any> | null) => {
-  if (formElement && formElement instanceof HTMLFormElement) {
-    return formElement.checkValidity();
-  }
+	if (formElement && formElement instanceof HTMLFormElement) {
+		return formElement.checkValidity();
+	}
 
-  return false;
+	return false;
 };
-export const formIsValid = (formClassName: string) => formElementIsValid(getForm(formClassName));
+export const formIsValid = (formClassName: string) =>
+	formElementIsValid(getForm(formClassName));
 export function getTitle(contributionType: ContributionType): string {
-  switch (contributionType) {
-    case 'ANNUAL':
-      return 'Make an annual';
+	switch (contributionType) {
+		case 'ANNUAL':
+			return 'Make an annual';
 
-    case 'MONTHLY':
-      return 'Make a monthly';
+		case 'MONTHLY':
+			return 'Make a monthly';
 
-    case 'ONE_OFF':
-    default:
-      return 'Make a single';
-  }
+		case 'ONE_OFF':
+		default:
+			return 'Make a single';
+	}
 }

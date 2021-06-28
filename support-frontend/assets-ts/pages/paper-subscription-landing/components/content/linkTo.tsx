@@ -7,28 +7,30 @@ import { ActiveTabState } from '../../paperSubscriptionLandingPageReducer';
 import { setTab } from '../../paperSubscriptionLandingPageActions';
 
 const linkColor = css`
-  color: inherit;
+	color: inherit;
 `;
 
 function LinkTo({
-  setTabAction,
-  tab,
-  children,
+	setTabAction,
+	tab,
+	children,
 }: {
-  setTabAction: typeof setTab;
-  tab: ActiveTabState;
-  children: Node;
+	setTabAction: typeof setTab;
+	tab: ActiveTabState;
+	children: Node;
 }) {
-  return (<Link
-    css={linkColor}
-    href={paperSubsUrl(tab === 'delivery')}
-    onClick={(ev) => {
-    ev.preventDefault();
-    setTabAction(tab);
-  }}
-  >
-    {children}
-  </Link>);
+	return (
+		<Link
+			css={linkColor}
+			href={paperSubsUrl(tab === 'delivery')}
+			onClick={(ev) => {
+				ev.preventDefault();
+				setTabAction(tab);
+			}}
+		>
+			{children}
+		</Link>
+	);
 }
 
 export default LinkTo;

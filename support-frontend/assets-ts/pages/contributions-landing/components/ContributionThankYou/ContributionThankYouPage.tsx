@@ -1,17 +1,23 @@
-import React from "react";
-import Page from "components/page/page";
-import Footer from "components/footer/footer";
-import { RoundelHeader } from "components/headers/roundelHeader/header";
-import ContributionThankYou from "./ContributionThankYou";
-import { CountryGroupId } from "helpers/internationalisation/countryGroup";
+import React from 'react';
+import Page from 'components/page/page';
+import Footer from 'components/footer/footer';
+import { RoundelHeader } from 'components/headers/roundelHeader/header';
+import ContributionThankYou from './ContributionThankYou';
+import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
 type ContributionThankYouProps = {
-  countryGroupId: CountryGroupId;
+	countryGroupId: CountryGroupId;
 };
 
 const ContributionThankYouPage = ({
-  countryGroupId
-}: ContributionThankYouProps) => <Page classModifiers={['contribution-thankyou']} header={<RoundelHeader />} footer={<Footer disclaimer countryGroupId={countryGroupId} />}>
-    <ContributionThankYou />
-  </Page>;
+	countryGroupId,
+}: ContributionThankYouProps) => (
+	<Page
+		classModifiers={['contribution-thankyou']}
+		header={<RoundelHeader />}
+		footer={<Footer disclaimer countryGroupId={countryGroupId} />}
+	>
+		<ContributionThankYou />
+	</Page>
+);
 
 export default ContributionThankYouPage;
