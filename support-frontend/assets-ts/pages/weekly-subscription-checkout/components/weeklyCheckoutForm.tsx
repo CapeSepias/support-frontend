@@ -23,10 +23,14 @@ import {
 import { withStore } from 'components/subscriptionCheckouts/address/addressFields';
 import GridImage from 'components/gridImage/gridImage';
 import PersonalDetails from 'components/subscriptionCheckouts/personalDetails';
-import { FormField, FormFields } from 'helpers/subscriptionsForms/formFields';
-import { getFormFields } from 'helpers/subscriptionsForms/formFields';
-import { IsoCountry } from 'helpers/internationalisation/country';
-import { countries } from 'helpers/internationalisation/country';
+import {
+	FormField,
+	FormFields,
+	getFormFields,
+} from 'helpers/subscriptionsForms/formFields';
+
+import { IsoCountry, countries } from 'helpers/internationalisation/country';
+
 import { weeklyDeliverableCountries } from 'helpers/internationalisation/weeklyDeliverableCountries';
 import { PaymentMethodSelector } from 'components/subscriptionCheckouts/paymentMethodSelector';
 import PaymentTerms from 'components/subscriptionCheckouts/paymentTerms';
@@ -34,13 +38,15 @@ import { signOut } from 'helpers/user/user';
 import {
 	Action,
 	FormActionCreators,
+	formActionCreators,
 } from 'helpers/subscriptionsForms/formActions';
-import { formActionCreators } from 'helpers/subscriptionsForms/formActions';
-import { WithDeliveryCheckoutState } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
+
 import {
+	WithDeliveryCheckoutState,
 	getBillingAddress,
 	getDeliveryAddress,
 } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
+
 import { getWeeklyDays } from 'pages/weekly-subscription-checkout/helpers/deliveryDays';
 import { submitWithDeliveryForm } from 'helpers/subscriptionsForms/submit';
 import {
@@ -56,11 +62,17 @@ import {
 } from 'components/subscriptionCheckouts/address/addressFieldsStore';
 import { SetCountryAction } from 'helpers/page/commonActions';
 import { Stripe, DirectDebit, PayPal } from 'helpers/forms/paymentMethods';
-import { validateWithDeliveryForm } from 'helpers/subscriptionsForms/formValidation';
+import {
+	validateWithDeliveryForm,
+	withDeliveryFormIsValid,
+} from 'helpers/subscriptionsForms/formValidation';
 import { StripeProviderForCountry } from 'components/subscriptionCheckouts/stripeForm/stripeProviderForCountry';
 import { Csrf } from 'helpers/csrf/csrfReducer';
-import { IsoCurrency } from 'helpers/internationalisation/currency';
-import { withDeliveryFormIsValid } from 'helpers/subscriptionsForms/formValidation';
+import {
+	IsoCurrency,
+	currencyFromCountryCode,
+} from 'helpers/internationalisation/currency';
+
 import { setupSubscriptionPayPalPayment } from 'helpers/forms/paymentIntegrations/payPalRecurringCheckout';
 import DirectDebitForm from 'components/directDebit/directDebitProgressiveDisclosure/directDebitForm';
 import Total from 'components/subscriptionCheckouts/total/total';
@@ -70,7 +82,7 @@ import { supportedPaymentMethods } from 'helpers/subscriptionsForms/countryPayme
 import { titles } from 'helpers/user/details';
 import { Select, Option as OptionForSelect } from '@guardian/src-select';
 import { options } from 'components/forms/customFields/options';
-import { currencyFromCountryCode } from 'helpers/internationalisation/currency';
+
 // ----- Styles ----- //
 const marginBottom = css`
 	margin-bottom: ${space[6]}px;
@@ -212,7 +224,7 @@ function WeeklyCheckoutForm(props: PropTypes) {
 							css={marginBottom}
 							id="title"
 							label="Title"
-							optional
+							optional={true}
 							value={props.title}
 							onChange={(e) => props.setTitle(e.target.value)}
 						>
@@ -238,7 +250,7 @@ function WeeklyCheckoutForm(props: PropTypes) {
 						<Rows>
 							<RadioGroup
 								label="Is the billing address the same as the delivery address?"
-								hideLabel
+								hideLabel={true}
 								id="billingAddressIsSame"
 								name="billingAddressIsSame"
 								orienntation="vertical"

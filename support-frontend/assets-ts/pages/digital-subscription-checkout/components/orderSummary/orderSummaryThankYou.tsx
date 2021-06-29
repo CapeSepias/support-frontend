@@ -5,8 +5,9 @@ import { headline, textSans } from '@guardian/src-foundations/typography/obj';
 import { space } from '@guardian/src-foundations';
 import { background, text, neutral } from '@guardian/src-foundations/palette';
 import { from, between, until } from '@guardian/src-foundations/mq';
-type GridImageType = typeof import('components/gridImage/gridImage').default;
 import { GridImg } from 'components/gridImage/gridImage';
+
+type GridImageType = typeof import('components/gridImage/gridImage').default;
 export const wrapper = css`
 	display: none;
 

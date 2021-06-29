@@ -1,5 +1,5 @@
-import { ProductOptions } from 'helpers/productPrice/productOptions';
 import {
+	ProductOptions,
 	Everyday,
 	EverydayPlus,
 	Saturday,
@@ -11,11 +11,13 @@ import {
 	Weekend,
 	WeekendPlus,
 } from 'helpers/productPrice/productOptions';
-import { Day } from 'helpers/subscriptionsForms/deliveryDays';
+
 import {
+	Day,
 	getDeliveryDays,
 	numberOfWeeksWeDeliverTo,
 } from 'helpers/subscriptionsForms/deliveryDays';
+
 // The cut off for getting vouchers in two weeks is Wednesday (day #3 in ISO format) at 6 AM GMT
 const voucherExtraDelayCutoffWeekday = 3;
 const voucherExtraDelayCutoffHour = 6;

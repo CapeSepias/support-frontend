@@ -10,13 +10,14 @@ import {
 	glyph as shortGlyph,
 	extendedGlyph,
 } from 'helpers/internationalisation/currency';
-import { IntroductoryPriceBenefit } from 'helpers/productPrice/promotions';
 import {
+	IntroductoryPriceBenefit,
 	getAppliedPromo,
 	hasDiscount,
 	hasIntroductoryPrice,
 	Promotion,
 } from 'helpers/productPrice/promotions';
+
 import { Option } from 'helpers/types/option';
 
 const displayPrice = (glyph: string, price: number) =>

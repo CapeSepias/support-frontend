@@ -1,5 +1,5 @@
-import React from 'react';
-import { Element } from 'react';
+import React, { Element } from 'react';
+
 // helpers
 import { getDigitalCheckout } from 'helpers/urls/externalLinks';
 import {
@@ -7,8 +7,11 @@ import {
 	sendTrackingEventsOnClick,
 	sendTrackingEventsOnView,
 } from 'helpers/productPrice/subscriptions';
-import { currencies } from 'helpers/internationalisation/currency';
-import { countryGroups } from 'helpers/internationalisation/countryGroup';
+import { currencies, IsoCurrency } from 'helpers/internationalisation/currency';
+import {
+	countryGroups,
+	CountryGroupId,
+} from 'helpers/internationalisation/countryGroup';
 import { gaEvent } from 'helpers/tracking/googleTagManager';
 // types
 import { Product } from 'components/product/productOption';
@@ -25,19 +28,18 @@ import {
 	ProductPrices,
 	BillingPeriods,
 	ProductPrice,
-} from 'helpers/productPrice/productPrices';
-import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
-import { IsoCurrency } from 'helpers/internationalisation/currency';
-import { getAppliedPromo } from 'helpers/productPrice/promotions';
-import {
 	getFirstValidPrice,
 	isNumeric,
 } from 'helpers/productPrice/productPrices';
+
+import { getAppliedPromo } from 'helpers/productPrice/promotions';
+
 import {
 	getPriceDescription,
 	getAdverbialSubscriptionDescription,
 } from 'helpers/productPrice/priceDescriptions';
 import { PropTypes } from '../paymentSelection';
+
 export type PaymentOption = {
 	title: string;
 	href: string;
@@ -204,7 +206,8 @@ const getHeroCtaProps = (
 		.sort((optA, optB) => {
 			if (optA === 'Annual') {
 				return 1;
-			} else if (optB === 'Annual') {
+			}
+			if (optB === 'Annual') {
 				return -1;
 			}
 

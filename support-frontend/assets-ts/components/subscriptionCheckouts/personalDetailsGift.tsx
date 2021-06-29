@@ -2,9 +2,10 @@ import React from 'react';
 import { TextInput } from '@guardian/src-text-input';
 import { css } from '@emotion/core';
 import { space } from '@guardian/src-foundations';
-import { FormError } from 'helpers/subscriptionsForms/validation';
-import { firstError } from 'helpers/subscriptionsForms/validation';
+import { FormError, firstError } from 'helpers/subscriptionsForms/validation';
+
 import { FormField } from 'helpers/subscriptionsForms/formFields';
+
 const marginBotom = css`
 	margin-bottom: ${space[6]}px;
 `;
@@ -44,7 +45,7 @@ function PersonalDetailsGift(props: PropTypes) {
 				id="emailGiftRecipient"
 				label="Email"
 				type="email"
-				optional
+				optional={true}
 				onChange={(e) => props.setEmailGift(e.target.value)}
 				value={props.emailGiftRecipient}
 				error={firstError('emailGiftRecipient', props.formErrors)}

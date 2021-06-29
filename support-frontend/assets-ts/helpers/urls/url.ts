@@ -70,7 +70,8 @@ function getBaseDomain(): Domain {
 
 	if (origin.includes(DOMAINS.DEV)) {
 		return DOMAINS.DEV;
-	} else if (origin.includes(DOMAINS.CODE)) {
+	}
+	if (origin.includes(DOMAINS.CODE)) {
 		return DOMAINS.CODE;
 	}
 

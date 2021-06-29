@@ -24,6 +24,9 @@ import CentredContainer from 'components/containers/centredContainer';
 import Block from 'components/page/block';
 import { getPromotionCopy } from 'helpers/productPrice/promotions';
 import headerWithCountrySwitcherContainer from 'components/headers/header/headerWithCountrySwitcher';
+import GiftNonGiftCta from 'components/product/giftNonGiftCta';
+import DigitalFooter from 'components/footerCompliant/DigitalFooter';
+import FeedbackWidget from 'pages/digital-subscription-landing/components/feedbackWidget/feedbackWidget';
 import { HeroWithPriceCards } from './components/hero/heroWithPriceCards';
 import { HeroWithImage } from './components/hero/heroWithImage';
 import ProductBlock from './components/productBlock/productBlock';
@@ -32,15 +35,13 @@ import digitalSubscriptionLandingReducer, {
 	State,
 } from './digitalSubscriptionLandingReducer';
 import Prices from './components/prices';
-import GiftNonGiftCta from 'components/product/giftNonGiftCta';
-import DigitalFooter from 'components/footerCompliant/DigitalFooter';
-import FeedbackWidget from 'pages/digital-subscription-landing/components/feedbackWidget/feedbackWidget';
 import EditorialVoice, {
 	evContainerOverrides,
 } from './components/editorialVoice/editorialVoice';
 import { getHeroCtaProps } from './components/paymentSelection/helpers/paymentSelection';
 // ----- Styles ----- //
 import 'stylesheets/skeleton/skeleton.scss';
+
 const productBlockContainer = css`
 	${until.tablet} {
 		margin-top: 0;
@@ -110,7 +111,7 @@ function LandingPage() {
 					country={countryGroupId}
 					orderIsAGift={orderIsAGift}
 					productPrices={productPrices}
-					centred
+					centred={true}
 				/>
 			</div>
 		</div>
@@ -149,7 +150,7 @@ function LandingPage() {
 					</CentredContainer>
 				</FullWidthContainer>
 			)}
-			<FullWidthContainer theme="dark" hasOverlap>
+			<FullWidthContainer theme="dark" hasOverlap={true}>
 				<CentredContainer>
 					<Prices orderIsAGift={orderIsAGift} />
 				</CentredContainer>

@@ -7,6 +7,7 @@ import { defaultUserActionFunctions } from 'helpers/user/defaultUserActionFuncti
 import { UserSetStateActions } from 'helpers/user/userActions';
 import { getSignoutUrl } from 'helpers/urls/externalLinks';
 import { Option } from 'helpers/types/option';
+
 export type User = {
 	firstName: Option<string>;
 	lastName: Option<string>;

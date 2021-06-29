@@ -1,5 +1,6 @@
 import { formatMachineDate } from 'helpers/utilities/dateConversions';
 import { ActivePaperProducts } from 'helpers/productPrice/productOptions';
+
 const additionalDays = [
 	{
 		Everyday: 8,

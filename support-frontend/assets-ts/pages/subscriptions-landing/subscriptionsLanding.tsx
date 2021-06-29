@@ -18,8 +18,8 @@ import headerWithCountrySwitcherContainer from 'components/headers/header/header
 import { init as pageInit } from 'helpers/page/page';
 import { renderPage } from 'helpers/rendering/render';
 import './subscriptionsLanding.scss';
-import SubscriptionLandingContent from './components/subscriptionsLandingContent';
 import subscriptionsLandingReducer from 'pages/subscriptions-landing/subscriptionsLandingReducer';
+import SubscriptionLandingContent from './components/subscriptionsLandingContent';
 // ----- Redux Store ----- //
 const countryGroupId: CountryGroupId = detect();
 const store = pageInit(() => subscriptionsLandingReducer(), true);
@@ -44,7 +44,7 @@ const content = (
 			footer={
 				<FooterContainer
 					faqsLink="https://www.theguardian.com/subscriber-direct/subscription-frequently-asked-questions"
-					centred
+					centred={true}
 				/>
 			}
 		>

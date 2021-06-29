@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { css } from '@emotion/core';
+
 const expandableContainer = css`
   overflow: hidden;
   transition: max-height 0.1s ease-in-out;

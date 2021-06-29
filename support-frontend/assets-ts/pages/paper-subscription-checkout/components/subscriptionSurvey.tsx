@@ -8,6 +8,7 @@ import { space } from '@guardian/src-foundations';
 import { ThemeProvider } from 'emotion-theming';
 import { LinkButton, buttonReaderRevenue } from '@guardian/src-button';
 import Content from 'components/content/contentSimple';
+
 const subHeading = css`
 	margin-bottom: ${space[1]}px;
 	${headline.xxsmall({
@@ -55,7 +56,7 @@ const SubscriptionsSurvey = () => {
 						priority="tertiary"
 						icon={<SvgArrowRightStraight />}
 						iconSide="right"
-						nudgeIcon
+						nudgeIcon={true}
 						aria-label="Link to subscription survey"
 						target="_blank"
 						rel="noopener noreferrer"

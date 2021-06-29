@@ -10,6 +10,7 @@ import WesternAustraliaSvg from './territories/westernAustraliaSvg';
 import TasmaniaSvg from './territories/tasmaniaSvg';
 import NorthernTerritorySvg from './territories/northernTerritorySvg';
 import { useWindowWidth } from '../hooks/useWindowWidth';
+
 type TerritorySvgContainerProps = {
 	onClick: () => void;
 	isSelected: boolean;

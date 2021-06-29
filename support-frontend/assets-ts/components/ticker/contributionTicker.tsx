@@ -134,6 +134,7 @@ export default class ContributionTicker extends Component<
 			window.requestAnimationFrame(this.increaseTextCounter(dataFromServer));
 		}
 	};
+
 	renderContributedSoFar = () => {
 		if (!this.state.goalReached) {
 			return (

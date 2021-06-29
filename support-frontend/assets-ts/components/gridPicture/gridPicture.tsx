@@ -3,8 +3,13 @@
 // If you want to work with a single image at different crops, maybe consider gridImage instead
 // ----- Imports ----- //
 import React from 'react';
-import { gridSrcset, gridUrl } from 'helpers/images/theGrid';
-import { ImageId, ImageType } from 'helpers/images/theGrid';
+import {
+	gridSrcset,
+	gridUrl,
+	ImageId,
+	ImageType,
+} from 'helpers/images/theGrid';
+
 // ----- Types ----- //
 export type GridImage = {
 	gridId: ImageId;

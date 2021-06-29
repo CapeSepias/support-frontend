@@ -1,11 +1,11 @@
 import React from 'react';
 // components
+import { connect } from 'react-redux';
 import SubscriptionsProduct from './subscriptionsProduct';
 import FeatureHeader from './featureHeader';
 import { State } from '../subscriptionsLandingReducer';
-import { getSubscriptionCopy } from '../copy/subscriptionCopy';
-import { ProductCopy } from '../copy/subscriptionCopy';
-import { connect } from 'react-redux';
+import { getSubscriptionCopy, ProductCopy } from '../copy/subscriptionCopy';
+
 type PropTypes = {
 	subscriptionCopy: ProductCopy[];
 };

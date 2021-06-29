@@ -5,8 +5,8 @@ import {
 	ErrorReason,
 } from 'helpers/forms/errorReasons';
 import { classNameWithModifiers } from 'helpers/utilities/utilities';
-import SvgExclamationAlternate from '../svgs/exclamationAlternate';
 import { Option } from 'helpers/types/option';
+import SvgExclamationAlternate from '../svgs/exclamationAlternate';
 import './generalErrorMessage.scss';
 // ---- Types ----- //
 type PropTypes = {

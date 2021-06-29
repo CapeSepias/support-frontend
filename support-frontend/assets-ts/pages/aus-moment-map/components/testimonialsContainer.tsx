@@ -1,11 +1,11 @@
 // @ts-ignore
 import * as React from 'preact/compat';
-import { LinkButton } from '@guardian/src-button';
+import { LinkButton, Button } from '@guardian/src-button';
 import {
 	TestimonialsCollection,
 	Testimonial,
 } from 'pages/aus-moment-map/types/testimonials';
-import { Button } from '@guardian/src-button';
+
 import { useWindowWidth } from '../hooks/useWindowWidth';
 import { contributeUrl } from '../utils';
 

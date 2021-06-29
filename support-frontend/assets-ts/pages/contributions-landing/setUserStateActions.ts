@@ -1,8 +1,8 @@
 import { defaultUserActionFunctions } from 'helpers/user/defaultUserActionFunctions';
-import { setFormSubmissionDependentValue } from './checkoutFormIsSubmittableActions';
 import { UserSetStateActions } from 'helpers/user/userActions';
 import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
 import { stateProvinceFieldFromString } from 'helpers/internationalisation/country';
+import { setFormSubmissionDependentValue } from './checkoutFormIsSubmittableActions';
 
 // ----- Actions Creators ----- //
 const setIsSignedIn =

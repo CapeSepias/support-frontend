@@ -7,7 +7,6 @@ import Page from 'components/page/page';
 import Footer from 'components/footerCompliant/Footer';
 import 'stylesheets/skeleton/skeleton.scss';
 import CheckoutStage from 'components/subscriptionCheckouts/stage';
-import ThankYouContent from './components/thankYou';
 import CheckoutForm from 'pages/paper-subscription-checkout/components/paperCheckoutForm';
 import './_legacyImports.scss';
 import {
@@ -21,6 +20,7 @@ import { Monthly } from 'helpers/productPrice/billingPeriods';
 import { Paper } from 'helpers/productPrice/subscriptions';
 import HeaderWrapper from 'components/subscriptionCheckouts/headerWrapper';
 import { FocusStyleManager } from '@guardian/src-utilities';
+import ThankYouContent from './components/thankYou';
 // ----- Redux Store ----- //
 const fulfilmentOption = getFulfilmentOption();
 const productOption = getProductOption();
@@ -69,7 +69,7 @@ const content = (
 			<CheckoutStage
 				checkoutForm={<CheckoutForm />}
 				thankYouContentPending={
-					<ThankYouContent isPending countryGroupId={countryGroupId} />
+					<ThankYouContent isPending={true} countryGroupId={countryGroupId} />
 				}
 				thankYouContent={
 					<ThankYouContent isPending={false} countryGroupId={countryGroupId} />

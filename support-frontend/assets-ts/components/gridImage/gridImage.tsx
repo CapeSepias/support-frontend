@@ -3,9 +3,14 @@
 // If you want to work with multiple (different) images, maybe try gridPicture instead
 // ----- Imports ----- //
 import React, { Node } from 'react';
-import { gridUrl, gridSrcset } from 'helpers/images/theGrid';
+import {
+	gridUrl,
+	gridSrcset,
+	ImageType,
+	ImageId,
+} from 'helpers/images/theGrid';
 import { ascending, classNameWithModifiers } from 'helpers/utilities/utilities';
-import { ImageType, ImageId } from 'helpers/images/theGrid';
+
 // ----- Constants ----- //
 const MIN_IMG_WIDTH = 300;
 // ----- Types ----- //

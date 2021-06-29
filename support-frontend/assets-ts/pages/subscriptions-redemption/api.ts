@@ -24,6 +24,7 @@ import { appropriateErrorMessage } from 'helpers/forms/errorReasons';
 import { getGlobal } from 'helpers/globalsAndSwitches/globals';
 import { ReaderType } from 'helpers/productPrice/readerType';
 import { DigitalPack } from 'helpers/productPrice/subscriptions';
+
 type ValidationResult = {
 	valid: boolean;
 	readerType: Option<ReaderType>;

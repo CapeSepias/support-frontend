@@ -13,17 +13,18 @@ import { Button } from '@guardian/src-button';
 import { Link } from '@guardian/src-link';
 import { SvgArrowRightStraight } from '@guardian/src-icons';
 import { RadioGroup, Radio } from '@guardian/src-radio';
+import {
+	trackComponentClick,
+	trackComponentLoad,
+} from 'helpers/tracking/behaviour';
+import { privacyLink } from 'helpers/legal';
 import ActionContainer from './components/ActionContainer';
 import ActionHeader from './components/ActionHeader';
 import ActionBody from './components/ActionBody';
 import SvgClock from './components/SvgClock';
 import styles from './styles';
 import { OPHAN_COMPONENT_ID_SET_REMINDER } from './utils/ophan';
-import {
-	trackComponentClick,
-	trackComponentLoad,
-} from 'helpers/tracking/behaviour';
-import { privacyLink } from 'helpers/legal';
+
 const form = css`
 	margin-top: ${space[5]}px;
 
@@ -226,7 +227,7 @@ const ContributionThankYouSupportReminder = ({
 							size="default"
 							icon={<SvgArrowRightStraight />}
 							iconSide="right"
-							nudgeIcon
+							nudgeIcon={true}
 						>
 							Set my reminder
 						</Button>

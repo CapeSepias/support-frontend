@@ -6,6 +6,7 @@ import {
 	GuardianWeekly,
 } from 'helpers/productPrice/subscriptions';
 import Text from 'components/text/text';
+
 type PropTypes = {
 	subscriptionProduct: SubscriptionProduct;
 };
@@ -13,7 +14,8 @@ type PropTypes = {
 const getProductText = (subscriptionProduct) => {
 	if (subscriptionProduct === DigitalPack) {
 		return 'digital ';
-	} else if (subscriptionProduct === GuardianWeekly) {
+	}
+	if (subscriptionProduct === GuardianWeekly) {
 		return 'Guardian Weekly ';
 	}
 

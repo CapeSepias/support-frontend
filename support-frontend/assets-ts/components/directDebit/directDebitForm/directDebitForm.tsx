@@ -9,8 +9,6 @@ import {
 	Action,
 	Phase,
 	SortCodeIndex,
-} from 'components/directDebit/directDebitActions';
-import {
 	closeDirectDebitGuarantee,
 	confirmDirectDebitClicked,
 	openDirectDebitGuarantee,
@@ -21,6 +19,7 @@ import {
 	updateAccountNumber,
 	updateSortCode,
 } from 'components/directDebit/directDebitActions';
+
 import SvgDirectDebitSymbol from 'components/svgs/directDebitSymbol';
 import SvgDirectDebitSymbolAndText from 'components/svgs/directDebitSymbolAndText';
 import SvgArrowRightStraight from 'components/svgs/arrowRightStraight';

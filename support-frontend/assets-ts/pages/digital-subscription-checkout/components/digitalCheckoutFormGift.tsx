@@ -14,11 +14,12 @@ import CheckoutLayout, {
 	Content,
 } from 'components/subscriptionCheckouts/layout';
 import { ErrorReason } from 'helpers/forms/errorReasons';
-import { ProductPrices } from 'helpers/productPrice/productPrices';
 import {
+	ProductPrices,
 	finalPrice,
 	getProductPrice,
 } from 'helpers/productPrice/productPrices';
+
 import { IsoCurrency } from 'helpers/internationalisation/currency';
 import OrderSummary from 'pages/digital-subscription-checkout/components/orderSummary/orderSummary';
 import {
@@ -40,9 +41,12 @@ import {
 import { PersonalDetailsDigitalGift } from 'components/subscriptionCheckouts/personalDetailsGift';
 import PersonalDetails from 'components/subscriptionCheckouts/personalDetails';
 import DirectDebitPaymentTerms from 'components/subscriptionCheckouts/directDebit/directDebitPaymentTerms';
-import { IsoCountry } from 'helpers/internationalisation/country';
+import { IsoCountry, countries } from 'helpers/internationalisation/country';
 import { DigitalPack } from 'helpers/productPrice/subscriptions';
-import { CheckoutState } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
+import {
+	CheckoutState,
+	getBillingAddress,
+} from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
 import {
 	checkoutFormIsValid,
 	validateCheckoutForm,
@@ -60,12 +64,13 @@ import EndSummaryMobile from 'pages/digital-subscription-checkout/components/end
 import { Participations } from 'helpers/abTests/abtest';
 import { withError } from 'hocs/withError';
 import DatePickerFields from 'components/datePicker/datePicker';
-import { getBillingAddress } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
+
 import { withStore } from 'components/subscriptionCheckouts/address/addressFields';
-import { countries } from 'helpers/internationalisation/country';
+
 import { PayPalSubmitButton } from 'components/subscriptionCheckouts/payPalSubmitButton';
 import { supportedPaymentMethods } from 'helpers/subscriptionsForms/countryPaymentMethods';
 import { NoProductOptions } from 'helpers/productPrice/productOptions';
+
 const controlTextAreaResizing = css`
 	resize: vertical;
 `;
@@ -180,7 +185,7 @@ function DigitalCheckoutFormGift(props: PropTypes) {
 						productPrice={productPrice}
 						billingPeriod={props.billingPeriod}
 						changeSubscription={routes.digitalSubscriptionLandingGift}
-						orderIsAGift
+						orderIsAGift={true}
 					/>
 				}
 			>
@@ -218,7 +223,7 @@ function DigitalCheckoutFormGift(props: PropTypes) {
 							maxlength={300}
 							value={props.giftMessage}
 							onChange={(e) => props.setGiftMessage(e.target.value)}
-							optional
+							optional={true}
 						/>
 					</FormSection>
 					<FormSection title="Your details" border="top">
@@ -296,7 +301,7 @@ function DigitalCheckoutFormGift(props: PropTypes) {
 						errorReason={props.submissionError}
 						errorHeading={submissionErrorHeading}
 					/>
-					<EndSummaryMobile orderIsAGift />
+					<EndSummaryMobile orderIsAGift={true} />
 					<DirectDebitPaymentTerms paymentMethod={props.paymentMethod} />
 				</Form>
 			</CheckoutLayout>

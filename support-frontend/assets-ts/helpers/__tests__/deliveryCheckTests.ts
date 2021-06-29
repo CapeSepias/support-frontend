@@ -2,6 +2,7 @@ import {
 	postcodeIsWithinDeliveryArea,
 	postcodeHasPrefix,
 } from '../forms/deliveryCheck';
+
 describe('Delivery Check', () => {
 	const homeDeliveryPostcodes = ['SE2', 'SE20', 'SE8', 'SW17', 'SE19'];
 	describe('postcodeIsWithinDeliveryArea', () => {

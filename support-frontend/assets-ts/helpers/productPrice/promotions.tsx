@@ -10,9 +10,12 @@ import { ProductOptions } from 'helpers/productPrice/productOptions';
 import {
 	ProductPrice,
 	ProductPrices,
+	getProductPrice,
+	isNumeric,
 } from 'helpers/productPrice/productPrices';
-import { getProductPrice, isNumeric } from 'helpers/productPrice/productPrices';
+
 import { SubscriptionProduct } from 'helpers/productPrice/subscriptions';
+
 export type DiscountBenefit = {
 	amount: number;
 	durationMonths?: number;
@@ -68,7 +71,8 @@ function applyDiscount(
 ) {
 	if (hasDiscount(promotion)) {
 		return { ...price, price: promotion.discountedPrice };
-	} else if (hasIntroductoryPrice(promotion)) {
+	}
+	if (hasIntroductoryPrice(promotion)) {
 		return {
 			...price,
 			// $FlowIgnore - we have checked this above

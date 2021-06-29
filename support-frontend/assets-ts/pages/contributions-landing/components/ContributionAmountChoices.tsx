@@ -1,7 +1,7 @@
 // ----- Imports ----- //
 import React from 'react';
-import { SelectedAmounts } from 'helpers/contributions';
-import { ContributionType } from 'helpers/contributions';
+import { SelectedAmounts, ContributionType } from 'helpers/contributions';
+
 import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
 import {
 	IsoCurrency,
@@ -10,9 +10,10 @@ import {
 } from 'helpers/internationalisation/currency';
 import { formatAmount } from 'helpers/forms/checkouts';
 import { ChoiceCardGroup, ChoiceCard } from '@guardian/src-choice-card';
-import ContributionAmountChoicesChoiceLabel from './ContributionAmountChoicesChoiceLabel';
 import { from, until } from '@guardian/src-foundations/mq';
 import { css } from '@emotion/core';
+import ContributionAmountChoicesChoiceLabel from './ContributionAmountChoicesChoiceLabel';
+
 const choiceCardGroupOverrides = css`
 	> div {
 		${until.leftCol} {

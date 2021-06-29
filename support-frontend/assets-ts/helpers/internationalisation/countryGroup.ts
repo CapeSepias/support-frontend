@@ -327,17 +327,23 @@ function fromPath(
 ): CountryGroupId | null | undefined {
 	if (path === '/uk' || path.startsWith('/uk/')) {
 		return GBPCountries;
-	} else if (path === '/us' || path.startsWith('/us/')) {
+	}
+	if (path === '/us' || path.startsWith('/us/')) {
 		return UnitedStates;
-	} else if (path === '/au' || path.startsWith('/au/')) {
+	}
+	if (path === '/au' || path.startsWith('/au/')) {
 		return AUDCountries;
-	} else if (path === '/eu' || path.startsWith('/eu/')) {
+	}
+	if (path === '/eu' || path.startsWith('/eu/')) {
 		return EURCountries;
-	} else if (path === '/int' || path.startsWith('/int/')) {
+	}
+	if (path === '/int' || path.startsWith('/int/')) {
 		return International;
-	} else if (path === '/nz' || path.startsWith('/nz/')) {
+	}
+	if (path === '/nz' || path.startsWith('/nz/')) {
 		return NZDCountries;
-	} else if (path === '/ca' || path.startsWith('/ca/')) {
+	}
+	if (path === '/ca' || path.startsWith('/ca/')) {
 		return Canada;
 	}
 

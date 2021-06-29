@@ -26,24 +26,27 @@ import {
 	FormField as PersonalDetailsFormField,
 	FormField,
 	FormFields,
+	getFormFields,
 } from 'helpers/subscriptionsForms/formFields';
-import { getFormFields } from 'helpers/subscriptionsForms/formFields';
+
 import { PersonalDetailsGift } from 'components/subscriptionCheckouts/personalDetailsGift';
-import { IsoCountry } from 'helpers/internationalisation/country';
-import { countries } from 'helpers/internationalisation/country';
+import { IsoCountry, countries } from 'helpers/internationalisation/country';
+
 import { weeklyDeliverableCountries } from 'helpers/internationalisation/weeklyDeliverableCountries';
 import { PaymentMethodSelector } from 'components/subscriptionCheckouts/paymentMethodSelector';
 import { signOut } from 'helpers/user/user';
 import {
 	Action,
 	FormActionCreators,
+	formActionCreators,
 } from 'helpers/subscriptionsForms/formActions';
-import { formActionCreators } from 'helpers/subscriptionsForms/formActions';
-import { WithDeliveryCheckoutState } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
+
 import {
+	WithDeliveryCheckoutState,
 	getBillingAddress,
 	getDeliveryAddress,
 } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
+
 import { getWeeklyDays } from 'pages/weekly-subscription-checkout/helpers/deliveryDays';
 import { submitWithDeliveryForm } from 'helpers/subscriptionsForms/submit';
 import {
@@ -58,13 +61,19 @@ import {
 } from 'components/subscriptionCheckouts/address/addressFieldsStore';
 import { SetCountryAction } from 'helpers/page/commonActions';
 import { Stripe, DirectDebit, PayPal } from 'helpers/forms/paymentMethods';
-import { validateWithDeliveryForm } from 'helpers/subscriptionsForms/formValidation';
+import {
+	validateWithDeliveryForm,
+	withDeliveryFormIsValid,
+} from 'helpers/subscriptionsForms/formValidation';
 import { StripeProviderForCountry } from 'components/subscriptionCheckouts/stripeForm/stripeProviderForCountry';
 import Heading from 'components/heading/heading';
 import './weeklyCheckout.scss';
 import { Csrf } from 'helpers/csrf/csrfReducer';
-import { IsoCurrency } from 'helpers/internationalisation/currency';
-import { withDeliveryFormIsValid } from 'helpers/subscriptionsForms/formValidation';
+import {
+	IsoCurrency,
+	currencyFromCountryCode,
+} from 'helpers/internationalisation/currency';
+
 import { setupSubscriptionPayPalPayment } from 'helpers/forms/paymentIntegrations/payPalRecurringCheckout';
 import DirectDebitForm from 'components/directDebit/directDebitProgressiveDisclosure/directDebitForm';
 import PaymentTerms from 'components/subscriptionCheckouts/paymentTerms';
@@ -75,7 +84,7 @@ import { supportedPaymentMethods } from 'helpers/subscriptionsForms/countryPayme
 import { titles } from 'helpers/user/details';
 import { Select, Option as OptionForSelect } from '@guardian/src-select';
 import { options } from 'components/forms/customFields/options';
-import { currencyFromCountryCode } from 'helpers/internationalisation/currency';
+
 // ----- Styles ----- //
 const marginBottom = css`
 	margin-bottom: ${space[6]}px;
@@ -205,7 +214,7 @@ function WeeklyCheckoutFormGifting(props: PropTypes) {
 						billingPeriod={props.billingPeriod}
 						changeSubscription={routes.guardianWeeklySubscriptionLandingGift}
 						product={props.product}
-						orderIsAGift
+						orderIsAGift={true}
 					/>
 				}
 			>
@@ -228,7 +237,7 @@ function WeeklyCheckoutFormGifting(props: PropTypes) {
 							css={marginBottom}
 							id="title"
 							label="Title"
-							optional
+							optional={true}
 							value={props.titleGiftRecipient}
 							onChange={(e) => props.setTitleGift(e.target.value)}
 						>
@@ -308,7 +317,7 @@ function WeeklyCheckoutFormGifting(props: PropTypes) {
 							css={marginBottom}
 							id="title"
 							label="Title"
-							optional
+							optional={true}
 							value={props.title}
 							onChange={(e) => props.setTitle(e.target.value)}
 						>
@@ -331,7 +340,7 @@ function WeeklyCheckoutFormGifting(props: PropTypes) {
 						<Rows>
 							<RadioGroup
 								label="Is the billing address the same as the recipient's address?"
-								hideLabel
+								hideLabel={true}
 								id="billingAddressIsSame"
 								name="billingAddressIsSame"
 								orienntation="vertical"
@@ -438,7 +447,10 @@ function WeeklyCheckoutFormGifting(props: PropTypes) {
 						currency={props.currencyId}
 						promotions={price.promotions}
 					/>
-					<PaymentTerms orderIsAGift paymentMethod={props.paymentMethod} />
+					<PaymentTerms
+						orderIsAGift={true}
+						paymentMethod={props.paymentMethod}
+					/>
 				</Form>
 			</Layout>
 		</Content>

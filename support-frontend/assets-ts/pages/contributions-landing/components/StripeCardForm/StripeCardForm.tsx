@@ -27,6 +27,7 @@ import {
 	setStripeCardFormComplete,
 	setStripeRecurringRecaptchaVerified,
 	setStripeSetupIntentClientSecret,
+	updateRecaptchaToken,
 } from 'pages/contributions-landing/contributionsLandingActions';
 import { ContributionType } from 'helpers/contributions';
 import { ErrorReason } from 'helpers/forms/errorReasons';
@@ -37,7 +38,7 @@ import CreditCardsROW from './creditCardsROW.svg';
 import CreditCardsUS from './creditCardsUS.svg';
 import { Csrf as CsrfState } from 'helpers/csrf/csrfReducer';
 import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
-import { updateRecaptchaToken } from '../../contributionsLandingActions';
+
 import { routes } from 'helpers/urls/routes';
 import { Recaptcha } from 'components/recaptcha/recaptcha';
 import { InlineError } from '@guardian/src-user-feedback';

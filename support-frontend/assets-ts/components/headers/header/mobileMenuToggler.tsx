@@ -2,9 +2,10 @@
 import React, { Component, Node } from 'react';
 import Dialog from 'components/dialog/dialog';
 import SvgMenu from 'components/svgs/menu';
+import { sendTrackingEventsOnClick } from 'helpers/productPrice/subscriptions';
 import MobileMenu, { Position } from '../mobileMenu/mobileMenu';
 import VeggieBurgerButton from '../veggieBurgerButton/veggieBurgerButton';
-import { sendTrackingEventsOnClick } from 'helpers/productPrice/subscriptions';
+
 export default class MobileMenuToggler extends Component<
 	{
 		utility: Node;
@@ -19,6 +20,7 @@ export default class MobileMenuToggler extends Component<
 		buttonPosition: null,
 		menuOpen: false,
 	};
+
 	buttonRef: Element | null | undefined;
 
 	render() {

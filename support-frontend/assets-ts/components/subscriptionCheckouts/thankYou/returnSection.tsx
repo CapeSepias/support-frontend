@@ -11,6 +11,7 @@ import {
 	SubscriptionProduct,
 } from 'helpers/productPrice/subscriptions';
 import Content, { Divider, NarrowContent } from 'components/content/content';
+
 const buttonStyles = css`
 	${from.desktop} {
 		margin-left: ${space[2]}px;
@@ -35,7 +36,7 @@ function ReturnSection(props: PropTypes) {
 							href="https://theguardian.com"
 							icon={<SvgArrowRightStraight />}
 							iconSide="right"
-							nudgeIcon
+							nudgeIcon={true}
 							onClick={sendTrackingEventsOnClick({
 								id: 'checkout_return_home',
 								product: props.subscriptionProduct,

@@ -15,10 +15,14 @@ import {
 	ContributionType,
 	OtherAmounts,
 	SelectedAmounts,
+	getAmount,
 } from 'helpers/contributions';
-import { getAmount } from 'helpers/contributions';
-import { IsoCountry } from 'helpers/internationalisation/country';
-import { isInStripePaymentRequestAllowedCountries } from 'helpers/internationalisation/country';
+
+import {
+	IsoCountry,
+	isInStripePaymentRequestAllowedCountries,
+} from 'helpers/internationalisation/country';
+
 import StripePaymentRequestButton from './StripePaymentRequestButton';
 // ----- Types -----//
 

@@ -2,6 +2,12 @@
 import React, { useEffect } from 'react';
 import { LinkButton } from '@guardian/src-button';
 import { SvgFacebook, SvgTwitter, SvgEnvelope } from '@guardian/src-icons';
+import {
+	trackComponentClick,
+	trackComponentLoad,
+} from 'helpers/tracking/behaviour';
+import { css } from '@emotion/core';
+import { space } from '@guardian/src-foundations';
 import ActionContainer from './components/ActionContainer';
 import ActionHeader from './components/ActionHeader';
 import ActionBody from './components/ActionBody';
@@ -20,13 +26,8 @@ import {
 	OPHAN_COMPONENT_ID_SOCIAL_LINKED_IN,
 	OPHAN_COMPONENT_ID_SOCIAL_EMAIL,
 } from './utils/ophan';
-import {
-	trackComponentClick,
-	trackComponentLoad,
-} from 'helpers/tracking/behaviour';
 import { generateReferralCode } from '../../../../helpers/campaigns/campaignReferralCodes';
-import { css } from '@emotion/core';
-import { space } from '@guardian/src-foundations';
+
 const buttonsContainer = css`
 	margin-top: ${space[6]}px;
 
@@ -71,7 +72,7 @@ const ContributionThankYouSocialShare = ({
 					priority="tertiary"
 					size="default"
 					icon={<SvgFacebook />}
-					hideLabel
+					hideLabel={true}
 				/>
 				<LinkButton
 					href={getTwitterShareLink(referralCode)}
@@ -81,7 +82,7 @@ const ContributionThankYouSocialShare = ({
 					priority="tertiary"
 					size="default"
 					icon={<SvgTwitter />}
-					hideLabel
+					hideLabel={true}
 				/>
 				<LinkButton
 					href={getLinkedInShareLink(referralCode)}
@@ -93,7 +94,7 @@ const ContributionThankYouSocialShare = ({
 					priority="tertiary"
 					size="default"
 					icon={<SvgLinkedIn />}
-					hideLabel
+					hideLabel={true}
 				/>
 				<LinkButton
 					href={getEmailShareLink(referralCode)}
@@ -103,7 +104,7 @@ const ContributionThankYouSocialShare = ({
 					priority="tertiary"
 					size="default"
 					icon={<SvgEnvelope />}
-					hideLabel
+					hideLabel={true}
 				/>
 			</div>
 		</ActionBody>

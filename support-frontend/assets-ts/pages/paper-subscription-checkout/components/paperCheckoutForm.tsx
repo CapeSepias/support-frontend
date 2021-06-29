@@ -28,6 +28,7 @@ import {
 import {
 	HomeDelivery,
 	Collection,
+	FulfilmentOptions,
 } from 'helpers/productPrice/fulfilmentOptions';
 import {
 	formatMachineDate,
@@ -38,32 +39,40 @@ import {
 	FormFields,
 	getFormFields,
 } from 'helpers/subscriptionsForms/formFields';
-import { Action } from 'helpers/subscriptionsForms/formActions';
 import {
+	Action,
 	FormActionCreators,
 	formActionCreators,
 } from 'helpers/subscriptionsForms/formActions';
+
 import { withStore } from 'components/subscriptionCheckouts/address/addressFields';
 import GridImage from 'components/gridImage/gridImage';
 import PersonalDetails from 'components/subscriptionCheckouts/personalDetails';
 import { PaymentMethodSelector } from 'components/subscriptionCheckouts/paymentMethodSelector';
-import { newspaperCountries } from 'helpers/internationalisation/country';
+import {
+	newspaperCountries,
+	IsoCountry,
+} from 'helpers/internationalisation/country';
 import { signOut } from 'helpers/user/user';
 import { getDays } from 'pages/paper-subscription-checkout/helpers/options';
-import { WithDeliveryCheckoutState } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
 import {
+	WithDeliveryCheckoutState,
 	getBillingAddress,
 	getDeliveryAddress,
 } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
+
 import { submitWithDeliveryForm } from 'helpers/subscriptionsForms/submit';
-import { IsoCountry } from 'helpers/internationalisation/country';
+
 import { Stripe, DirectDebit, PayPal } from 'helpers/forms/paymentMethods';
-import { validateWithDeliveryForm } from 'helpers/subscriptionsForms/formValidation';
+import {
+	validateWithDeliveryForm,
+	withDeliveryFormIsValid,
+} from 'helpers/subscriptionsForms/formValidation';
 import GeneralErrorMessage from 'components/generalErrorMessage/generalErrorMessage';
 import { StripeProviderForCountry } from 'components/subscriptionCheckouts/stripeForm/stripeProviderForCountry';
 import { Csrf } from 'helpers/csrf/csrfReducer';
 import { IsoCurrency } from 'helpers/internationalisation/currency';
-import { withDeliveryFormIsValid } from 'helpers/subscriptionsForms/formValidation';
+
 import { setupSubscriptionPayPalPayment } from 'helpers/forms/paymentIntegrations/payPalRecurringCheckout';
 import DirectDebitForm from 'components/directDebit/directDebitProgressiveDisclosure/directDebitForm';
 import {
@@ -72,7 +81,7 @@ import {
 	ActivePaperProducts,
 } from 'helpers/productPrice/productOptions';
 import { Paper } from 'helpers/productPrice/subscriptions';
-import { FulfilmentOptions } from 'helpers/productPrice/fulfilmentOptions';
+
 import DirectDebitPaymentTerms from 'components/subscriptionCheckouts/directDebit/directDebitPaymentTerms';
 import {
 	getPaymentStartDate,
@@ -91,6 +100,7 @@ import {
 } from 'pages/paper-subscription-checkout/helpers/orderSummaryText';
 import { paperSubsUrl } from 'helpers/urls/routes';
 import { getQueryParameter } from 'helpers/urls/url';
+
 const marginBottom = css`
 	margin-bottom: ${space[6]}px;
 `;
@@ -323,7 +333,7 @@ function PaperCheckoutForm(props: PropTypes) {
 							css={marginBottom}
 							id="title"
 							label="Title"
-							optional
+							optional={true}
 							value={props.title}
 							onChange={(e) => props.setTitle(e.target.value)}
 						>
@@ -355,7 +365,7 @@ function PaperCheckoutForm(props: PropTypes) {
 								maxlength={250}
 								value={props.deliveryInstructions}
 								onChange={(e) => props.setDeliveryInstructions(e.target.value)}
-								optional
+								optional={true}
 							/>
 						) : null}
 					</FormSection>
@@ -364,7 +374,7 @@ function PaperCheckoutForm(props: PropTypes) {
 						<Rows>
 							<RadioGroup
 								label="Is the billing address the same as the delivery address?"
-								hideLabel
+								hideLabel={true}
 								id="billingAddressIsSame"
 								name="billingAddressIsSame"
 								orienntation="vertical"
@@ -400,7 +410,7 @@ function PaperCheckoutForm(props: PropTypes) {
 							<Rows>
 								<RadioGroup
 									label="When would you like your subscription to start?"
-									hideLabel
+									hideLabel={true}
 									id="startDate"
 									error={firstError('startDate', props.formErrors)}
 									legend="When would you like your subscription to start?"

@@ -23,6 +23,7 @@ import {
 	glyph,
 } from 'helpers/internationalisation/currency';
 import { sendTrackingEventsOnClick } from 'helpers/productPrice/subscriptions';
+
 type PropTypes = {
 	orderIsAGift: boolean;
 	countryGroupId: CountryGroupId;

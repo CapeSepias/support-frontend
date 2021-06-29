@@ -4,6 +4,7 @@ import {
 	SortCodeIndex,
 	Phase,
 } from 'components/directDebit/directDebitActions';
+
 type SortCodePropTypes = {
 	phase: Phase;
 	sortCodeArray: Array<string>;

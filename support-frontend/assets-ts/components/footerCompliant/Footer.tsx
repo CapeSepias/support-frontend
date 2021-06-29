@@ -71,32 +71,35 @@ function Footer({
 					<ul css={linksList}>
 						{faqsLink && (
 							<li css={link}>
-								<Link subdued href={faqsLink}>
+								<Link subdued={true} href={faqsLink}>
 									FAQs
 								</Link>
 							</li>
 						)}
 						<li css={link}>
-							<Link subdued href="https://www.theguardian.com/help/contact-us">
+							<Link
+								subdued={true}
+								href="https://www.theguardian.com/help/contact-us"
+							>
 								Contact us
 							</Link>
 						</li>
 						<li css={link}>
 							<Link
-								subdued
+								subdued={true}
 								href="https://www.theguardian.com/help/privacy-policy"
 							>
 								Privacy Policy
 							</Link>
 						</li>
 						<li css={link}>
-							<ButtonLink subdued onClick={showPrivacyManager}>
+							<ButtonLink subdued={true} onClick={showPrivacyManager}>
 								Privacy Settings
 							</ButtonLink>
 						</li>
 						{termsConditionsLink && (
 							<li css={link}>
-								<Link subdued href={termsConditionsLink}>
+								<Link subdued={true} href={termsConditionsLink}>
 									Terms & Conditions
 								</Link>
 							</li>

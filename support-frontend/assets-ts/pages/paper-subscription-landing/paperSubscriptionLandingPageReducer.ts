@@ -1,7 +1,6 @@
 // ----- Imports ----- //
 import { combineReducers } from 'redux';
 import { CommonState } from 'helpers/page/commonReducer';
-import { TabActions } from './paperSubscriptionLandingPageActions';
 import {
 	Collection,
 	PaperFulfilmentOptions,
@@ -13,6 +12,7 @@ import {
 	getPromotionCopy,
 } from 'helpers/globalsAndSwitches/globals';
 import { PromotionCopy } from 'helpers/productPrice/promotions';
+import { TabActions } from './paperSubscriptionLandingPageActions';
 // ----- Types ----- //
 export type ActiveTabState = PaperFulfilmentOptions;
 export type State = {

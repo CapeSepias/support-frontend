@@ -9,10 +9,11 @@ import { BillingPeriod } from 'helpers/productPrice/billingPeriods';
 import PayPalExpressButton from 'components/paypalExpressButton/PayPalExpressButton';
 import { FormError } from 'helpers/subscriptionsForms/validation';
 import { FormField } from 'helpers/subscriptionsForms/formFields';
-import { ErrorSummary } from './submitFormErrorSummary';
 import { Option } from 'helpers/types/option';
 import { PayPal, PaymentMethod } from 'helpers/forms/paymentMethods';
 import { hiddenIf } from 'helpers/utilities/utilities';
+import { ErrorSummary } from './submitFormErrorSummary';
+
 const payPalButton = css`
 	box-sizing: border-box;
 	padding: ${space[3]}px;

@@ -1,7 +1,7 @@
 import * as storage from 'helpers/storage/storage';
 import { PaymentAuthorisation } from 'helpers/forms/paymentIntegrations/readerRevenueApis';
-import { checkAccount } from './helpers/ajax';
 import { DirectDebit } from 'helpers/forms/paymentMethods';
+import { checkAccount } from './helpers/ajax';
 // ----- Types ----- //
 export type SortCodeIndex = 0 | 1 | 2;
 export type Phase = 'entry' | 'confirmation';

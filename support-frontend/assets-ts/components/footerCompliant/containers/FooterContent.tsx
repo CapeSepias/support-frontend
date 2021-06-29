@@ -1,6 +1,7 @@
 // ----- Imports ----- //
 import React, { Node } from 'react';
 import { Content } from './Content';
+
 type PropTypes = {
 	appearance: {
 		centred?: boolean;

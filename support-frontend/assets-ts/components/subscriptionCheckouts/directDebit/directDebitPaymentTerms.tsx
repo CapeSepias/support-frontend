@@ -6,6 +6,7 @@ import { from } from '@guardian/src-foundations/mq';
 import { Option } from 'helpers/types/option';
 import { DirectDebit, PaymentMethod } from 'helpers/forms/paymentMethods';
 import DirectDebitTerms from './directDebitTerms';
+
 const directDebitSection = css`
 	display: block;
 	padding: ${space[3]}px;

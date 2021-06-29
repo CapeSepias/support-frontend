@@ -3,16 +3,16 @@ import * as React from 'react';
 import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
 import Content from 'components/content/content';
 import Text, { LargeParagraph } from 'components/text/text';
-import AppsSection from './components/thankYou/appsSection';
 import HeadingBlock from 'components/headingBlock/headingBlock';
-import ThankYouHero from './components/thankYou/hero';
 import { HeroWrapper } from 'components/productPage/productPageHero/productPageHero';
-import { DirectDebit } from 'helpers/forms/paymentMethods';
+import { DirectDebit, PaymentMethod } from 'helpers/forms/paymentMethods';
 import OptInCopy from 'components/subscriptionCheckouts/thankYou/optInCopy';
 import { DigitalPack } from 'helpers/productPrice/subscriptions';
-import { PaymentMethod } from 'helpers/forms/paymentMethods';
+
 import { Option } from 'helpers/types/option';
 import { SubscriptionsSurvey } from 'components/subscriptionCheckouts/subscriptionsSurvey/SubscriptionsSurvey';
+import ThankYouHero from './components/thankYou/hero';
+import AppsSection from './components/thankYou/appsSection';
 // ----- Types ----- //
 export type PropTypes = {
 	countryGroupId: CountryGroupId;
@@ -28,7 +28,8 @@ const getEmailCopy = (
 ) => {
 	if (paymentMethod === DirectDebit) {
 		return "Look out for an email within three business days confirming your recurring payment. Your first payment will be taken in 14 days and will appear as 'Guardian Media Group' on your bank statement.";
-	} else if (includePaymentCopy) {
+	}
+	if (includePaymentCopy) {
 		return 'We have sent you an email with everything you need to know. Your first payment will be taken in 14 days.';
 	}
 

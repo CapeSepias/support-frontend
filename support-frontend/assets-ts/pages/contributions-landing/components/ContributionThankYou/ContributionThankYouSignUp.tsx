@@ -10,28 +10,29 @@ import { Button } from '@guardian/src-button';
 import { ButtonLink } from '@guardian/src-link';
 import { TextInput } from '@guardian/src-text-input';
 import { SvgArrowRightStraight } from '@guardian/src-icons';
+import { checkEmail } from 'helpers/forms/formValidation';
+import { setPasswordGuest } from 'helpers/forms/paymentIntegrations/readerRevenueApis';
+import {
+	trackComponentClick,
+	trackComponentLoad,
+} from 'helpers/tracking/behaviour';
 import ActionContainer from './components/ActionContainer';
 import ActionHeader from './components/ActionHeader';
 import ActionBody from './components/ActionBody';
 import ExpandableContainer from './components/ExpandableContainer';
 import BulletPointedList from './components/BulletPointedList';
 import SvgPersonWithTick from './components/SvgPersonWithTick';
-import { checkEmail } from 'helpers/forms/formValidation';
 import {
 	setPasswordError as setPasswordErrorAction,
 	updatePassword as updatePasswordAction,
 	Action,
 } from '../../contributionsLandingActions';
-import { setPasswordGuest } from 'helpers/forms/paymentIntegrations/readerRevenueApis';
 import styles from './styles';
 import {
 	OPHAN_COMPONENT_ID_SIGN_UP,
 	OPHAN_COMPONENT_ID_READ_MORE_SIGN_UP,
 } from './utils/ophan';
-import {
-	trackComponentClick,
-	trackComponentLoad,
-} from 'helpers/tracking/behaviour';
+
 const bodyText = css`
 	${body.small()};
 `;
@@ -182,13 +183,13 @@ const ContributionThankYouSignUp = ({
 						</div>
 					</div>
 					<div>
-						<form onSubmit={onSubmit} css={form} noValidate>
+						<form onSubmit={onSubmit} css={form} noValidate={true}>
 							<div>
 								<TextInput
 									value={email}
 									label="Email address"
 									supporting="example@domain.com"
-									disabled
+									disabled={true}
 								/>
 							</div>
 							<div>
@@ -198,7 +199,7 @@ const ContributionThankYouSignUp = ({
 									value={password}
 									onChange={updatePassword}
 									error={passwordError ? PASSWORD_ERROR_MESSAGE : ''}
-									required
+									required={true}
 									type="password"
 								/>
 							</div>
@@ -209,7 +210,7 @@ const ContributionThankYouSignUp = ({
 									size="default"
 									icon={<SvgArrowRightStraight />}
 									iconSide="right"
-									nudgeIcon
+									nudgeIcon={true}
 								>
 									Register
 								</Button>

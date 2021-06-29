@@ -1,5 +1,6 @@
 import React, { Node } from 'react';
 import { Option } from 'helpers/types/option';
+
 type LandingPage = 'digitalSubscription' | 'newspaper' | 'guardianWeekly';
 type TimeBoundCopy = {
 	startShowingOn: string;

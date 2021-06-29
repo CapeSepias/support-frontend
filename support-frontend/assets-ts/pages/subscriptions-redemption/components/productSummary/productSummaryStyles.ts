@@ -3,6 +3,7 @@ import { headline, textSans } from '@guardian/src-foundations/typography/obj';
 import { space } from '@guardian/src-foundations';
 import { background, border, text } from '@guardian/src-foundations/palette';
 import { from, until } from '@guardian/src-foundations/mq';
+
 export const wrapper = css`
 	background-color: ${background.primary};
 	color: ${text.primary};

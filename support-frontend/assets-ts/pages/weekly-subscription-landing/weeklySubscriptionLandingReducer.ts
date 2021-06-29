@@ -6,6 +6,7 @@ import {
 	getPromotionCopy,
 } from 'helpers/globalsAndSwitches/globals';
 import { PromotionCopy } from 'helpers/productPrice/promotions';
+
 export type State = {
 	common: CommonState;
 	page: {

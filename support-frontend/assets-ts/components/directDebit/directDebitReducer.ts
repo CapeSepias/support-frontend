@@ -31,66 +31,45 @@ const directDebitReducer = (
 ): DirectDebitState => {
 	switch (action.type) {
 		case 'DIRECT_DEBIT_POP_UP_OPEN':
-			return Object.assign({}, state, {
-				isPopUpOpen: true,
-			});
+			return { ...state, isPopUpOpen: true };
 
 		case 'DIRECT_DEBIT_POP_UP_CLOSE':
-			return Object.assign({}, state, {
-				isPopUpOpen: false,
-			});
+			return { ...state, isPopUpOpen: false };
 
 		case 'DIRECT_DEBIT_GUARANTEE_OPEN':
-			return Object.assign({}, state, {
-				isDDGuaranteeOpen: true,
-			});
+			return { ...state, isDDGuaranteeOpen: true };
 
 		case 'DIRECT_DEBIT_GUARANTEE_CLOSE':
-			return Object.assign({}, state, {
-				isDDGuaranteeOpen: false,
-			});
+			return { ...state, isDDGuaranteeOpen: false };
 
 		case 'DIRECT_DEBIT_UPDATE_SORT_CODE':
 			initialState.sortCodeArray[action.index] = action.partialSortCode;
-			return Object.assign({}, state, {
-				sortCode: initialState.sortCodeArray,
-			});
+			return { ...state, sortCode: initialState.sortCodeArray };
 
 		case 'DIRECT_DEBIT_UPDATE_SORT_CODE_STRING':
-			return Object.assign({}, state, {
-				sortCodeString: action.sortCodeString,
-			});
+			return { ...state, sortCodeString: action.sortCodeString };
 
 		case 'DIRECT_DEBIT_UPDATE_ACCOUNT_NUMBER':
-			return Object.assign({}, state, {
-				accountNumber: action.accountNumber,
-			});
+			return { ...state, accountNumber: action.accountNumber };
 
 		case 'DIRECT_DEBIT_UPDATE_ACCOUNT_HOLDER_NAME':
-			return Object.assign({}, state, {
-				accountHolderName: action.accountHolderName,
-			});
+			return { ...state, accountHolderName: action.accountHolderName };
 
 		case 'DIRECT_DEBIT_UPDATE_ACCOUNT_HOLDER_CONFIRMATION':
-			return Object.assign({}, state, {
+			return {
+				...state,
 				accountHolderConfirmation: action.accountHolderConfirmation,
-			});
+			};
 
 		case 'DIRECT_DEBIT_SET_FORM_ERROR':
-			return Object.assign({}, state, {
-				formError: action.message,
-			});
+			return { ...state, formError: action.message };
 
 		case 'DIRECT_DEBIT_RESET_FORM_ERROR': {
-			return Object.assign({}, state, {
-				formError: '',
-			});
+			return { ...state, formError: '' };
 		}
 
 		case 'DIRECT_DEBIT_SET_FORM_PHASE': {
-			return Object.assign({}, state, {
-				phase: action.phase,
-			});
+			return { ...state, phase: action.phase };
 		}
 
 		default:

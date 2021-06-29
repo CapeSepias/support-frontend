@@ -5,6 +5,7 @@ import {
 	brandBackground,
 	neutral,
 } from '@guardian/src-foundations/palette';
+
 type Theme = 'light' | 'dark' | 'white' | 'brand';
 type PropTypes = {
 	cssOverrides?: string;

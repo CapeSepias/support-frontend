@@ -10,6 +10,7 @@ import Padlock from './padlock.svg';
 import Links from '../links/links';
 import MobileMenuToggler from './mobileMenuToggler';
 import './header.scss';
+
 export type PropTypes = {
 	utility: Option<Node>;
 	countryGroupId: CountryGroupId;
@@ -78,6 +79,7 @@ export default class Header extends Component<PropTypes, State> {
 		utility: null,
 		display: 'navigation',
 	};
+
 	state = {
 		fitsLinksInOneRow: false,
 		fitsLinksAtAll: false,
@@ -113,8 +115,11 @@ export default class Header extends Component<PropTypes, State> {
 	}
 
 	logoRef: Element | null | undefined;
+
 	menuRef: Element | null | undefined;
+
 	containerRef: Element | null | undefined;
+
 	observer: ElementResizer;
 
 	render() {

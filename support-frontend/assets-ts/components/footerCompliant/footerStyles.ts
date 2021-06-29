@@ -9,6 +9,7 @@ import {
 } from '@guardian/src-foundations/palette';
 import { from, until } from '@guardian/src-foundations/mq';
 import { space } from '@guardian/src-foundations';
+
 export const componentFooter = css`
 	&,
 	& *,

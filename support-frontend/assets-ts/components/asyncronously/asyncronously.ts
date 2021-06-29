@@ -1,4 +1,5 @@
 import { Component, Node, ComponentType } from 'react';
+
 type PropTypes = {
 	loader: Promise<{
 		default: ComponentType<any>;
@@ -14,6 +15,7 @@ class Asyncronously extends Component<PropTypes, State> {
 	static defaultProps = {
 		loading: null,
 	};
+
 	state = {
 		loaded: false,
 	};

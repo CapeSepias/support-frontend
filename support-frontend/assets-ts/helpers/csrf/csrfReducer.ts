@@ -20,9 +20,7 @@ export default function csrfReducer(
 ): Csrf {
 	switch (action.type) {
 		case 'SET_TOKEN':
-			return Object.assign({}, state, {
-				token: action.name,
-			});
+			return { ...state, token: action.name };
 
 		default:
 			return state;

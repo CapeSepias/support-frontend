@@ -1,7 +1,7 @@
 import uuidv4 from 'uuid';
 import * as storage from 'helpers/storage/storage';
-import { Participations } from 'helpers/abTests/abtest';
-import { getVariantsAsString } from 'helpers/abTests/abtest';
+import { Participations, getVariantsAsString } from 'helpers/abTests/abtest';
+
 import { detect as detectCurrency } from 'helpers/internationalisation/currency';
 import { getQueryParameter } from 'helpers/urls/url';
 import { detect as detectCountryGroup } from 'helpers/internationalisation/countryGroup';

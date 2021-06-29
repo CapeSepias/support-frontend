@@ -139,7 +139,7 @@ const AusMomentMap = () => {
 					variants={mapVariants}
 					animate={animationVariant()}
 					transition={animationTransition}
-					positionTransition
+					positionTransition={true}
 				>
 					{windowWidthIsLessThan('desktop') && <Blurb />}
 					<Map
@@ -159,7 +159,7 @@ const AusMomentMap = () => {
 						animate={animationVariant()}
 						variants={blurbVariants}
 					>
-						<Blurb slim />
+						<Blurb slim={true} />
 					</motion.div>
 				</motion.div>
 				<div className="right">

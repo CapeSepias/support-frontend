@@ -18,38 +18,29 @@ import SvgNewCreditCard from 'components/svgs/newCreditCard';
 import SvgPayPal from 'components/svgs/paypal';
 import SvgDirectDebitSymbol from 'components/svgs/directDebitSymbol';
 import GeneralErrorMessage from 'components/generalErrorMessage/generalErrorMessage';
-import { State } from '../contributionsLandingReducer';
 import {
 	DirectDebit,
 	PayPal,
 	PaymentMethod,
-} from 'helpers/forms/paymentMethods';
-import {
-	Action,
-	updatePaymentMethod,
-	updateSelectedExistingPaymentMethod,
-	loadPayPalExpressSdk,
-	loadAmazonPaySdk,
-} from '../contributionsLandingActions';
-import { isUsableExistingPaymentMethod } from 'helpers/forms/existingPaymentMethods/existingPaymentMethods';
-import {
-	ExistingPaymentMethod,
-	RecentlySignedInExistingPaymentMethod,
-} from 'helpers/forms/existingPaymentMethods/existingPaymentMethods';
-import { getReauthenticateUrl } from 'helpers/urls/externalLinks';
-import AnimatedDots from 'components/spinners/animatedDots';
-import {
 	ExistingCard,
 	ExistingDirectDebit,
 	Stripe,
 	AmazonPay,
-} from '../../../helpers/forms/paymentMethods';
-import {
+} from 'helpers/forms/paymentMethods';
+import { isUsableExistingPaymentMethod ,
+	ExistingPaymentMethod,
+	RecentlySignedInExistingPaymentMethod,
+,
 	getExistingPaymentMethodLabel,
 	mapExistingPaymentMethodToPaymentMethod,
 	subscriptionsToExplainerList,
 	subscriptionToExplainerPart,
 } from 'helpers/forms/existingPaymentMethods/existingPaymentMethods';
+
+import { getReauthenticateUrl } from 'helpers/urls/externalLinks';
+import AnimatedDots from 'components/spinners/animatedDots';
+
+
 import SecureTransactionIndicator from 'components/secureTransactionIndicator/secureTransactionIndicator';
 import SvgAmazonPayLogo from 'components/svgs/amazonPayLogo';
 import { RadioGroup, Radio } from '@guardian/src-radio';
@@ -58,6 +49,14 @@ import SvgDirectDebitSymbolDs from 'components/svgs/directDebitSymbolDs';
 import SvgAmazonPayLogoDs from 'components/svgs/amazonPayLogoDs';
 import SvgNewCreditCardDs from 'components/svgs/newCreditCardDs';
 import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
+import {
+	Action,
+	updatePaymentMethod,
+	updateSelectedExistingPaymentMethod,
+	loadPayPalExpressSdk,
+	loadAmazonPaySdk,
+} from '../contributionsLandingActions';
+import { State } from '../contributionsLandingReducer';
 import ContributionChoicesHeader from './ContributionChoicesHeader';
 // ----- Types ----- //
 

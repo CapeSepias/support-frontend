@@ -12,10 +12,10 @@ import {
 	updateSortCodeString,
 	updateAccountHolderConfirmation,
 } from 'components/directDebit/directDebitActions';
-import Form from './components/form';
-import Playback from './components/playback';
 import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
 import { ErrorReason } from 'helpers/forms/errorReasons';
+import Form from './components/form';
+import Playback from './components/playback';
 // ---- Types ----- //
 type PropTypes = {
 	buttonText: string;
@@ -153,10 +153,12 @@ class DirectDebitForm extends Component<PropTypes, StateTypes> {
 		);
 		dispatchUpdate(event);
 	};
+
 	onSubmit = (event) => {
 		event.preventDefault();
 		this.props.submitForm();
 	};
+
 	getAccountErrors = () => {
 		const cardErrors = [];
 		fieldNames.forEach((field) => {
@@ -170,6 +172,7 @@ class DirectDebitForm extends Component<PropTypes, StateTypes> {
 			allErrors: cardErrors,
 		});
 	};
+
 	getAccountErrorsLength = () => {
 		let accum = 0;
 		this.state.allErrors.forEach((item) => {
@@ -179,6 +182,7 @@ class DirectDebitForm extends Component<PropTypes, StateTypes> {
 		});
 		return accum;
 	};
+
 	handleErrorsAndCheckAccount = (event) => {
 		event.preventDefault();
 		const { props } = this;

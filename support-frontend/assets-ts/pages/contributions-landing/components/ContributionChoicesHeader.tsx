@@ -3,6 +3,7 @@ import { headline } from '@guardian/src-foundations/typography';
 import { space } from '@guardian/src-foundations';
 import { from } from '@guardian/src-foundations/mq';
 import { css } from '@emotion/core';
+
 type ContributionAmountLabelProps = {
 	children: React.ReactNode;
 };

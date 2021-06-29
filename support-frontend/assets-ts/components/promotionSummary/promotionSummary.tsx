@@ -1,6 +1,9 @@
 // ----- Imports ----- //
 import React from 'react';
-import { ProductPrices } from 'helpers/productPrice/productPrices';
+import {
+	ProductPrices,
+	getProductPrice,
+} from 'helpers/productPrice/productPrices';
 import {
 	billingPeriodNoun,
 	BillingPeriod,
@@ -8,13 +11,13 @@ import {
 import {
 	countryGroups,
 	fromCountry,
+	GBPCountries,
 } from 'helpers/internationalisation/countryGroup';
 import { currencies } from 'helpers/internationalisation/currency';
 import { IsoCountry } from 'helpers/internationalisation/country';
 import { fixDecimals } from 'helpers/productPrice/subscriptions';
 import { Option } from 'helpers/types/option';
-import { GBPCountries } from 'helpers/internationalisation/countryGroup';
-import { getProductPrice } from 'helpers/productPrice/productPrices';
+
 import { getPromotion } from 'helpers/productPrice/promotions';
 
 export type PropTypes = {

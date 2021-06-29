@@ -4,7 +4,7 @@ import { Button } from '@guardian/src-button';
 import { SvgArrowRightStraight } from '@guardian/src-icons';
 import { space } from '@guardian/src-foundations';
 import { from } from '@guardian/src-foundations/mq';
-import { line, text } from '@guardian/src-foundations/palette';
+import { line, text, error } from '@guardian/src-foundations/palette';
 import CheckoutLayout, {
 	Content,
 } from 'components/subscriptionCheckouts/layout';
@@ -26,8 +26,9 @@ import { ErrorMessage } from 'helpers/subscriptionsForms/validation';
 import { TextInput } from '@guardian/src-text-input';
 import { headline, textSans } from '@guardian/src-foundations/typography/obj';
 import { User } from 'helpers/subscriptionsForms/user';
-import { error } from '@guardian/src-foundations/palette';
+
 import { InlineError } from '@guardian/src-user-feedback';
+
 type PropTypes = {
 	user: User;
 	userCode: Option<string>;
@@ -159,7 +160,7 @@ function RedemptionForm(props: PropTypes) {
 							<hr css={hrCss} />
 							<Button
 								onClick={() => props.submit(props.userCode || '')}
-								showIcon
+								showIcon={true}
 								iconSide="right"
 								icon={<SvgArrowRightStraight />}
 							>

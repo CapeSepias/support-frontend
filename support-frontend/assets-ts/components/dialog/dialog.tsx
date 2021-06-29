@@ -77,7 +77,7 @@ class Dialog extends Component<PropTypes> {
 					open ? 'open' : null,
 					styled ? 'styled' : null,
 				])}
-				aria-modal
+				aria-modal={true}
 				aria-hidden={!open}
 				tabIndex="-1"
 				role="dialog"
@@ -111,7 +111,7 @@ class Dialog extends Component<PropTypes> {
 				</div>
 				<div
 					className="component-dialog__backdrop"
-					aria-hidden
+					aria-hidden={true}
 					onClick={() => !blocking && onStatusChange(false)}
 				/>
 			</dialog>

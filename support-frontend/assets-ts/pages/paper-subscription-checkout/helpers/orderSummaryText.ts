@@ -8,6 +8,7 @@ import {
 	billingPeriodNoun,
 	BillingPeriod,
 } from 'helpers/productPrice/billingPeriods';
+
 const productOptionDisplayNames: Record<ProductOptions, string> = {
 	Saturday: 'Saturday',
 	SaturdayPlus: 'Saturday',

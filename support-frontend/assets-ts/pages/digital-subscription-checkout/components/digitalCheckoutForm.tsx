@@ -12,11 +12,12 @@ import CheckoutLayout, {
 	Content,
 } from 'components/subscriptionCheckouts/layout';
 import { ErrorReason } from 'helpers/forms/errorReasons';
-import { ProductPrices } from 'helpers/productPrice/productPrices';
 import {
+	ProductPrices,
 	finalPrice,
 	getProductPrice,
 } from 'helpers/productPrice/productPrices';
+
 import { IsoCurrency } from 'helpers/internationalisation/currency';
 import OrderSummary from 'pages/digital-subscription-checkout/components/orderSummary/orderSummary';
 import {
@@ -37,11 +38,14 @@ import {
 import PersonalDetails from 'components/subscriptionCheckouts/personalDetails';
 import DirectDebitPaymentTerms from 'components/subscriptionCheckouts/directDebit/directDebitPaymentTerms';
 import { withStore } from 'components/subscriptionCheckouts/address/addressFields';
-import { IsoCountry } from 'helpers/internationalisation/country';
-import { countries } from 'helpers/internationalisation/country';
+import { IsoCountry, countries } from 'helpers/internationalisation/country';
+
 import { DigitalPack } from 'helpers/productPrice/subscriptions';
-import { CheckoutState } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
-import { getBillingAddress } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
+import {
+	CheckoutState,
+	getBillingAddress,
+} from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
+
 import {
 	checkoutFormIsValid,
 	validateCheckoutForm,

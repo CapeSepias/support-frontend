@@ -1,16 +1,17 @@
 // ----- Imports ----- //
 import { logException } from 'helpers/utilities/logger';
 import { routes } from 'helpers/urls/routes';
-import { Csrf as CsrfState } from 'helpers/csrf/csrfReducer';
+import { Csrf as CsrfState, Csrf } from 'helpers/csrf/csrfReducer';
 import { IsoCurrency } from 'helpers/internationalisation/currency';
 import * as storage from 'helpers/storage/storage';
 import { BillingPeriod } from 'helpers/productPrice/billingPeriods';
 import { setPayPalHasLoaded } from 'helpers/forms/paymentIntegrations/payPalActions';
 import { PayPal } from 'helpers/forms/paymentMethods';
-import { billingPeriodFromContrib, getAmount } from '../../contributions';
-import { Csrf } from '../../csrf/csrfReducer';
-import { State } from '../../../pages/contributions-landing/contributionsLandingReducer';
 import { Action } from 'pages/contributions-landing/contributionsLandingActions';
+import { billingPeriodFromContrib, getAmount } from '../../contributions';
+
+import { State } from '../../../pages/contributions-landing/contributionsLandingReducer';
+
 export type SetupPayPalRequestType = (
 	resolve: (arg0: string) => void,
 	reject: (arg0: Error) => void,

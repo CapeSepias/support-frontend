@@ -5,6 +5,7 @@ import { body, headline } from '@guardian/src-foundations/typography';
 import { LinkButton } from '@guardian/src-button';
 import { SvgArrowRightStraight } from '@guardian/src-icons';
 import { sendTrackingEventsOnClick } from 'helpers/productPrice/subscriptions';
+
 type GiftableProduct = 'digital' | 'Guardian Weekly';
 type PropTypes = {
 	href: string;
@@ -39,7 +40,7 @@ function GiftOrPersonal({ href, product, orderIsAGift }: PropTypes) {
 				icon={<SvgArrowRightStraight />}
 				iconSide="right"
 				priority="tertiary"
-				nudgeIcon
+				nudgeIcon={true}
 				href={href}
 				onClick={() => {
 					sendTrackingEventsOnClick({

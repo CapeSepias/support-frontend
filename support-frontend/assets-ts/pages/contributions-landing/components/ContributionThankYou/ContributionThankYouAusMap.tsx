@@ -4,15 +4,16 @@ import { css } from '@emotion/core';
 import { space } from '@guardian/src-foundations';
 import { LinkButton } from '@guardian/src-button';
 import { SvgArrowRightStraight } from '@guardian/src-icons';
+import {
+	trackComponentClick,
+	trackComponentLoad,
+} from 'helpers/tracking/behaviour';
 import ActionContainer from './components/ActionContainer';
 import ActionHeader from './components/ActionHeader';
 import ActionBody from './components/ActionBody';
 import SvgAusMap from './components/SvgAusMap';
 import { OPHAN_COMPONENT_ID_AUS_MAP } from './utils/ophan';
-import {
-	trackComponentClick,
-	trackComponentLoad,
-} from 'helpers/tracking/behaviour';
+
 const buttonContainer = css`
 	margin-top: ${space[6]}px;
 `;
@@ -44,7 +45,7 @@ const ContributionThankYouAusMap = () => {
 					size="default"
 					icon={<SvgArrowRightStraight />}
 					iconSide="right"
-					nudgeIcon
+					nudgeIcon={true}
 				>
 					View the map
 				</LinkButton>

@@ -10,6 +10,7 @@ import { Checkbox } from '@guardian/src-checkbox';
 import GridImage from 'components/gridImage/gridImage';
 import { ListWithSubText } from 'components/list/list';
 import { sendTrackingEventsOnClick } from 'helpers/productPrice/subscriptions';
+
 type PropTypes = {
 	digiSubPrice: string;
 	addDigitalSubscription: (
@@ -97,7 +98,7 @@ function AddDigiSubCta({ addDigitalSubscription, digiSubPrice }: PropTypes) {
 	return (
 		<Accordion
 			cssOverrides={[ctaContainer, expanded ? ctaContainerOpen : '']}
-			hideToggleLabel
+			hideToggleLabel={true}
 		>
 			<AccordionRow
 				cssOverrides={rowOverrides}

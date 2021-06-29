@@ -8,8 +8,9 @@ import { sendTrackingEventsOnClick } from 'helpers/productPrice/subscriptions';
 import {
 	CountryGroupId,
 	GBPCountries,
+	countryGroups,
 } from 'helpers/internationalisation/countryGroup';
-import { countryGroups } from 'helpers/internationalisation/countryGroup';
+
 // types
 type HeaderNavLink = {
 	href: string;

@@ -1,6 +1,7 @@
 import React, { Node } from 'react';
 import { css } from '@emotion/core';
 import { from } from '@guardian/src-foundations/mq';
+
 type PropTypes = {
 	cssOverrides?: string;
 	children: Node;

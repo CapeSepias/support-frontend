@@ -16,6 +16,7 @@ import {
 	updatePayPalButtonReady,
 } from 'pages/contributions-landing/contributionsLandingActions';
 import AnimatedDots from 'components/spinners/animatedDots';
+
 type PropTypes = {
 	onPaymentAuthorisation: (...args: Array<any>) => any;
 	csrf: CsrfState;

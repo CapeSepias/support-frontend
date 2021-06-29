@@ -1,17 +1,22 @@
 import {
 	CountryGroup,
 	CountryGroupName,
-} from 'helpers/internationalisation/countryGroup';
-import {
 	countryGroups,
 	fromCountry,
 	GBPCountries,
 } from 'helpers/internationalisation/countryGroup';
+
 import { BillingPeriod } from 'helpers/productPrice/billingPeriods';
-import { FulfilmentOptions } from 'helpers/productPrice/fulfilmentOptions';
-import { NoFulfilmentOptions } from 'helpers/productPrice/fulfilmentOptions';
-import { ProductOptions } from 'helpers/productPrice/productOptions';
-import { NoProductOptions } from 'helpers/productPrice/productOptions';
+import {
+	FulfilmentOptions,
+	NoFulfilmentOptions,
+} from 'helpers/productPrice/fulfilmentOptions';
+
+import {
+	ProductOptions,
+	NoProductOptions,
+} from 'helpers/productPrice/productOptions';
+
 import { IsoCountry } from 'helpers/internationalisation/country';
 import {
 	extendedGlyph,
@@ -19,8 +24,12 @@ import {
 	IsoCurrency,
 } from 'helpers/internationalisation/currency';
 import { fixDecimals } from 'helpers/productPrice/subscriptions';
-import { Promotion } from 'helpers/productPrice/promotions';
-import { applyDiscount, getPromotion } from 'helpers/productPrice/promotions';
+import {
+	Promotion,
+	applyDiscount,
+	getPromotion,
+} from 'helpers/productPrice/promotions';
+
 // ----- Types ----- //
 export type ProductPrice = {
 	price: number;

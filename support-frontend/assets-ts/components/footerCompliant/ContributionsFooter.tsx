@@ -3,6 +3,7 @@ import { css } from '@emotion/core';
 import { from } from '@guardian/src-foundations/mq';
 import { brandBackground } from '@guardian/src-foundations/palette';
 import Footer from './Footer';
+
 const containerStyles = css`
 	width: 100%;
 	background-color: ${brandBackground.primary};

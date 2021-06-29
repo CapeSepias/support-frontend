@@ -3,8 +3,11 @@ import React, { Children } from 'react';
 import { Node } from 'react';
 import ContribLegal from 'components/legal/contribLegal/contribLegal';
 import { privacyLink, copyrightNotice } from 'helpers/legal';
-import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
-import { GBPCountries } from 'helpers/internationalisation/countryGroup';
+import {
+	CountryGroupId,
+	GBPCountries,
+} from 'helpers/internationalisation/countryGroup';
+
 import Content, { Appearance } from 'components/content/content';
 import './footer.scss';
 import Rows from '../base/rows';
@@ -52,7 +55,7 @@ function Footer({
 					</div>
 				</Content>
 			)}
-			<Content border appearance={appearance}>
+			<Content border={true} appearance={appearance}>
 				<span className="component-footer__copyright">{copyrightNotice}</span>
 			</Content>
 		</footer>

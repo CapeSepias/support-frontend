@@ -13,11 +13,10 @@ import {
 	CountryGroup,
 	countryGroups,
 	AUDCountries,
-} from 'helpers/internationalisation/countryGroup';
-import {
 	Canada,
 	UnitedStates,
 } from 'helpers/internationalisation/countryGroup';
+
 import { InlineError } from '@guardian/src-user-feedback';
 import DownChevronDs from 'components/svgs/downChevronDs';
 import { focusHalo } from '@guardian/src-foundations/accessibility';
@@ -144,7 +143,7 @@ const renderStatesField = (
 				css={showError ? [selectCss, errorBorderCss] : selectCss}
 				id="contributionState"
 				onChange={onChange}
-				required
+				required={true}
 			>
 				<option value="">&nbsp;</option>
 				{Object.keys(states)

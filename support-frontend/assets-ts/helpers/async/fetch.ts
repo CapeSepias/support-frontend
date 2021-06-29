@@ -1,4 +1,5 @@
 import { Csrf as CsrfState } from 'helpers/csrf/csrfReducer';
+
 type Credentials = 'omit' | 'same-origin' | 'include';
 
 /** Sends a request to an API and converts the response into a JSON object */

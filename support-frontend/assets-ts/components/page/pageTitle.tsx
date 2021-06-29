@@ -4,12 +4,13 @@ import { from } from '@guardian/src-foundations/mq';
 import { brandAlt, neutral } from '@guardian/src-foundations/palette';
 import { space } from '@guardian/src-foundations';
 import { titlepiece } from '@guardian/src-foundations/typography';
-import CentredContainer from '../containers/centredContainer';
 import {
 	digitalSubscriptionsBlue,
 	guardianWeeklyBlue,
 	paperSubscriptionsBlue,
 } from 'stylesheets/emotion/colours';
+import CentredContainer from '../containers/centredContainer';
+
 type ThemeType = 'showcase' | 'digital' | 'weekly' | 'paper';
 type PropTypes = {
 	title: string;

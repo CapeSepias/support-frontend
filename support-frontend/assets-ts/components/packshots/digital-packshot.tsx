@@ -1,7 +1,10 @@
 import React from 'react';
 import GridPicture from 'components/gridPicture/gridPicture';
-import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
-import { AUDCountries } from 'helpers/internationalisation/countryGroup';
+import {
+	CountryGroupId,
+	AUDCountries,
+} from 'helpers/internationalisation/countryGroup';
+
 type PropTypes = {
 	countryGroupId: CountryGroupId;
 };

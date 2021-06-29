@@ -2,7 +2,11 @@
 // ----- Imports ----- //
 import React from 'react';
 import { connect } from 'react-redux';
-import { ContributionType } from 'helpers/contributions';
+import {
+	ContributionType,
+	ContributionTypes,
+	ContributionTypeSetting,
+} from 'helpers/contributions';
 import { classNameWithModifiers } from 'helpers/utilities/utilities';
 import {
 	getPaymentMethodToSelect,
@@ -12,13 +16,10 @@ import { trackComponentClick } from 'helpers/tracking/behaviour';
 import { IsoCountry } from 'helpers/internationalisation/country';
 import { Switches } from 'helpers/globalsAndSwitches/settings';
 import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
+import { ChoiceCardGroup, ChoiceCard } from '@guardian/src-choice-card';
 import { State } from '../contributionsLandingReducer';
 import { updateContributionTypeAndPaymentMethod } from '../contributionsLandingActions';
-import {
-	ContributionTypes,
-	ContributionTypeSetting,
-} from 'helpers/contributions';
-import { ChoiceCardGroup, ChoiceCard } from '@guardian/src-choice-card';
+
 import {
 	setCurrencyId,
 	setUseLocalAmounts,

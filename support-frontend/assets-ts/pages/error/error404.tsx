@@ -11,7 +11,7 @@ const content = (
 		errorCode="404"
 		headings={['the page you', 'have requested', 'does not exist']}
 		copy="You may have followed an outdated link, or have mistyped a URL. If you believe this to be an error, "
-		reportLink
+		reportLink={true}
 	/>
 );
 renderPage(content, 'error-404-page');

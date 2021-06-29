@@ -1,17 +1,21 @@
 import React from 'react';
 import { SansParagraph } from 'components/text/text';
 import { PromotionTermsPropTypes } from 'pages/promotion-terms/promotionTermsReducer';
-import { CountryGroupName } from 'helpers/internationalisation/countryGroup';
 import {
+	CountryGroupName,
 	fromCountryGroupName,
 	International,
 } from 'helpers/internationalisation/countryGroup';
+
 import { Domestic, RestOfWorld } from 'helpers/productPrice/fulfilmentOptions';
 import { NoProductOptions } from 'helpers/productPrice/productOptions';
 import { Annual, Quarterly } from 'helpers/productPrice/billingPeriods';
 import { extendedGlyph } from 'helpers/internationalisation/currency';
-import { CountryGroupPrices } from 'helpers/productPrice/productPrices';
-import { showPrice } from 'helpers/productPrice/productPrices';
+import {
+	CountryGroupPrices,
+	showPrice,
+} from 'helpers/productPrice/productPrices';
+
 type NameAndSaving = {
 	name: CountryGroupName;
 	saving: string | null | undefined;

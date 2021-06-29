@@ -5,6 +5,7 @@ import { space } from '@guardian/src-foundations';
 import { border, background } from '@guardian/src-foundations/palette';
 import EndSummary from 'pages/digital-subscription-checkout/components/endSummary/endSummary';
 import { Option } from 'helpers/types/option';
+
 const endSummaryMobile = css`
 	display: block;
 	padding: ${space[3]}px;

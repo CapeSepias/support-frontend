@@ -9,19 +9,20 @@ import {
 	finalPrice,
 	getProductPrice,
 } from 'helpers/productPrice/paperProductPrices';
-import { State } from '../paperSubscriptionLandingPageReducer';
-import { setTab, TabActions } from '../paperSubscriptionLandingPageActions';
 import { Product } from 'components/product/productOption';
 import { PaperFulfilmentOptions } from 'helpers/productPrice/fulfilmentOptions';
 import { ActivePaperProductTypes } from 'helpers/productPrice/productOptions';
 import { paperCheckoutUrl } from 'helpers/urls/routes';
-import { getTitle } from '../helpers/products';
 import {
 	ProductPrice,
 	ProductPrices,
+	showPrice,
 } from 'helpers/productPrice/productPrices';
-import { showPrice } from 'helpers/productPrice/productPrices';
+
 import { getAppliedPromo } from 'helpers/productPrice/promotions';
+import { getTitle } from '../helpers/products';
+import { setTab, TabActions } from '../paperSubscriptionLandingPageActions';
+import { State } from '../paperSubscriptionLandingPageReducer';
 import Prices from './content/prices';
 
 // ---- Helpers ----- //

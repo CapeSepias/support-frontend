@@ -5,6 +5,7 @@ import {
 	Quarterly,
 	SixWeekly,
 } from 'helpers/productPrice/billingPeriods';
+
 jest.mock('ophan', () => {});
 // ----- Tests ----- //
 describe('getPriceDescription', () => {

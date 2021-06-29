@@ -3,6 +3,7 @@ import { headline } from '@guardian/src-foundations/typography';
 import { brandAltBackground } from '@guardian/src-foundations/palette';
 import { from } from '@guardian/src-foundations/mq';
 import { space } from '@guardian/src-foundations';
+
 const allowsAnimation = '@media (prefers-reduced-motion: no-preference)';
 export const giftTag = css`
 	display: flex;

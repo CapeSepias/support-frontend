@@ -1,8 +1,9 @@
 import React from 'react';
+
 export default function SvgClose() {
 	return (
 		<svg
-			aria-hidden
+			aria-hidden={true}
 			className="svg-close"
 			width="16px"
 			height="16px"

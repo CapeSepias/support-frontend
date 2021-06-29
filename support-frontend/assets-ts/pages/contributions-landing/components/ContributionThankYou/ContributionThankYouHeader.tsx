@@ -7,10 +7,12 @@ import { ContributionType } from 'helpers/contributions';
 import {
 	currencies,
 	spokenCurrencies,
+	IsoCurrency,
 } from 'helpers/internationalisation/currency';
-import { IsoCurrency } from 'helpers/internationalisation/currency';
+
 import { PaymentMethod } from 'helpers/forms/paymentMethods';
 import { formatAmount } from 'helpers/forms/checkouts';
+
 const header = css`
 	background: white;
 	padding-top: ${space[4]}px;

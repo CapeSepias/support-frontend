@@ -9,6 +9,7 @@ import { checkEmail } from 'helpers/forms/formValidation';
 import { logException } from 'helpers/utilities/logger';
 import { Button } from '@guardian/src-button';
 import 'components/marketingConsent/marketingConsent.scss';
+
 const minorHeading = css`
 	${headline.xxsmall({
 		fontWeight: 'bold',

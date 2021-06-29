@@ -6,6 +6,7 @@ import {
 	GBPCountries,
 	UnitedStates,
 } from '../countryGroup';
+
 let mockCurrency: IsoCurrency | null | undefined = null;
 jest.mock('helpers/urls/url', () => ({
 	getQueryParameter: () => mockCurrency,

@@ -1,16 +1,20 @@
 import React from 'react';
-import { extendedGlyph } from 'helpers/internationalisation/currency';
+import {
+	extendedGlyph,
+	IsoCurrency,
+} from 'helpers/internationalisation/currency';
 import { displayPrice } from 'helpers/productPrice/priceDescriptions';
 import {
 	getAppliedPromo,
 	hasDiscount,
 	hasIntroductoryPrice,
+	Promotion,
 } from 'helpers/productPrice/promotions';
 import { isNumeric } from 'helpers/productPrice/productPrices';
-import { IsoCurrency } from 'helpers/internationalisation/currency';
-import { Promotion } from 'helpers/productPrice/promotions';
+
 import { Option } from 'helpers/types/option';
 import * as styles from './totalStyles';
+
 type Props = {
 	price: number;
 	currency: IsoCurrency;

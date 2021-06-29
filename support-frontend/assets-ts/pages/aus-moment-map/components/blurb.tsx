@@ -2,6 +2,7 @@
 // @ts-ignore
 import * as React from 'preact/compat';
 import { SocialLinks } from 'pages/aus-moment-map/components/socialLinks';
+
 const enableSupporterCount = false;
 
 const useSupportersCount = () => {

@@ -3,6 +3,7 @@ import React, { Node } from 'react';
 import { css } from '@emotion/core';
 import { space } from '@guardian/src-foundations';
 import { textSans } from '@guardian/src-foundations/typography';
+
 const expander = css`
 	summary::-webkit-details-marker {
 		display: none;

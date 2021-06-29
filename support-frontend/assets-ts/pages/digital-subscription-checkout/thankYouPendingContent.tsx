@@ -3,13 +3,16 @@ import * as React from 'react';
 import Content from 'components/content/content';
 import Text, { LargeParagraph } from 'components/text/text';
 import HeadingBlock from 'components/headingBlock/headingBlock';
-import ThankYouHero from './components/thankYou/hero';
 import { HeroWrapper } from 'components/productPage/productPageHero/productPageHero';
-import { sendTrackingEventsOnClick } from 'helpers/productPrice/subscriptions';
+import {
+	sendTrackingEventsOnClick,
+	DigitalPack,
+} from 'helpers/productPrice/subscriptions';
 import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
 import OptInCopy from 'components/subscriptionCheckouts/thankYou/optInCopy';
-import { DigitalPack } from 'helpers/productPrice/subscriptions';
+
 import { SubscriptionsSurvey } from 'components/subscriptionCheckouts/subscriptionsSurvey/SubscriptionsSurvey';
+import ThankYouHero from './components/thankYou/hero';
 // ----- Types ----- //
 type PropTypes = {
 	countryGroupId: CountryGroupId;

@@ -104,19 +104,19 @@ const router = (
 		<Provider store={store}>
 			<div>
 				<Route
-					exact
+					exact={true}
 					path="/:countryId(uk|us|au|eu|int|nz|ca)/contribute/"
 					render={() => contributionsLandingPage()}
 				/>
 				<Route
-					exact
+					exact={true}
 					path="/:countryId(uk|us|au|eu|int|nz|ca)/contribute/:campaignCode"
 					render={(props) =>
 						contributionsLandingPage(props.match.params.campaignCode)
 					}
 				/>
 				<Route
-					exact
+					exact={true}
 					path="/:countryId(uk|us|au|eu|int|nz|ca)/thankyou"
 					render={(props) => {
 						const paymentMethod = storage.getSession('selectedPaymentMethod');

@@ -7,8 +7,6 @@ import {
 	DigitalPack,
 	GuardianWeekly,
 } from 'helpers/productPrice/subscriptions';
-import { State } from './promotionTermsReducer';
-import reducer from './promotionTermsReducer';
 import Page from 'components/page/page';
 import Footer from 'components/footerCompliant/Footer';
 import Header from 'components/headers/header/header';
@@ -16,13 +14,16 @@ import { Provider } from 'react-redux';
 import PromoDetails from 'pages/promotion-terms/promoDetails';
 import LegalTerms from 'pages/promotion-terms/legalTerms';
 import { detect } from 'helpers/internationalisation/countryGroup';
+import reducer, { State } from './promotionTermsReducer';
+
 // ----- Redux Store ----- //
 const store = pageInit(() => reducer, true);
 
 function getTermsConditionsLink({ product }: PromotionTerms) {
 	if (product === DigitalPack) {
 		return 'https://www.theguardian.com/digital-subscriptions-terms-conditions';
-	} else if (product === GuardianWeekly) {
+	}
+	if (product === GuardianWeekly) {
 		return 'https://www.theguardian.com/guardian-weekly-subscription-terms-conditions';
 	}
 

@@ -4,6 +4,7 @@ import { space } from '@guardian/src-foundations';
 import { headline } from '@guardian/src-foundations/typography';
 import { neutral, text } from '@guardian/src-foundations/palette';
 import { from } from '@guardian/src-foundations/mq';
+
 const blockLabel = css`
 	display: inline-block;
 	padding: ${space[1]}px ${space[2]}px;

@@ -18,6 +18,7 @@ import { logException } from 'helpers/utilities/logger';
 import { trackComponentLoad } from 'helpers/tracking/behaviour';
 import { ContributionType } from 'helpers/contributions';
 import { InlineError } from '@guardian/src-user-feedback';
+
 type PropTypes = {
 	amazonPayData: AmazonPayData;
 	setAmazonPayWalletIsStale: (arg0: boolean) => Action;

@@ -7,14 +7,15 @@ import {
 	International,
 	NZDCountries,
 	UnitedStates,
+	CountryGroupId,
 } from 'helpers/internationalisation/countryGroup';
 import GridImage from 'components/gridImage/gridImage';
-import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
+
 import { regionalContent } from './regionalContent';
 import HeroImg from './hero.svg';
 import './hero.scss';
 
-const Caption = (props: { className: string; captionText: String }) => (
+const Caption = (props: { className: string; captionText: string }) => (
 	<div className={props.className}>
 		<figcaption className="showcase-hero__caption">
 			<p>{props.captionText}</p>

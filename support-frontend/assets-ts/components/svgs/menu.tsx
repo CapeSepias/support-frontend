@@ -1,8 +1,9 @@
 import React from 'react';
+
 export default function SvgMenu() {
 	return (
 		<svg
-			aria-hidden
+			aria-hidden={true}
 			className="svg-menu"
 			width="20"
 			height="14"

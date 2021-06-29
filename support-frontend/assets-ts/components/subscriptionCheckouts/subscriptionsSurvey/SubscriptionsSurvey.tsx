@@ -5,6 +5,7 @@ import AnchorButton from 'components/button/anchorButton';
 import Text from 'components/text/text';
 import Content from 'components/content/content';
 import './subscriptionsSurvey.scss';
+
 type PropTypes = {
 	product: SubscriptionProduct;
 };

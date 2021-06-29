@@ -9,13 +9,13 @@ import {
 	countryGroups,
 } from 'helpers/internationalisation/countryGroup';
 import { Participations } from 'helpers/abTests/abtest';
-import { getBaseDomain } from 'helpers/urls/url';
+import { getBaseDomain, getOrigin } from 'helpers/urls/url';
 import {
 	DigitalBillingPeriod,
 	DigitalGiftBillingPeriod,
 } from 'helpers/productPrice/billingPeriods';
 import { SubscriptionProduct } from 'helpers/productPrice/subscriptions';
-import { getOrigin } from './url';
+
 import { promoQueryParam } from 'helpers/productPrice/promotions';
 import { Option } from 'helpers/types/option';
 // ----- Types ----- //

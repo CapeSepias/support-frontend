@@ -6,22 +6,23 @@ import {
 	billingPeriodFromContrib,
 	ContributionType,
 	getAmount,
+	SelectedAmounts,
 } from 'helpers/contributions';
 import { IsoCurrency } from 'helpers/internationalisation/currency';
 import { PaymentAuthorisation } from 'helpers/forms/paymentIntegrations/readerRevenueApis';
-import { SelectedAmounts } from 'helpers/contributions';
+
 import { getContributeButtonCopyWithPaymentType } from 'helpers/forms/checkouts';
 import { hiddenIf } from 'helpers/utilities/utilities';
 import { setupRecurringPayPalPayment } from 'helpers/forms/paymentIntegrations/payPalRecurringCheckout';
 import { BillingPeriod } from 'helpers/productPrice/billingPeriods';
 import PayPalExpressButton from 'components/paypalExpressButton/PayPalExpressButton';
-import { State } from '../contributionsLandingReducer';
-import { sendFormSubmitEventForPayPalRecurring } from '../contributionsLandingActions';
 import { PayPal, AmazonPay, PaymentMethod } from 'helpers/forms/paymentMethods';
 import Button from 'components/button/button';
 import AmazonPayLoginButton from 'pages/contributions-landing/components/AmazonPay/AmazonPayLoginButton';
+import { sendFormSubmitEventForPayPalRecurring } from '../contributionsLandingActions';
+import { State, AmazonPayData } from '../contributionsLandingReducer';
 import AmazonPayWallet from './AmazonPay/AmazonPayWallet';
-import { AmazonPayData } from '../contributionsLandingReducer';
+
 // ----- Types ----- //
 type PropTypes = {
 	contributionType: ContributionType;
@@ -143,13 +144,13 @@ function withProps(props: PropTypes) {
 			(props.paymentMethod !== AmazonPay ||
 				(amazonPayEnabled() && props.amazonPayData.hasAccessToken)) ? (
 				<Button
-					type="submit"
-					aria-label={submitButtonCopy}
-					disabled={props.isWaiting}
-					postDeploymentTestID="contributions-landing-submit-contribution-button"
+						type="submit"
+						aria-label={submitButtonCopy}
+						disabled={props.isWaiting}
+						postDeploymentTestID="contributions-landing-submit-contribution-button"
 				>
-					{submitButtonCopy}
-				</Button>
+						{submitButtonCopy}
+					</Button>
 			) : null}
 		</div>
 	);
@@ -158,7 +159,7 @@ function withProps(props: PropTypes) {
 function withoutProps() {
 	return (
 		<div className="form__submit">
-			<Button type="submit" aria-label="Submit contribution" disabled>
+			<Button type="submit" aria-label="Submit contribution" disabled={true}>
 				&nbsp;
 			</Button>
 		</div>

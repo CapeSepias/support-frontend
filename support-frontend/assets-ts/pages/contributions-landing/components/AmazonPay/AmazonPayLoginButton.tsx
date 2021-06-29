@@ -15,6 +15,7 @@ import {
 	trackComponentClick,
 	trackComponentLoad,
 } from 'helpers/tracking/behaviour';
+
 type PropTypes = {
 	amazonPayData: AmazonPayData;
 	setAmazonPayHasAccessToken: () => Action;

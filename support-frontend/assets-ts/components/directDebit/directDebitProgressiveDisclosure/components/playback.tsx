@@ -11,6 +11,7 @@ import {
 } from '@guardian/src-button';
 import { SvgArrowRightStraight } from '@guardian/src-icons';
 import { ErrorSummary } from 'components/subscriptionCheckouts/submitFormErrorSummary';
+
 const directDebitForm = css`
 	clear: left;
 	margin-top: 20px;

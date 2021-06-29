@@ -2,8 +2,6 @@
 import React from 'react';
 import FlexContainer from 'components/containers/flexContainer';
 import GridImage from 'components/gridImage/gridImage';
-import { setTab } from '../../paperSubscriptionLandingPageActions';
-import LinkTo from './linkTo';
 import { Collection } from 'helpers/productPrice/fulfilmentOptions';
 import { Accordion } from '@guardian/src-accordion';
 import { css } from '@emotion/core';
@@ -11,7 +9,10 @@ import { neutral } from '@guardian/src-foundations/palette';
 import { textSans } from '@guardian/src-foundations/typography';
 import { space } from '@guardian/src-foundations';
 import { from, until } from '@guardian/src-foundations/mq';
+import LinkTo from './linkTo';
+import { setTab } from '../../paperSubscriptionLandingPageActions';
 import { TabAccordionRow } from './tabAccordionRow';
+
 const flexContainerOverride = css`
 	align-items: flex-start;
 	justify-content: space-between;

@@ -1,6 +1,7 @@
 import React, { Node } from 'react';
 import { Option } from 'helpers/types/option';
 import './veggieBurgerButton.scss';
+
 type PropTypes = {
 	children: Node;
 	label: string;

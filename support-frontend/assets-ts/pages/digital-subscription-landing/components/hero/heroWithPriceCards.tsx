@@ -9,12 +9,12 @@ import {
 	getTimeboundQuery,
 	getTimeboundCopy,
 } from 'helpers/timeBoundedCopy/timeBoundedCopy';
-import { HeroPriceCards } from './heroPriceCards';
-import DefaultRoundel from './defaultRoundel';
 import {
 	AUDCountries,
 	CountryGroupId,
 } from 'helpers/internationalisation/countryGroup';
+import { HeroPriceCards } from './heroPriceCards';
+import DefaultRoundel from './defaultRoundel';
 import {
 	heroCopy,
 	heroTitle,
@@ -24,6 +24,7 @@ import {
 	roundelOverrides,
 	embeddedRoundel,
 } from './heroWithPriceCardsStyles';
+
 type PropTypes = {
 	promotionCopy: PromotionCopy;
 	priceList: any[];

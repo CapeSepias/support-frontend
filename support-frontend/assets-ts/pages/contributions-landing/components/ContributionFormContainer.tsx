@@ -10,6 +10,8 @@ import { PaymentAuthorisation } from 'helpers/forms/paymentIntegrations/readerRe
 import DirectDebitPopUpForm from 'components/directDebit/directDebitPopUpForm/directDebitPopUpForm';
 import ContributionTicker from 'components/ticker/contributionTicker';
 import { getCampaignSettings } from 'helpers/campaigns/campaigns';
+import { IsoCountry } from 'helpers/internationalisation/country';
+import SecureTransactionIndicator from 'components/secureTransactionIndicator/secureTransactionIndicator';
 import { State } from '../contributionsLandingReducer';
 import { ContributionForm, EmptyContributionForm } from './ContributionForm';
 import {
@@ -17,8 +19,6 @@ import {
 	paymentWaiting,
 	setTickerGoalReached,
 } from '../contributionsLandingActions';
-import { IsoCountry } from 'helpers/internationalisation/country';
-import SecureTransactionIndicator from 'components/secureTransactionIndicator/secureTransactionIndicator';
 // ----- Types ----- //
 
 /* eslint-disable react/no-unused-prop-types */

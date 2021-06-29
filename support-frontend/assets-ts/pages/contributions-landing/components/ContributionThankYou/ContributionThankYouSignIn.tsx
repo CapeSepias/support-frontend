@@ -7,6 +7,11 @@ import { space } from '@guardian/src-foundations';
 import { LinkButton } from '@guardian/src-button';
 import { ButtonLink } from '@guardian/src-link';
 import { SvgArrowRightStraight } from '@guardian/src-icons';
+import { routes } from 'helpers/urls/routes';
+import {
+	trackComponentClick,
+	trackComponentLoad,
+} from 'helpers/tracking/behaviour';
 import ActionContainer from './components/ActionContainer';
 import ActionHeader from './components/ActionHeader';
 import ActionBody from './components/ActionBody';
@@ -18,11 +23,7 @@ import {
 	OPHAN_COMPONENT_ID_SIGN_IN,
 	OPHAN_COMPONENT_ID_READ_MORE_SIGN_IN,
 } from './utils/ophan';
-import { routes } from 'helpers/urls/routes';
-import {
-	trackComponentClick,
-	trackComponentLoad,
-} from 'helpers/tracking/behaviour';
+
 const bodyText = css`
 	${body.small()};
 `;
@@ -134,7 +135,7 @@ const ContributionThankYouSignIn = ({
 					size="default"
 					icon={<SvgArrowRightStraight />}
 					iconSide="right"
-					nudgeIcon
+					nudgeIcon={true}
 				>
 					Continue
 				</LinkButton>

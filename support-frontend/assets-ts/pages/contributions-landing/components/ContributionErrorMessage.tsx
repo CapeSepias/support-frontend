@@ -40,7 +40,8 @@ function ContributionErrorMessage(props: PropTypes) {
 
 	if (props.paymentError) {
 		return <GeneralErrorMessage errorReason={props.paymentError} />;
-	} else if (!props.formIsValid && props.checkoutFormHasBeenSubmitted) {
+	}
+	if (!props.formIsValid && props.checkoutFormHasBeenSubmitted) {
 		return (
 			<GeneralErrorMessage
 				classModifiers={['invalid_form_mobile']}
@@ -48,7 +49,8 @@ function ContributionErrorMessage(props: PropTypes) {
 				errorReason="invalid_form_mobile"
 			/>
 		);
-	} else if (shouldsShowExistingContributorErrorMessage) {
+	}
+	if (shouldsShowExistingContributorErrorMessage) {
 		return (
 			<ExistingRecurringContributorErrorMessage
 				contributionType={props.contributionType}

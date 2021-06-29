@@ -3,6 +3,7 @@ import { brand, neutral } from '@guardian/src-foundations/palette';
 import { from, until } from '@guardian/src-foundations/mq';
 import { space } from '@guardian/src-foundations';
 import { headline, body } from '@guardian/src-foundations/typography';
+
 export const hero = css`
 	position: relative;
 	display: flex;

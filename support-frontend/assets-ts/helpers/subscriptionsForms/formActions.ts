@@ -1,13 +1,15 @@
 import { Option } from 'helpers/types/option';
-import { PaymentMethod } from 'helpers/forms/paymentMethods';
-import { PayPal } from 'helpers/forms/paymentMethods';
+import { PaymentMethod, PayPal } from 'helpers/forms/paymentMethods';
+
 import { FormError } from 'helpers/subscriptionsForms/validation';
 import { ErrorReason } from 'helpers/forms/errorReasons';
-import { FormField, Stage } from './formFields';
 import { BillingPeriod } from 'helpers/productPrice/billingPeriods';
 import * as storage from 'helpers/storage/storage';
 import { trackThankYouPageLoaded } from 'helpers/tracking/behaviour';
-import { sendTrackingEventsOnClick } from 'helpers/productPrice/subscriptions';
+import {
+	sendTrackingEventsOnClick,
+	SubscriptionProduct,
+} from 'helpers/productPrice/subscriptions';
 import { showPayPal } from 'helpers/forms/paymentIntegrations/payPalRecurringCheckout';
 import { PaymentAuthorisation } from 'helpers/forms/paymentIntegrations/readerRevenueApis';
 import { IsoCountry } from 'helpers/internationalisation/country';
@@ -17,7 +19,9 @@ import { Action as AddressAction } from 'components/subscriptionCheckouts/addres
 import { CheckoutState } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
 import { onPaymentAuthorised } from 'helpers/subscriptionsForms/submit';
 import { setFormSubmissionDependentValue } from 'helpers/subscriptionsForms/checkoutFormIsSubmittableActions';
-import { SubscriptionProduct } from 'helpers/productPrice/subscriptions';
+
+import { FormField, Stage } from './formFields';
+
 export type Action =
 	| {
 			type: 'SET_STAGE';

@@ -2,6 +2,7 @@
 import { Annual, Monthly } from 'helpers/productPrice/billingPeriods';
 // eslint-disable-next-line import/extensions
 import { getSummary } from '../promotionSummary';
+
 jest.mock('ophan', () => {});
 // ----- Tests ----- //
 describe('promotionSummary', () => {

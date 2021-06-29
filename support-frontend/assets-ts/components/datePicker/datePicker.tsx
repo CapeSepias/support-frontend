@@ -5,18 +5,19 @@ import 'react-day-picker/lib/style.css';
 import { css } from '@emotion/core';
 import { space } from '@guardian/src-foundations';
 import { formatMachineDate } from 'helpers/utilities/dateConversions';
-import CalendarIcon from './calendarIcon.svg';
 import { monthText } from 'pages/paper-subscription-checkout/helpers/subsCardDays';
 import { TextInput } from '@guardian/src-text-input';
 import { ThemeProvider } from 'emotion-theming';
 import { Button, buttonBrandAlt } from '@guardian/src-button';
 import { Error } from 'components/forms/customFields/error';
+import CalendarIcon from './calendarIcon.svg';
 import {
 	getLatestAvailableDateText,
 	getRange,
 	dateIsOutsideRange,
 } from './helpers';
 import './styles.scss';
+
 const calendarIconContainer = css`
 	padding: 0;
 	border: none;
@@ -76,6 +77,7 @@ class DatePickerFields extends Component<PropTypes, StateTypes> {
 
 	getDateString = () =>
 		`${this.state.year}-${this.state.month}-${this.state.day}`;
+
 	getDateConfirmationText = () => {
 		const { value } = this.props;
 
@@ -92,6 +94,7 @@ class DatePickerFields extends Component<PropTypes, StateTypes> {
 			monthText[confirmedDate.getMonth()]
 		} ${confirmedDate.getFullYear()}`;
 	};
+
 	checkDateIsValid = (e: Record<string, any>) => {
 		e.preventDefault();
 		const date = new Date(this.getDateString());
@@ -112,6 +115,7 @@ class DatePickerFields extends Component<PropTypes, StateTypes> {
 			);
 		}
 	};
+
 	handleError = (error: string) => {
 		this.setState({
 			dateError: error,
@@ -121,6 +125,7 @@ class DatePickerFields extends Component<PropTypes, StateTypes> {
 		});
 		this.updateStartDate();
 	};
+
 	handleCalendarDate = (date: Date) => {
 		if (dateIsOutsideRange(date)) {
 			return;
@@ -138,6 +143,7 @@ class DatePickerFields extends Component<PropTypes, StateTypes> {
 			this.updateStartDate,
 		);
 	};
+
 	handleInput = (value: string, field: string) => {
 		if (/^[0-9]+$/.test(value) === true) {
 			this.setState(
@@ -159,6 +165,7 @@ class DatePickerFields extends Component<PropTypes, StateTypes> {
 			);
 		}
 	};
+
 	updateStartDate = () => {
 		const dateString = this.getDateString();
 
@@ -220,7 +227,7 @@ class DatePickerFields extends Component<PropTypes, StateTypes> {
 						</div>
 
 						<button
-							aria-hidden
+							aria-hidden={true}
 							css={calendarIconContainer}
 							onClick={(e) => {
 								e.preventDefault();

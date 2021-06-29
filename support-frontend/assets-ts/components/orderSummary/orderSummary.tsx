@@ -1,9 +1,10 @@
 import { $Call } from 'utility-types';
 import React, { Node } from 'react';
 import { SvgInfo } from '@guardian/src-icons';
-type GridImageType = typeof import('components/gridImage/gridImage').default;
 import { GridImg } from 'components/gridImage/gridImage';
 import * as styles from './orderSummaryStyles';
+
+type GridImageType = typeof import('components/gridImage/gridImage').default;
 type MobileOrderSummary = {
 	title: Node;
 	price: Node;

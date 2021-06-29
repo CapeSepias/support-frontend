@@ -1,6 +1,7 @@
 // ----- Imports ----- //
 import { routes } from 'helpers/urls/routes';
 import { Csrf as CsrfState } from 'helpers/csrf/csrfReducer';
+
 type CheckBankAccountDetails = {
 	accountNumber: string;
 	sortCode: string;

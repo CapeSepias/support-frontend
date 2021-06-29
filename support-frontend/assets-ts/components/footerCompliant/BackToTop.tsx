@@ -6,6 +6,7 @@ import {
 	brandAlt,
 } from '@guardian/src-foundations/palette';
 import { textSans } from '@guardian/src-foundations/typography';
+
 const iconHeight = '42px';
 const iconContainer = css`
 	position: relative;

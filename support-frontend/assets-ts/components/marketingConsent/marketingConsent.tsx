@@ -35,7 +35,8 @@ function MarketingButton(props: ButtonPropTypes) {
 				Signed up
 			</NonInteractiveButton>
 		);
-	} else if (props.requestPending === true) {
+	}
+	if (props.requestPending === true) {
 		return (
 			<NonInteractiveButton
 				appearance="greyHollow"

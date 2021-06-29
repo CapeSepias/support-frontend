@@ -55,7 +55,7 @@ const AppsSection = ({ countryGroupId }: PropTypes) => (
 						size="default"
 						icon={<SvgArrowRightStraight />}
 						iconSide="right"
-						nudgeIcon
+						nudgeIcon={true}
 						aria-label="Click to download the Guardian Daily app on the Apple App Store"
 						href={getDailyEditionUrl(countryGroupId)}
 						onClick={sendTrackingEventsOnClick({
@@ -74,7 +74,7 @@ const AppsSection = ({ countryGroupId }: PropTypes) => (
 						size="default"
 						icon={<SvgArrowRightStraight />}
 						iconSide="right"
-						nudgeIcon
+						nudgeIcon={true}
 						aria-label="Click to download the Guardian Daily app on Google Play"
 						href={androidDailyUrl}
 						onClick={sendTrackingEventsOnClick({
@@ -104,7 +104,7 @@ const AppsSection = ({ countryGroupId }: PropTypes) => (
 						size="default"
 						icon={<SvgArrowRightStraight />}
 						iconSide="right"
-						nudgeIcon
+						nudgeIcon={true}
 						aria-label="Click to download the app on the Apple App Store"
 						href={getIosAppUrl(countryGroupId)}
 						onClick={sendTrackingEventsOnClick({
@@ -121,7 +121,7 @@ const AppsSection = ({ countryGroupId }: PropTypes) => (
 						size="default"
 						icon={<SvgArrowRightStraight />}
 						iconSide="right"
-						nudgeIcon
+						nudgeIcon={true}
 						aria-label="Click to download the app on the Google Play store"
 						href={androidAppUrl}
 						onClick={sendTrackingEventsOnClick({
@@ -150,7 +150,7 @@ const AppsSection = ({ countryGroupId }: PropTypes) => (
 					size="default"
 					icon={<SvgArrowRightStraight />}
 					iconSide="right"
-					nudgeIcon
+					nudgeIcon={true}
 					aria-label="Click to sign in to the website"
 					href="https://www.theguardian.com/"
 					onClick={sendTrackingEventsOnClick({

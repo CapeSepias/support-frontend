@@ -6,7 +6,7 @@ import {
 	getFrequency,
 	toContributionType,
 	generateContributionTypes,
-} from 'helpers/contributions';
+ SelectedAmounts } from 'helpers/contributions';
 import * as storage from 'helpers/storage/storage';
 import { Switches } from 'helpers/globalsAndSwitches/settings';
 import { IsoCountry } from 'helpers/internationalisation/country';
@@ -19,15 +19,15 @@ import {
 	currencies,
 	spokenCurrencies,
 } from 'helpers/internationalisation/currency';
-import { SelectedAmounts } from 'helpers/contributions';
-import { PaymentMethod } from 'helpers/forms/paymentMethods';
-import {
+
+import { PaymentMethod ,
 	DirectDebit,
 	PayPal,
 	Stripe,
 	AmazonPay,
-} from 'helpers/forms/paymentMethods';
-import { ExistingCard, ExistingDirectDebit } from './paymentMethods';
+, ExistingCard, ExistingDirectDebit } from 'helpers/forms/paymentMethods';
+
+
 import { isSwitchOn } from 'helpers/globalsAndSwitches/globals';
 import { StripePaymentMethod } from './paymentIntegrations/readerRevenueApis';
 // ----- Types ----- //
@@ -126,7 +126,7 @@ function getPaymentMethods(
 ): PaymentMethod[] {
 	if (contributionType !== 'ONE_OFF' && countryId === 'GB') {
 		return [DirectDebit, Stripe, PayPal];
-	} else if (countryId === 'US') {
+	} if (countryId === 'US') {
 		// Remove this condition after we've tested in PROD
 		if (
 			contributionType === 'ONE_OFF' ||
@@ -203,7 +203,7 @@ function getPaymentDescription(
 	if (contributionType === 'ONE_OFF') {
 		if (paymentMethod === PayPal) {
 			return 'with PayPal';
-		} else if (paymentMethod === AmazonPay) {
+		} if (paymentMethod === AmazonPay) {
 			return 'with Amazon Pay';
 		}
 
@@ -310,7 +310,7 @@ function getAvailablePaymentRequestButtonPaymentMethod(
 		isSwitchOn(`${switchKey}.stripeApplePay`)
 	) {
 		return 'StripeApplePay';
-	} else if (
+	} if (
 		result &&
 		result.applePay === false &&
 		isSwitchOn(`${switchKey}.stripePaymentRequestButton`)

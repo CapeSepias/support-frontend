@@ -12,8 +12,9 @@ import {
 	International,
 	NZDCountries,
 	UnitedStates,
+	CountryGroupId,
 } from './countryGroup';
-import { CountryGroupId } from './countryGroup';
+
 // ----- Setup ----- //
 const usStates: Record<string, string> = {
 	AK: 'Alaska',
@@ -521,7 +522,8 @@ function fromPath(
 ): IsoCountry | null | undefined {
 	if (path === '/us' || path.startsWith('/us/')) {
 		return 'US';
-	} else if (path === '/ca' || path.startsWith('/ca/')) {
+	}
+	if (path === '/ca' || path.startsWith('/ca/')) {
 		return 'CA';
 	}
 

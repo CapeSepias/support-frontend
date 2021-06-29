@@ -5,6 +5,7 @@ import { space } from '@guardian/src-foundations';
 import { from, until } from '@guardian/src-foundations/mq';
 import GridImage from 'components/gridImage/gridImage';
 import FlexContainer from 'components/containers/flexContainer';
+
 type BenefitsSection = {
 	id: string;
 	content: Node;

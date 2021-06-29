@@ -9,8 +9,6 @@ import headerWithCountrySwitcherContainer from 'components/headers/header/header
 import {
 	detect,
 	CountryGroupId,
-} from 'helpers/internationalisation/countryGroup';
-import {
 	GBPCountries,
 	AUDCountries,
 	Canada,
@@ -19,6 +17,7 @@ import {
 	NZDCountries,
 	UnitedStates,
 } from 'helpers/internationalisation/countryGroup';
+
 import Content from 'components/content/content';
 import 'stylesheets/skeleton/skeleton.scss';
 import WhySupportMatters from './components/whySupportMatters';

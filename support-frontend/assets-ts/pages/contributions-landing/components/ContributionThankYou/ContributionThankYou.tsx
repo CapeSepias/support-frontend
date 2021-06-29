@@ -3,7 +3,7 @@ import React, { useEffect, useMemo } from 'react';
 import { connect } from 'react-redux';
 import { User } from 'helpers/user/userReducer';
 import { PaymentMethod, DirectDebit } from 'helpers/forms/paymentMethods';
-import { ContributionType } from 'helpers/contributions';
+import { ContributionType, getAmount } from 'helpers/contributions';
 import { Csrf } from 'helpers/csrf/csrfReducer';
 import { IsoCountry } from 'helpers/internationalisation/country';
 import { css } from '@emotion/core';
@@ -16,6 +16,12 @@ import {
 } from '@guardian/src-foundations/mq';
 import { neutral } from '@guardian/src-foundations/palette';
 import { LinkButton } from '@guardian/src-button';
+import { trackComponentClick } from 'helpers/tracking/behaviour';
+import {
+	getCampaignSettings,
+	CampaignSettings,
+} from 'helpers/campaigns/campaigns';
+import { IsoCurrency } from 'helpers/internationalisation/currency';
 import ContributionThankYouHeader from './ContributionThankYouHeader';
 import ContributionThankYouSignIn from './ContributionThankYouSignIn';
 import ContributionThankYouSignUp from './ContributionThankYouSignUp';
@@ -28,13 +34,7 @@ import {
 	trackUserData,
 	OPHAN_COMPONENT_ID_RETURN_TO_GUARDIAN,
 } from './utils/ophan';
-import { trackComponentClick } from 'helpers/tracking/behaviour';
-import {
-	getCampaignSettings,
-	CampaignSettings,
-} from 'helpers/campaigns/campaigns';
-import { getAmount } from 'helpers/contributions';
-import { IsoCurrency } from 'helpers/internationalisation/currency';
+
 const container = css`
 	background: white;
 	padding: 0 ${space[3]}px;

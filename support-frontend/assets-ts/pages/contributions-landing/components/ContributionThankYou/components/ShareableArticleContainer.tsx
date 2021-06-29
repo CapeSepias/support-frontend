@@ -4,14 +4,14 @@ import { neutral, news } from '@guardian/src-foundations/palette';
 import { LinkButton } from '@guardian/src-button';
 import { trackComponentClick } from 'helpers/tracking/behaviour';
 import { SvgFacebook, SvgTwitter, SvgEnvelope } from '@guardian/src-icons';
+import { headline } from '@guardian/src-foundations/typography';
+import { space } from '@guardian/src-foundations';
+import { until } from '@guardian/src-foundations/mq';
 import {
 	OPHAN_COMPONENT_ID_SOCIAL_FACEBOOK,
 	OPHAN_COMPONENT_ID_SOCIAL_TWITTER,
 	OPHAN_COMPONENT_ID_SOCIAL_EMAIL,
 } from '../utils/ophan';
-import { headline } from '@guardian/src-foundations/typography';
-import { space } from '@guardian/src-foundations';
-import { until } from '@guardian/src-foundations/mq';
 // Styles ///////////////////////////////////////////////////////////
 const outerContainer = css`
 	display: flex;
@@ -116,7 +116,7 @@ const shareButtonsContainer = (styles: string, articleUrl: string) => (
 			size="default"
 			icon={<SvgFacebook />}
 			css={button}
-			hideLabel
+			hideLabel={true}
 		/>
 		<LinkButton
 			href={twitterShareLink(articleUrl)}
@@ -127,7 +127,7 @@ const shareButtonsContainer = (styles: string, articleUrl: string) => (
 			size="default"
 			icon={<SvgTwitter />}
 			css={button}
-			hideLabel
+			hideLabel={true}
 		/>
 		<LinkButton
 			href={emailShareLink(articleUrl)}
@@ -138,7 +138,7 @@ const shareButtonsContainer = (styles: string, articleUrl: string) => (
 			size="default"
 			icon={<SvgEnvelope />}
 			css={button}
-			hideLabel
+			hideLabel={true}
 		/>
 	</div>
 );

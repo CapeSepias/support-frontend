@@ -6,8 +6,11 @@ import {
 } from 'helpers/globalsAndSwitches/globals';
 import { PromotionTerms } from 'helpers/productPrice/promotions';
 import { ProductPrices } from 'helpers/productPrice/productPrices';
-import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
-import { detect } from 'helpers/internationalisation/countryGroup';
+import {
+	CountryGroupId,
+	detect,
+} from 'helpers/internationalisation/countryGroup';
+
 export type PromotionTermsPropTypes = {
 	productPrices: ProductPrices;
 	promotionTerms: PromotionTerms;

@@ -2,12 +2,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
-import { Phase } from 'components/directDebit/directDebitActions';
 import {
+	Phase,
 	Action,
 	closeDirectDebitPopUp,
 	resetDirectDebitFormError,
 } from 'components/directDebit/directDebitActions';
+
 import DirectDebitForm from 'components/directDebit/directDebitForm/directDebitForm';
 import SvgCross from 'components/svgs/cross';
 import { PaymentAuthorisation } from 'helpers/forms/paymentIntegrations/readerRevenueApis';

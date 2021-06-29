@@ -7,7 +7,6 @@ import Page from 'components/page/page';
 import DigitalFooter from 'components/footerCompliant/DigitalFooter';
 import ThankYouContent from 'pages/digital-subscription-checkout/thankYouContainer';
 import ThankYouGift from 'pages/digital-subscription-checkout/thankYouGift';
-import ThankYouPendingContent from './thankYouPendingContent';
 import CheckoutForm from 'pages/digital-subscription-checkout/components/digitalCheckoutForm';
 import CheckoutFormGift from 'pages/digital-subscription-checkout/components/digitalCheckoutFormGift';
 import 'stylesheets/skeleton/skeleton.scss';
@@ -17,12 +16,11 @@ import { getQueryParameter } from 'helpers/urls/url';
 import {
 	DigitalBillingPeriod,
 	DigitalGiftBillingPeriod,
-} from 'helpers/productPrice/billingPeriods';
-import {
 	Monthly,
 	Annual,
 	Quarterly,
 } from 'helpers/productPrice/billingPeriods';
+
 import { createCheckoutReducer } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
 import { CommonState } from 'helpers/page/commonReducer';
 import { DigitalPack } from 'helpers/productPrice/subscriptions';
@@ -30,6 +28,7 @@ import HeaderWrapper from 'components/subscriptionCheckouts/headerWrapper';
 import MarketingConsent from 'components/subscriptionCheckouts/thankYou/marketingConsentContainer';
 import MarketingConsentGift from 'components/subscriptionCheckouts/thankYou/marketingConsentContainerGift';
 import { FocusStyleManager } from '@guardian/src-utilities';
+import ThankYouPendingContent from './thankYouPendingContent';
 
 // ----- Redux Store ----- //
 function getInitialBillingPeriod(
@@ -84,10 +83,15 @@ FocusStyleManager.onlyShowFocusOnTabs();
 // ----- Render ----- //
 const content = orderIsAGift ? (
 	<Provider store={store}>
-		<Page header={<HeaderWrapper />} footer={<DigitalFooter orderIsAGift />}>
+		<Page
+			header={<HeaderWrapper />}
+			footer={<DigitalFooter orderIsAGift={true} />}
+		>
 			<CheckoutStage
 				checkoutForm={<CheckoutFormGift />}
-				thankYouContentPending={<ThankYouGift {...thankyouProps} pending />}
+				thankYouContentPending={
+					<ThankYouGift {...thankyouProps} pending={true} />
+				}
 				thankYouContent={<ThankYouGift {...thankyouProps} />}
 				subscriptionProduct="DigitalPack"
 			/>
@@ -102,7 +106,10 @@ const content = orderIsAGift ? (
 			<CheckoutStage
 				checkoutForm={<CheckoutForm />}
 				thankYouContentPending={
-					<ThankYouPendingContent includePaymentCopy {...thankyouProps} />
+					<ThankYouPendingContent
+						includePaymentCopy={true}
+						{...thankyouProps}
+					/>
 				}
 				thankYouContent={<ThankYouContent {...thankyouProps} />}
 				subscriptionProduct="DigitalPack"

@@ -4,6 +4,7 @@ import AnchorButton from 'components/button/anchorButton';
 import ArrowRightStraight from 'components/svgs/arrowRightStraight';
 import { classNameWithModifiers } from 'helpers/utilities/utilities';
 import { sendTrackingEventsOnClick } from 'helpers/productPrice/subscriptions';
+
 type PropTypes = {
 	title: string;
 	description: string;

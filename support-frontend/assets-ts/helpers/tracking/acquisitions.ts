@@ -2,11 +2,14 @@ import { $Keys } from 'utility-types';
 // ----- Imports ----- //
 import { viewId } from 'ophan';
 import { get as getCookie } from 'helpers/storage/cookie';
-import { getQueryParameter } from 'helpers/urls/url';
+import {
+	getQueryParameter,
+	getAllQueryParamsWithExclusions,
+} from 'helpers/urls/url';
 import { deserialiseJsonObject } from 'helpers/utilities/utilities';
 import { Participations } from 'helpers/abTests/abtest';
 import * as storage from 'helpers/storage/storage';
-import { getAllQueryParamsWithExclusions } from 'helpers/urls/url';
+
 import { getCampaignCode } from 'helpers/campaigns/campaigns';
 // ----- Types ----- //
 export type AcquisitionABTest = {

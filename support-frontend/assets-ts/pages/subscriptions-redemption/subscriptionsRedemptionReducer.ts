@@ -2,14 +2,15 @@
 import { CommonState } from 'helpers/page/commonReducer';
 import { getGlobal } from 'helpers/globalsAndSwitches/globals';
 import { Option } from 'helpers/types/option';
-import { User } from 'helpers/subscriptionsForms/user';
-import { getUser } from 'helpers/subscriptionsForms/user';
+import { User, getUser } from 'helpers/subscriptionsForms/user';
+
 import { Csrf } from 'helpers/csrf/csrfReducer';
 import {
 	marketingConsentReducerFor,
 	State as MarketingConsentState,
 } from 'components/marketingConsent/marketingConsentReducer';
 import { ReaderType } from 'helpers/productPrice/readerType';
+
 export type Stage = 'form' | 'processing' | 'thankyou' | 'thankyou-pending';
 export type RedemptionFormState = {
 	stage: Stage;

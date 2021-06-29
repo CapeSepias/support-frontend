@@ -17,14 +17,14 @@ import { amountIsValid } from 'helpers/forms/formValidation';
 import { classNameWithModifiers } from 'helpers/utilities/utilities';
 import { trackComponentClick } from 'helpers/tracking/behaviour';
 import { formatAmount } from 'helpers/forms/checkouts';
+import { TextInput } from '@guardian/src-text-input';
+import { LocalCurrencyCountry } from 'helpers/internationalisation/localCurrencyCountry';
 import {
 	selectAmount,
 	updateOtherAmount,
 } from '../contributionsLandingActions';
 import { State } from '../contributionsLandingReducer';
 import ContributionAmountChoices from './ContributionAmountChoices';
-import { TextInput } from '@guardian/src-text-input';
-import { LocalCurrencyCountry } from 'helpers/internationalisation/localCurrencyCountry';
 // ----- Types ----- //
 type PropTypes = {
 	countryGroupId: CountryGroupId;
@@ -188,7 +188,7 @@ function withProps(props: PropTypes) {
 						}
 						error={otherAmountErrorMessage}
 						autoComplete="off"
-						autoFocus
+						autoFocus={true}
 					/>
 				</div>
 			)}

@@ -7,6 +7,7 @@ import { digitalSubscriptionsBlue } from 'stylesheets/emotion/colours';
 import FlexContainer from 'components/containers/flexContainer';
 import Quote from 'components/quote/quote';
 import HeadlineSvg from './whyYourSupportMatters.svg';
+
 export const evContainerOverrides = css`
 	margin-bottom: ${space[6]}px;
 	z-index: 1;

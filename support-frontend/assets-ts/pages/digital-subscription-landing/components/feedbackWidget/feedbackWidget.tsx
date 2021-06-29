@@ -42,7 +42,7 @@ function FeedbackWidget({ display }: { display: boolean }) {
 							<Button
 								priority="subdued"
 								size="small"
-								hideLabel
+								hideLabel={true}
 								aria-label="Is this page helpful? Yes, this page has the information I am looking for"
 								icon={<SvgThumbsUp />}
 								cssOverrides={[positiveButtonCss, buttonStyles]}
@@ -64,7 +64,7 @@ function FeedbackWidget({ display }: { display: boolean }) {
 							<Button
 								priority="subdued"
 								size="small"
-								hideLabel
+								hideLabel={true}
 								aria-label="Is this page helpful? No, this page does not have the information I am looking for"
 								icon={<SvgThumbsDown />}
 								cssOverrides={[negativeButtonCss, buttonStyles]}

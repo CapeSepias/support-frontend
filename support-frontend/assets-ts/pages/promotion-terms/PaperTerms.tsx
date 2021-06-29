@@ -3,6 +3,7 @@ import { PromotionTerms } from 'helpers/productPrice/promotions';
 import { formatUserDate } from 'helpers/utilities/dateConversions';
 import { paperSubsUrl } from 'helpers/urls/routes';
 import OrderedList from 'components/list/orderedList';
+
 export default function PaperTerms(props: PromotionTerms) {
 	const expiryCopy = props.expires
 		? `The closing date and time of the promotion is ${formatUserDate(

@@ -6,6 +6,7 @@ import { brand } from '@guardian/src-foundations/palette';
 import { space } from '@guardian/src-foundations';
 import { textSans } from '@guardian/src-foundations/typography';
 import { LinkButton, buttonReaderRevenue } from '@guardian/src-button';
+
 export type ProductSmall = {
 	offerCopy: string;
 	priceCopy: Node;

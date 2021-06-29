@@ -1,5 +1,4 @@
 import React, { Node } from 'react';
-import styles from './layout.module.scss';
 import LeftMarginSection from 'components/leftMarginSection/leftMarginSection';
 import {
 	asideBottomCss,
@@ -9,6 +8,8 @@ import {
 	mainCss,
 	stickyCss,
 } from 'components/subscriptionCheckouts/layoutStyles';
+import styles from './layout.module.scss';
+
 type AsideWrapPosition = 'top' | 'bottom';
 type PropTypes = {
 	children: Node;

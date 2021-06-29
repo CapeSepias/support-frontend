@@ -2,8 +2,11 @@
 import React from 'react';
 import PageSection from 'components/pageSection/pageSection';
 import { contributionsEmail } from 'helpers/legal';
-import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
-import { GBPCountries } from 'helpers/internationalisation/countryGroup';
+import {
+	CountryGroupId,
+	GBPCountries,
+} from 'helpers/internationalisation/countryGroup';
+
 import {
 	ContactPageLink,
 	useDotcomContactPage,

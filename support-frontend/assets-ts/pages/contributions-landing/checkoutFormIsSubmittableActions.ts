@@ -16,13 +16,13 @@ import {
 } from 'helpers/contributions';
 import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
 import { StateProvince } from 'helpers/internationalisation/country';
+import { stripeCardFormIsIncomplete } from 'helpers/forms/stripe';
+import { AmazonPay } from 'helpers/forms/paymentMethods';
 import { State } from './contributionsLandingReducer';
 import {
 	Action as ContributionsLandingAction,
 	setFormIsValid,
 } from './contributionsLandingActions';
-import { stripeCardFormIsIncomplete } from 'helpers/forms/stripe';
-import { AmazonPay } from 'helpers/forms/paymentMethods';
 import { LocalCurrencyCountry } from '../../helpers/internationalisation/localCurrencyCountry';
 // ----- Types ----- //
 type Action = ContributionsLandingAction | UserAction;

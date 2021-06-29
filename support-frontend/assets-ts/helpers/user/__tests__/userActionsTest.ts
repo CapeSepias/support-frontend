@@ -1,4 +1,5 @@
 import { defaultUserActionFunctions } from '../defaultUserActionFunctions';
+
 jest.mock('ophan', () => () => ({}));
 describe('actions', () => {
 	const {

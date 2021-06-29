@@ -3,6 +3,7 @@ import AnchorButton from 'components/button/anchorButton';
 // types
 import { Option } from 'helpers/types/option';
 import { ProductButton } from 'pages/subscriptions-landing/copy/subscriptionCopy';
+
 type PropTypes = {
 	title: string;
 	subtitle: string;
@@ -15,12 +16,11 @@ type PropTypes = {
 const getButtonAppearance = (isFeature, index, hierarchy) => {
 	if (isFeature && index === 0) {
 		return 'primary';
-	} else if (isFeature && index > 0) {
+	}
+	if (isFeature && index > 0) {
 		return 'tertiaryFeature';
-	} else if (
-		(!isFeature && index === 0) ||
-		(!isFeature && hierarchy === 'first')
-	) {
+	}
+	if ((!isFeature && index === 0) || (!isFeature && hierarchy === 'first')) {
 		return 'secondary';
 	}
 

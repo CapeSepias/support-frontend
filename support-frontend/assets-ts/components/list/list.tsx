@@ -4,6 +4,7 @@ import { brand, brandAlt } from '@guardian/src-foundations/palette';
 import { space } from '@guardian/src-foundations';
 import { from } from '@guardian/src-foundations/mq';
 import { body } from '@guardian/src-foundations/typography';
+
 export type ListItemText = {
 	content: string;
 	subText?: string;

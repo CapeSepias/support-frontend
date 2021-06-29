@@ -89,9 +89,7 @@ const buildOphanPayload = (participations: Participations): OphanABPayload =>
 			complete: false,
 			campaignCodes: [],
 		};
-		return Object.assign({}, payload, {
-			[participation]: ophanABEvent,
-		});
+		return { ...payload, [participation]: ophanABEvent };
 	}, {});
 
 const trackAbTests = (participations: Participations): void =>

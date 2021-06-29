@@ -1,6 +1,6 @@
 import { setSession } from 'helpers/storage/storage';
-import { Action } from './userActions';
 import { trackComponentLoad } from 'helpers/tracking/behaviour';
+import { Action } from './userActions';
 
 // ----- Actions Creators ----- //
 function setId(id: string): Action {
@@ -101,8 +101,8 @@ function setIsReturningContributor(isReturningContributor: boolean): Action {
 	// JTL: We want to send an Ophan event when we recognize a user is a returning contributor and on the landing page
 	const isReturningContributorOnLandingPage =
 		isReturningContributor &&
-		!!document.location.pathname.match(
-			/^https:\/\/support\.\w+\.com\/\w\w\/contribute/,
+		!!/^https:\/\/support\.\w+\.com\/\w\w\/contribute/.exec(
+			document.location.pathname,
 		);
 
 	if (isReturningContributorOnLandingPage) {

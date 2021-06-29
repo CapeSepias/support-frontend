@@ -5,13 +5,13 @@ import { init as pageInit } from 'helpers/page/page';
 import Page from 'components/page/page';
 import Footer from 'components/footerCompliant/Footer';
 import 'stylesheets/skeleton/skeleton.scss';
-import CheckoutStage from './components/stage';
-import reducer from './subscriptionsRedemptionReducer';
 import RedemptionForm from 'pages/subscriptions-redemption/components/redemptionForm';
 import Header from 'components/headers/header/header';
 import ThankYouContent from 'pages/subscriptions-redemption/thankYouContainer';
-import MarketingConsent from './marketingConsentContainer';
 import ThankYouPendingContent from 'pages/digital-subscription-checkout/thankYouPendingContent';
+import MarketingConsent from './marketingConsentContainer';
+import reducer from './subscriptionsRedemptionReducer';
+import CheckoutStage from './components/stage';
 // ----- Redux Store ----- //
 const store = pageInit(reducer, true);
 const state = store.getState();

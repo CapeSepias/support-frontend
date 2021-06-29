@@ -8,7 +8,6 @@ import { space } from '@guardian/src-foundations';
 import { ThemeProvider } from 'emotion-theming';
 import { compose } from 'redux';
 import * as stripeJs from '@stripe/react-stripe-js';
-import { ErrorSummary } from '../submitFormErrorSummary';
 import { FormError } from 'helpers/subscriptionsForms/validation';
 import { FormField } from 'helpers/subscriptionsForms/formFields';
 import {
@@ -28,6 +27,7 @@ import { trackComponentLoad } from 'helpers/tracking/behaviour';
 import { loadRecaptchaV2 } from 'helpers/forms/recaptcha';
 import { routes } from 'helpers/urls/routes';
 import { Recaptcha } from 'components/recaptcha/recaptcha';
+import { ErrorSummary } from '../submitFormErrorSummary';
 // Types
 export type StripeFormPropTypes = {
 	allErrors: FormError<FormField>[];

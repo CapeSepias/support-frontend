@@ -19,7 +19,7 @@ const AustraliaMapLink = () => (
 				target="_blank"
 				icon={<SvgArrowRightStraight />}
 				iconSide="right"
-				nudgeIcon
+				nudgeIcon={true}
 				href="https://support.theguardian.com/aus-2020-map?INTCMP=thankyou-page-aus-map-cta"
 				onClick={() => trackComponentClick('contribution-thankyou-aus-map')}
 			>

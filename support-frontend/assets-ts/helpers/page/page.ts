@@ -1,13 +1,14 @@
 // ----- Imports ----- //
 import * as ophan from 'ophan';
-import { Store } from 'redux';
 import {
+	Store,
 	applyMiddleware,
 	combineReducers,
 	compose,
 	createStore,
 	Reducer,
 } from 'redux';
+
 import thunkMiddleware from 'redux-thunk';
 import { Participations } from 'helpers/abTests/abtest';
 import * as abTest from 'helpers/abTests/abtest';
@@ -27,11 +28,16 @@ import {
 	getAllQueryParamsWithExclusions,
 	getQueryParameter,
 } from 'helpers/urls/url';
-import { CommonState, Internationalisation } from 'helpers/page/commonReducer';
-import { createCommonReducer } from 'helpers/page/commonReducer';
+import {
+	CommonState,
+	Internationalisation,
+	createCommonReducer,
+} from 'helpers/page/commonReducer';
+
 import {
 	getCampaign,
 	getReferrerAcquisitionData,
+	ReferrerAcquisitionData,
 } from 'helpers/tracking/acquisitions';
 import {
 	CountryGroupId,
@@ -41,13 +47,15 @@ import {
 	trackAbTests,
 	setReferrerDataInLocalStorage,
 } from 'helpers/tracking/ophan';
-import { getSettings } from 'helpers/globalsAndSwitches/globals';
-import { getGlobal } from 'helpers/globalsAndSwitches/globals';
+import { getSettings, getGlobal } from 'helpers/globalsAndSwitches/globals';
+
 import { isPostDeployUser } from 'helpers/user/user';
 import { getAmounts } from 'helpers/abTests/helpers';
-import { ReferrerAcquisitionData } from 'helpers/tracking/acquisitions';
-import { localCurrencyCountries } from '../internationalisation/localCurrencyCountry';
-import { LocalCurrencyCountry } from '../internationalisation/localCurrencyCountry';
+
+import {
+	localCurrencyCountries,
+	LocalCurrencyCountry,
+} from '../internationalisation/localCurrencyCountry';
 
 if (process.env.NODE_ENV === 'DEV') {
 	// $FlowIgnore

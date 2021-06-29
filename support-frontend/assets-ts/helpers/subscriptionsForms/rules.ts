@@ -1,11 +1,16 @@
-import { formError, nonEmptyString, notNull, validate } from './validation';
-import { FormField, FormFields } from './formFields';
-import { FormError } from './validation';
 import {
 	checkOptionalEmail,
 	checkEmail,
 	checkGiftStartDate,
 } from 'helpers/forms/formValidation';
+import {
+	formError,
+	nonEmptyString,
+	notNull,
+	validate,
+	FormError,
+} from './validation';
+import { FormField, FormFields } from './formFields';
 
 function applyCheckoutRules(fields: FormFields): FormError<FormField>[] {
 	const { orderIsAGift, product } = fields;

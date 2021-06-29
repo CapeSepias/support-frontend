@@ -19,6 +19,7 @@ import {
 	getAppliedPromoDescription,
 	getPriceDescription,
 } from 'helpers/productPrice/priceDescriptions';
+
 type PropTypes = {
 	productPrices: ProductPrices;
 	billingPeriods: BillingPeriod[];

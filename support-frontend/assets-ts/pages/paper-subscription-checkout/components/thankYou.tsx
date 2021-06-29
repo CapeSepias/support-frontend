@@ -5,11 +5,12 @@ import { textSans, headline } from '@guardian/src-foundations/typography';
 import { from } from '@guardian/src-foundations/mq';
 import { space } from '@guardian/src-foundations';
 import { connect } from 'react-redux';
-import { FulfilmentOptions } from 'helpers/productPrice/fulfilmentOptions';
 import {
+	FulfilmentOptions,
 	Collection,
 	HomeDelivery,
 } from 'helpers/productPrice/fulfilmentOptions';
+
 import { sendTrackingEventsOnClick } from 'helpers/productPrice/subscriptions';
 import { WithDeliveryCheckoutState } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
 import Asyncronously from 'components/asyncronously/asyncronously';
@@ -17,19 +18,20 @@ import Content from 'components/content/contentSimple';
 import { HeroWrapper } from 'components/productPage/productPageHero/productPageHero';
 import HeadingBlock from 'components/headingBlock/headingBlock';
 import { myAccountUrl } from 'helpers/urls/externalLinks';
-type MarketingConsent =
-	typeof import('components/subscriptionCheckouts/thankYou/marketingConsentContainer').default;
 import styles from 'components/subscriptionCheckouts/thankYou/thankYou.module.scss';
 import { formatUserDate } from 'helpers/utilities/dateConversions';
-import SubscriptionsSurvey from './subscriptionSurvey';
-import { HeroPicture } from './heroPicture';
 import { getTitle } from 'pages/paper-subscription-landing/helpers/products';
 import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
-import AppsSection from './appsSection';
 import {
 	FormFields,
 	getFormFields,
 } from 'helpers/subscriptionsForms/formFields';
+import SubscriptionsSurvey from './subscriptionSurvey';
+import { HeroPicture } from './heroPicture';
+import AppsSection from './appsSection';
+
+type MarketingConsent =
+	typeof import('components/subscriptionCheckouts/thankYou/marketingConsentContainer').default;
 // ----- Types ----- //
 type PropTypes = FormFields & {
 	isPending: boolean;
@@ -165,7 +167,7 @@ function ThankYouContent({
 				</HeadingBlock>
 			</HeroWrapper>
 			{showTopContentBlock && (
-				<Content divider>
+				<Content divider={true}>
 					{isPending && (
 						<p css={subHeading}>
 							Your subscription is being processed and you will receive an email

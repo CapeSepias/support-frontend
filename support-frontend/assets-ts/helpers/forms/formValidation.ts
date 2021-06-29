@@ -7,21 +7,21 @@ import { config } from 'helpers/contributions';
 import {
 	CountryGroup,
 	CountryGroupId,
+	Canada,
+	UnitedStates,
+	AUDCountries,
+	countryGroups,
 } from 'helpers/internationalisation/countryGroup';
 import {
 	ContributionType,
 	OtherAmounts,
 	SelectedAmounts,
 } from 'helpers/contributions';
-import {
-	Canada,
-	UnitedStates,
-	AUDCountries,
-	countryGroups,
-} from '../internationalisation/countryGroup';
+
 import { DateUtils } from 'react-day-picker';
 import { daysFromNowForGift } from 'pages/digital-subscription-checkout/components/helpers';
 import { LocalCurrencyCountry } from '../internationalisation/localCurrencyCountry';
+
 export const emailRegexPattern =
 	"^[a-zA-Z0-9\\.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$";
 export const isEmpty: (arg0: string | null) => boolean = (input) =>
@@ -130,7 +130,8 @@ export const checkStateIfApplicable: (
 	if (contributionType !== 'ONE_OFF') {
 		if (countryGroupId === UnitedStates || countryGroupId === Canada) {
 			return checkBillingState(billingState);
-		} else if (countryGroupId === AUDCountries) {
+		}
+		if (countryGroupId === AUDCountries) {
 			// Allow no state to be selected if the user is GEO-IP'd to one of the non AU countries that use AUD.
 			if (window.guardian && window.guardian.geoip) {
 				const AUDCountryGroup: CountryGroup = countryGroups[AUDCountries];

@@ -7,9 +7,6 @@ import Page from 'components/page/page';
 import WeeklyFooter from 'components/footerCompliant/WeeklyFooter';
 import 'stylesheets/skeleton/skeleton.scss';
 import CheckoutStage from 'components/subscriptionCheckouts/stage';
-import ThankYouContent from './components/thankYou';
-import WeeklyCheckoutForm from './components/weeklyCheckoutForm';
-import WeeklyCheckoutFormGifting from './components/weeklyCheckoutFormGifting';
 import { CommonState } from 'helpers/page/commonReducer';
 import { createWithDeliveryCheckoutReducer } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
 import { GuardianWeekly } from 'helpers/productPrice/subscriptions';
@@ -27,6 +24,9 @@ import { formatMachineDate } from 'helpers/utilities/dateConversions';
 import { promotionTermsUrl } from 'helpers/urls/routes';
 import { FocusStyleManager } from '@guardian/src-utilities';
 import HeaderWrapper from 'components/subscriptionCheckouts/headerWrapper';
+import WeeklyCheckoutFormGifting from './components/weeklyCheckoutFormGifting';
+import WeeklyCheckoutForm from './components/weeklyCheckoutForm';
+import ThankYouContent from './components/thankYou';
 // ----- Redux Store ----- //
 const billingPeriodInUrl = getQueryParameter('period');
 const initialBillingPeriod: WeeklyBillingPeriod =
@@ -81,7 +81,7 @@ const content = (
 					orderIsAGift ? <WeeklyCheckoutFormGifting /> : <WeeklyCheckoutForm />
 				}
 				thankYouContentPending={
-					<ThankYouContent isPending orderIsGift={orderIsAGift} />
+					<ThankYouContent isPending={true} orderIsGift={orderIsAGift} />
 				}
 				thankYouContent={
 					<ThankYouContent isPending={false} orderIsGift={orderIsAGift} />

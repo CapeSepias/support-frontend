@@ -5,9 +5,9 @@ import seedrandom from 'seedrandom';
 import * as cookie from 'helpers/storage/cookie';
 import { Settings } from 'helpers/globalsAndSwitches/settings';
 import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
-import { tests } from './abtestDefinitions';
 import { gaEvent } from 'helpers/tracking/googleTagManager';
 import { getQueryParameter } from 'helpers/urls/url';
+import { tests } from './abtestDefinitions';
 // ----- Types ----- //
 export type TestId = $Keys<typeof tests>;
 const breakpoints = {
@@ -240,7 +240,8 @@ function assignUserToVariant(
 		}
 
 		return index;
-	} else if (referrerControlled && acquisitionDataTest === null) {
+	}
+	if (referrerControlled && acquisitionDataTest === null) {
 		console.error('A/B test expects acquistion data but none was provided');
 	}
 

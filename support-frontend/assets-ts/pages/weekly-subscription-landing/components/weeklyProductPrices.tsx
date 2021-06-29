@@ -9,22 +9,25 @@ import {
 import {
 	sendTrackingEventsOnClick,
 	sendTrackingEventsOnView,
+	fixDecimals,
 } from 'helpers/productPrice/subscriptions';
-import { getAppliedPromo } from 'helpers/productPrice/promotions';
-import Prices, { PropTypes } from './content/prices';
-import { State } from '../weeklySubscriptionLandingReducer';
+import {
+	getAppliedPromo,
+	promoQueryParam,
+	Promotion,
+} from 'helpers/productPrice/promotions';
 import {
 	getProductPrice,
 	getFirstValidPrice,
+	ProductPrice,
 } from 'helpers/productPrice/productPrices';
 import { getSimplifiedPriceDescription } from 'helpers/productPrice/priceDescriptions';
 import { getWeeklyFulfilmentOption } from 'helpers/productPrice/fulfilmentOptions';
 import { getOrigin, getQueryParameter } from 'helpers/urls/url';
-import { promoQueryParam, Promotion } from 'helpers/productPrice/promotions';
-import { ProductPrice } from 'helpers/productPrice/productPrices';
-import { currencies } from 'helpers/internationalisation/currency';
-import { fixDecimals } from 'helpers/productPrice/subscriptions';
-import { IsoCurrency } from 'helpers/internationalisation/currency';
+
+import { currencies, IsoCurrency } from 'helpers/internationalisation/currency';
+import { State } from '../weeklySubscriptionLandingReducer';
+import Prices, { PropTypes } from './content/prices';
 
 const getCheckoutUrl = (
 	billingPeriod: WeeklyBillingPeriod,

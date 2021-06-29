@@ -18,6 +18,7 @@ import { sendTrackingEventsOnClick } from 'helpers/productPrice/subscriptions';
 import { getMaxSavingVsRetail } from 'helpers/productPrice/paperProductPrices';
 import { promotionHTML, PromotionCopy } from 'helpers/productPrice/promotions';
 import { getDiscountCopy } from './discountCopy';
+
 type PropTypes = {
 	productPrices: ProductPrices;
 	promotionCopy: PromotionCopy;

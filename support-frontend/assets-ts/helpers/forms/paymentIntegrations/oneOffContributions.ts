@@ -6,12 +6,16 @@ import { fetchJson, requestOptions } from 'helpers/async/fetch';
 import * as cookie from 'helpers/storage/cookie';
 import { addQueryParamsToURL } from 'helpers/urls/url';
 import { IsoCurrency } from 'helpers/internationalisation/currency';
-import { PaymentSuccess } from './readerRevenueApis';
-import { PaymentResult, StripePaymentMethod } from './readerRevenueApis';
 import {
 	ThankYouPageStage,
 	Stripe3DSResult,
 } from 'pages/contributions-landing/contributionsLandingReducer';
+import {
+	PaymentSuccess,
+	PaymentResult,
+	StripePaymentMethod,
+} from './readerRevenueApis';
+
 // ----- Types ----- //
 type UnexpectedError = {
 	type: 'unexpectedError';

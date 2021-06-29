@@ -10,6 +10,7 @@ import { ErrorSummary } from 'components/subscriptionCheckouts/submitFormErrorSu
 import GeneralErrorMessage from 'components/generalErrorMessage/generalErrorMessage';
 import { ErrorReason } from 'helpers/forms/errorReasons';
 import { Option } from 'helpers/types/option';
+
 const directDebitForm = css`
 	clear: left;
 	margin-top: 20px;

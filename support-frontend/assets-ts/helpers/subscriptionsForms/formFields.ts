@@ -13,6 +13,7 @@ import {
 	CheckoutState,
 } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
 import { SubscriptionProduct } from 'helpers/productPrice/subscriptions';
+
 export type Stage = 'checkout' | 'thankyou' | 'thankyou-pending';
 export type FormFields = {
 	title: Option<Title>;

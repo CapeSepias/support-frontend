@@ -217,7 +217,7 @@ const AppsSection = ({ countryGroupId }: PropTypes) => (
 					size="default"
 					icon={<SvgArrowRightStraight />}
 					iconSide="right"
-					nudgeIcon
+					nudgeIcon={true}
 					aria-label="Click to sign in to the website"
 					href="https://www.theguardian.com/"
 					onClick={sendTrackingEventsOnClick({

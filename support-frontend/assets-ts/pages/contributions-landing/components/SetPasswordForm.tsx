@@ -10,7 +10,12 @@ import SvgPasswordKey from 'components/svgs/passwordKey';
 import SvgEnvelope from 'components/svgs/envelope';
 import SvgExclamationAlternate from 'components/svgs/exclamationAlternate';
 import { checkEmail, emailRegexPattern } from 'helpers/forms/formValidation';
-import { trackComponentClick } from 'helpers/tracking/behaviour';
+import {
+	trackComponentClick,
+	trackComponentLoad,
+} from 'helpers/tracking/behaviour';
+import Button from 'components/button/button';
+import TrackableButton from 'components/button/trackableButton';
 import ContributionTextInput from './ContributionTextInput';
 import { ThankYouPageStage } from '../contributionsLandingReducer';
 import {
@@ -20,9 +25,7 @@ import {
 	updatePassword,
 	Action,
 } from '../contributionsLandingActions';
-import Button from 'components/button/button';
-import TrackableButton from 'components/button/trackableButton';
-import { trackComponentLoad } from 'helpers/tracking/behaviour';
+
 const passwordErrorHeading = 'Account set up failure';
 const passwordErrorMessage =
 	'Sorry, we are unable to register you at this time. We are working hard to fix the problem and hope to be back up and running soon. Please come back later to complete your registration. Thank you.';
@@ -108,7 +111,7 @@ function SetPasswordForm(props: PropTypes) {
 			<form
 				onSubmit={onSubmit(props)}
 				className={classNameWithModifiers('form', ['contribution'])}
-				noValidate
+				noValidate={true}
 			>
 				<ContributionTextInput
 					id="email"
@@ -121,8 +124,8 @@ function SetPasswordForm(props: PropTypes) {
 					autoComplete="email"
 					type="email"
 					errorMessage="Please enter a valid email address"
-					required
-					disabled
+					required={true}
+					disabled={true}
 				/>
 				<ContributionTextInput
 					id="password"
@@ -133,11 +136,11 @@ function SetPasswordForm(props: PropTypes) {
 					autoComplete="off"
 					value={props.password}
 					onInput={props.updatePassword}
-					pattern={'^.{6,20}$'}
+					pattern="^.{6,20}$"
 					isValid={props.password.length >= 6 && props.password.length <= 20}
 					formHasBeenSubmitted={props.passwordHasBeenSubmitted}
 					errorMessage="Please enter a password between 6 and 20 characters long"
-					required
+					required={true}
 				/>
 				<TrackableButton
 					appearance="secondary"

@@ -14,6 +14,8 @@ import {
 	emailRegexPattern,
 } from 'helpers/forms/formValidation';
 import { UserTypeFromIdentityResponse } from 'helpers/identityApis';
+import { classNameWithModifiers } from 'helpers/utilities/utilities';
+import { TextInput } from '@guardian/src-text-input';
 import ContributionState from './ContributionState';
 import ContributionTextInput from './ContributionTextInput';
 import { MustSignIn } from './MustSignIn';
@@ -25,8 +27,6 @@ import {
 	updateBillingState,
 	checkIfEmailHasPassword,
 } from '../contributionsLandingActions';
-import { classNameWithModifiers } from 'helpers/utilities/utilities';
-import { TextInput } from '@guardian/src-text-input';
 // ----- Types ----- //
 
 /* eslint-disable react/no-unused-prop-types */
@@ -137,7 +137,7 @@ function withProps(props: PropTypes) {
 					disabled={isSignedIn}
 				/>
 			</div>
-			<Signout isSignedIn />
+			<Signout isSignedIn={true} />
 			<MustSignIn
 				isSignedIn={props.isSignedIn}
 				userTypeFromIdentityResponse={props.userTypeFromIdentityResponse}
@@ -164,7 +164,7 @@ function withProps(props: PropTypes) {
 									? 'Please provide your first name'
 									: null
 							}
-							required
+							required={true}
 						/>
 					</div>
 					<div
@@ -184,7 +184,7 @@ function withProps(props: PropTypes) {
 									? 'Please provide your last name'
 									: null
 							}
-							required
+							required={true}
 						/>
 					</div>
 				</div>
@@ -209,7 +209,7 @@ function withoutProps() {
 				type="email"
 				placeholder="example@domain.com"
 				icon={<SvgEnvelope />}
-				disabled
+				disabled={true}
 				errorMessage={null}
 			/>
 			<div>
@@ -218,7 +218,7 @@ function withoutProps() {
 					name="contribution-fname"
 					label="First name"
 					icon={<SvgUser />}
-					disabled
+					disabled={true}
 					errorMessage={null}
 				/>
 				<ContributionTextInput
@@ -226,7 +226,7 @@ function withoutProps() {
 					name="contribution-lname"
 					label="Last name"
 					icon={<SvgUser />}
-					disabled
+					disabled={true}
 					errorMessage={null}
 				/>
 			</div>

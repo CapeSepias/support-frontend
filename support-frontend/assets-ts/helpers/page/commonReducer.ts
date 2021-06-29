@@ -1,6 +1,9 @@
 // ----- Types ----- //
 import { IsoCurrency } from 'helpers/internationalisation/currency';
-import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
+import {
+	CountryGroupId,
+	fromCountry,
+} from 'helpers/internationalisation/countryGroup';
 import {
 	Campaign,
 	ReferrerAcquisitionData,
@@ -10,10 +13,11 @@ import { Settings } from 'helpers/globalsAndSwitches/settings';
 import { IsoCountry } from 'helpers/internationalisation/country';
 import { Action } from 'helpers/page/commonActions';
 import { fromCountryGroupId } from 'helpers/internationalisation/currency';
-import { fromCountry } from 'helpers/internationalisation/countryGroup';
+
 import { ExistingPaymentMethod } from 'helpers/forms/existingPaymentMethods/existingPaymentMethods';
 import { ContributionAmounts } from 'helpers/contributions';
 import { LocalCurrencyCountry } from '../internationalisation/localCurrencyCountry';
+
 export type Internationalisation = {
 	currencyId: IsoCurrency;
 	countryGroupId: CountryGroupId;

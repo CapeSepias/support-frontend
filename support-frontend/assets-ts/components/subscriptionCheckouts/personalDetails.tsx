@@ -5,11 +5,12 @@ import { ThemeProvider } from 'emotion-theming';
 import { textSans } from '@guardian/src-foundations/typography';
 import { space } from '@guardian/src-foundations';
 import { Button, buttonReaderRevenueBrandAlt } from '@guardian/src-button';
-import { FormError } from 'helpers/subscriptionsForms/validation';
-import { firstError } from 'helpers/subscriptionsForms/validation';
+import { FormError, firstError } from 'helpers/subscriptionsForms/validation';
+
 import { Option } from 'helpers/types/option';
 import CheckoutExpander from 'components/checkoutExpander/checkoutExpander';
 import { FormField } from 'helpers/subscriptionsForms/formFields';
+
 const marginBotom = css`
 	margin-bottom: ${space[6]}px;
 `;
@@ -88,12 +89,17 @@ export default function PersonalDetails(props: PropTypes) {
 				onChange={(e) => props.setLastName(e.target.value)}
 				error={firstError('lastName', props.formErrors)}
 			/>
-			<TextInput label="Email" type="email" disabled value={props.email} />
+			<TextInput
+				label="Email"
+				type="email"
+				disabled={true}
+				value={props.email}
+			/>
 			<EmailFooter handleSignOut={handleSignOut} />
 			<TextInput
 				id="telephone"
 				label="Telephone"
-				optional
+				optional={true}
 				type="tel"
 				value={props.telephone}
 				onChange={(e) => props.setTelephone(e.target.value)}

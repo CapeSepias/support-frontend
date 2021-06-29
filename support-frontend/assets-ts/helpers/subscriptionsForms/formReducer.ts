@@ -2,24 +2,28 @@
 import { IsoCountry } from 'helpers/internationalisation/country';
 import { getUser } from 'helpers/subscriptionsForms/user';
 import { BillingPeriod } from 'helpers/productPrice/billingPeriods';
-import { SubscriptionProduct } from 'helpers/productPrice/subscriptions';
+import {
+	SubscriptionProduct,
+	GuardianWeekly,
+} from 'helpers/productPrice/subscriptions';
 import { isTestUser } from 'helpers/user/user';
 import { Action } from 'helpers/subscriptionsForms/formActions';
 import { removeError } from 'helpers/subscriptionsForms/validation';
-import { ProductOptions } from 'helpers/productPrice/productOptions';
 import {
+	ProductOptions,
 	NoProductOptions,
 	paperProductsWithDigital,
 	paperProductsWithoutDigital,
 } from 'helpers/productPrice/productOptions';
-import { FulfilmentOptions } from 'helpers/productPrice/fulfilmentOptions';
+
 import {
+	FulfilmentOptions,
 	getWeeklyFulfilmentOption,
 	NoFulfilmentOptions,
 } from 'helpers/productPrice/fulfilmentOptions';
+
 import { FormState } from 'helpers/subscriptionsForms/formFields';
 import { Option } from 'helpers/types/option';
-import { GuardianWeekly } from 'helpers/productPrice/subscriptions';
 
 function createFormReducer(
 	initialCountry: IsoCountry,

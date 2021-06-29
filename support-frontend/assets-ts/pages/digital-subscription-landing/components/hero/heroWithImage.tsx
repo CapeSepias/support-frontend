@@ -15,6 +15,7 @@ import {
 import { promotionHTML, PromotionCopy } from 'helpers/productPrice/promotions';
 import { sendTrackingEventsOnClick } from 'helpers/productPrice/subscriptions';
 import { heroCopy, paragraphs, mobileLineBreak } from './heroWithImageStyles';
+
 type PropTypes = {
 	promotionCopy: PromotionCopy;
 	countryGroupId: CountryGroupId;

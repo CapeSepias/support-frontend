@@ -10,8 +10,26 @@ import {
 	getValidPaymentMethods,
 	getValidContributionTypesFromUrlOrElse,
 } from 'helpers/forms/checkouts';
-import { ContributionType } from 'helpers/contributions';
+import { ContributionType, ContributionTypes } from 'helpers/contributions';
 import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
+import { PaymentMethod, AmazonPay, PayPal } from 'helpers/forms/paymentMethods';
+import {
+	isUsableExistingPaymentMethod,
+	mapExistingPaymentMethodToPaymentMethod,
+	sendGetExistingPaymentMethodsRequest,
+	ExistingPaymentMethod,
+} from 'helpers/forms/existingPaymentMethods/existingPaymentMethods';
+
+import {
+	setExistingPaymentMethods,
+	setContributionTypes,
+} from 'helpers/page/commonActions';
+import { doesUserAppearToBeSignedIn } from 'helpers/user/user';
+import { isSwitchOn } from 'helpers/globalsAndSwitches/globals';
+
+import { getCampaignSettings } from 'helpers/campaigns/campaigns';
+
+import { State } from './contributionsLandingReducer';
 import {
 	Action,
 	checkIfEmailHasPassword,
@@ -25,24 +43,7 @@ import {
 	loadPayPalExpressSdk,
 	loadAmazonPaySdk,
 } from './contributionsLandingActions';
-import { State } from './contributionsLandingReducer';
-import { PaymentMethod } from 'helpers/forms/paymentMethods';
-import {
-	isUsableExistingPaymentMethod,
-	mapExistingPaymentMethodToPaymentMethod,
-	sendGetExistingPaymentMethodsRequest,
-} from 'helpers/forms/existingPaymentMethods/existingPaymentMethods';
-import { ExistingPaymentMethod } from 'helpers/forms/existingPaymentMethods/existingPaymentMethods';
-import {
-	setExistingPaymentMethods,
-	setContributionTypes,
-} from 'helpers/page/commonActions';
-import { doesUserAppearToBeSignedIn } from 'helpers/user/user';
-import { isSwitchOn } from 'helpers/globalsAndSwitches/globals';
-import { ContributionTypes } from 'helpers/contributions';
-import { getCampaignSettings } from 'helpers/campaigns/campaigns';
 import { loadRecaptchaV2 } from '../../helpers/forms/recaptcha';
-import { AmazonPay, PayPal } from 'helpers/forms/paymentMethods';
 
 // ----- Functions ----- //
 function getInitialPaymentMethod(

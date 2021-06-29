@@ -10,6 +10,7 @@ import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
 import { ListHeading } from 'components/productPage/productPageList/productPageList';
 import BlockLabel from 'components/blockLabel/blockLabel';
 import { arrowSvg } from '../arrow';
+
 const labelMobileMargin = css`
 	margin-top: 20px;
 
@@ -208,7 +209,7 @@ class ProductBlockAus extends Component<PropTypes, StateTypes> {
 							</span>
 						}
 						image={weekendImage}
-						first
+						first={true}
 						secondImage={false}
 					/>
 					<Dropdown showDropDown={state.showDropDownDaily} product="daily">
@@ -270,7 +271,7 @@ class ProductBlockAus extends Component<PropTypes, StateTypes> {
 						}
 						image={appImageAus}
 						first={false}
-						secondImage
+						secondImage={true}
 					/>
 					<Dropdown showDropDown={state.showDropDownApp} product="app">
 						<ListHeading

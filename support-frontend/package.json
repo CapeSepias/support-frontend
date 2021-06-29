@@ -6,7 +6,6 @@
     "clean": "echo 'Cleaning Public Folder' && rimraf public/compiled-assets",
     "validate": "echo 'Validating JS' && npm-run-all 'lint --fix' flow && yarn orphans",
     "flow": "flow",
-    "lint": "eslint . --ext .ts --ext .tsx",
     "build-dev": "webpack --config webpack.dev.js",
     "build-ssr": "webpack --config webpack.ssr.js && node scripts/ssrScript.js",
     "build-prod": "npm-run-all clean storybook-static 'webpack --config webpack.prod.js'",
@@ -26,7 +25,9 @@
     "check-images": "echo 'Purging unused images' && node scripts/gridImages.js",
     "tsc": "tsc",
     "prettier:check": "prettier --check ./assets-ts",
-    "prettier:fix": "prettier --write ./assets-ts"
+    "prettier:fix": "prettier --write ./assets-ts",
+    "lint:check": "eslint . --ext .ts --ext .tsx",
+    "lint:fix": "yarn lint:check --fix"
   },
   "browserslist": [
     "Chrome >= 49",

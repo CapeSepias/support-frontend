@@ -1,12 +1,12 @@
 // ----- Routes ----- //
+import { FulfilmentOptions } from 'helpers/productPrice/fulfilmentOptions';
+import { ProductOptions } from 'helpers/productPrice/productOptions';
+import { Option } from 'helpers/types/option';
+import { getOrigin, isProd } from './url';
 import {
 	countryGroups,
 	CountryGroupId,
 } from '../internationalisation/countryGroup';
-import { getOrigin, isProd } from './url';
-import { FulfilmentOptions } from 'helpers/productPrice/fulfilmentOptions';
-import { ProductOptions } from 'helpers/productPrice/productOptions';
-import { Option } from 'helpers/types/option';
 
 const routes: Record<string, string> = {
 	recurringContribCheckout: '/contribute/recurring',

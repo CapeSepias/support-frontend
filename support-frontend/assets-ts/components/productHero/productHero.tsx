@@ -1,12 +1,12 @@
 // ----- Imports ----- //
 import React from 'react';
-import GridPicture from 'components/gridPicture/gridPicture';
-import LeftMarginSection from 'components/leftMarginSection/leftMarginSection';
-import {
+import GridPicture, {
 	GridImage,
 	GridSlot,
 	Source as GridSource,
 } from 'components/gridPicture/gridPicture';
+import LeftMarginSection from 'components/leftMarginSection/leftMarginSection';
+
 import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
 import { ImageId as GridId, ImageType } from 'helpers/images/theGrid';
 // ----- Types ----- //

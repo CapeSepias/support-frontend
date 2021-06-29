@@ -5,9 +5,9 @@ import { bindActionCreators } from 'redux';
 import { Outset } from 'components/content/content';
 import Tabs from 'components/tabs/tabs';
 import { paperSubsUrl } from 'helpers/urls/routes';
+import { PaperFulfilmentOptions } from 'helpers/productPrice/fulfilmentOptions';
 import { State } from '../paperSubscriptionLandingPageReducer';
 import { setTab, TabActions } from '../paperSubscriptionLandingPageActions';
-import { PaperFulfilmentOptions } from 'helpers/productPrice/fulfilmentOptions';
 import { SubsCardFaqBlock } from './content/subsCardTab';
 import { ContentDeliveryFaqBlock } from './content/deliveryTab';
 // ----- Tabs ----- //

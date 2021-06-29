@@ -13,12 +13,13 @@ import {
 	OtherAmounts,
 	SelectedAmounts,
 } from 'helpers/contributions';
-import { PaymentAuthorisation } from 'helpers/forms/paymentIntegrations/readerRevenueApis';
 import {
+	PaymentAuthorisation,
 	PaymentResult,
 	StripePaymentMethod,
 	StripePaymentRequestButtonMethod,
 } from 'helpers/forms/paymentIntegrations/readerRevenueApis';
+
 import {
 	amountOrOtherAmountIsValid,
 	isValidEmail,
@@ -31,19 +32,18 @@ import {
 import {
 	IsoCountry,
 	StateProvince,
-} from 'helpers/internationalisation/country';
-import {
 	findIsoCountry,
 	stateProvinceFromString,
 } from 'helpers/internationalisation/country';
+
 import { logException } from 'helpers/utilities/logger';
 import {
 	State,
 	Stripe3DSResult,
 	StripePaymentRequestButtonData,
 } from 'pages/contributions-landing/contributionsLandingReducer';
-import { Action } from 'pages/contributions-landing/contributionsLandingActions';
 import {
+	Action,
 	onThirdPartyPaymentAuthorised,
 	paymentWaiting as setPaymentWaiting,
 	setHandleStripe3DS,
@@ -57,6 +57,7 @@ import {
 	updateLastName,
 	updatePaymentMethod,
 } from 'pages/contributions-landing/contributionsLandingActions';
+
 import { Stripe, PaymentMethod } from 'helpers/forms/paymentMethods';
 import { StripeAccount } from 'helpers/forms/stripe';
 import { ErrorReason } from 'helpers/forms/errorReasons';
@@ -66,10 +67,10 @@ import {
 	getAvailablePaymentRequestButtonPaymentMethod,
 } from 'helpers/forms/checkouts';
 import { Option } from 'helpers/types/option';
+import { Button } from '@guardian/src-button';
 import { Csrf as CsrfState } from '../../../../helpers/csrf/csrfReducer';
 import { trackComponentEvents } from '../../../../helpers/tracking/ophan';
 import { LocalCurrencyCountry } from '../../../../helpers/internationalisation/localCurrencyCountry';
-import { Button } from '@guardian/src-button';
 // ----- Types -----//
 type PaymentRequestObject = Record<string, any>; // Just to make it clearer when we're passing this object around
 
@@ -197,11 +198,13 @@ function updatePayerName(
 		setFirstName(nameParts[0]);
 		setLastName(nameParts.slice(1).join(' '));
 		return true;
-	} else if (nameParts.length === 2) {
+	}
+	if (nameParts.length === 2) {
 		setFirstName(nameParts[0]);
 		setLastName(nameParts[1]);
 		return true;
-	} else if (nameParts.length === 1) {
+	}
+	if (nameParts.length === 1) {
 		logException(
 			`Failed to set name: no spaces in data object: ${nameParts.join('')}`,
 		);

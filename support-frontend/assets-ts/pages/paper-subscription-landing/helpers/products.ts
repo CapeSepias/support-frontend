@@ -1,5 +1,5 @@
-import { ProductOptions } from 'helpers/productPrice/productOptions';
 import {
+	ProductOptions,
 	Everyday,
 	Sixday,
 	SaturdayPlus,
@@ -8,6 +8,7 @@ import {
 	SixdayPlus,
 	EverydayPlus,
 } from 'helpers/productPrice/productOptions';
+
 export const getTitle = (productOption: ProductOptions) => {
 	switch (productOption) {
 		case Sixday:

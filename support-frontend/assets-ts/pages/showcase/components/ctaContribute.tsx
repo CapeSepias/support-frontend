@@ -6,6 +6,7 @@ import ArrowRightStraight from 'components/svgs/arrowRightStraight';
 import WithSupport from 'components/svgs/withSupport';
 import OneMillionCircles from 'components/svgs/oneMillionCircles';
 import { sendTrackingEventsOnClick } from 'helpers/productPrice/subscriptions';
+
 export default function CtaContribute() {
 	return (
 		<Content appearance="highlight" modifierClasses={['contribute']}>
@@ -22,9 +23,9 @@ export default function CtaContribute() {
 							and shed light where others won’t.
 						</p>
 						<p>
-							The Guardian{"'"}s open, independent journalism has now been
-							supported by over a million people around the world – but we must
-							keep building on this for the years to come.&nbsp;
+							The Guardian's open, independent journalism has now been supported
+							by over a million people around the world – but we must keep
+							building on this for the years to come.&nbsp;
 							<strong>
 								Every contribution, whether big or small, means we can keep
 								investigating and exploring the critical issues of our time. And

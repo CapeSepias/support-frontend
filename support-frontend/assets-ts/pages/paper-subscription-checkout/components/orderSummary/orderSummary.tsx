@@ -1,19 +1,19 @@
 import { $Call } from 'utility-types';
 import React from 'react';
 import { connect } from 'react-redux';
-type GridImageType = typeof import('components/gridImage/gridImage').default;
 import { GridImg } from 'components/gridImage/gridImage';
 import OrderSummary from 'components/orderSummary/orderSummary';
 import OrderSummaryProduct from 'components/orderSummary/orderSummaryProduct';
 import {
 	paperProductsWithoutDigital,
 	ProductOptions,
+	ActivePaperProducts,
 } from 'helpers/productPrice/productOptions';
 import {
 	Collection,
 	FulfilmentOptions,
 } from 'helpers/productPrice/fulfilmentOptions';
-import { ActivePaperProducts } from 'helpers/productPrice/productOptions';
+
 import { WithDeliveryCheckoutState } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
 import {
 	getPriceWithDiscount,
@@ -30,6 +30,8 @@ import {
 	getPriceSummary,
 } from 'pages/paper-subscription-checkout/helpers/orderSummaryText';
 import { getAppliedPromo } from 'helpers/productPrice/promotions';
+
+type GridImageType = typeof import('components/gridImage/gridImage').default;
 type PropTypes = {
 	fulfilmentOption: FulfilmentOptions;
 	productOption: ActivePaperProducts;

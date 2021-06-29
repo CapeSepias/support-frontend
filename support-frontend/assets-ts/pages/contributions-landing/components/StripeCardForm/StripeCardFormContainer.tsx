@@ -1,7 +1,6 @@
 // ----- Imports ----- //
 import * as React from 'react';
 import { Elements } from '@stripe/react-stripe-js';
-import StripeCardForm from './StripeCardForm';
 import {
 	getStripeKey,
 	stripeAccountForContributionType,
@@ -12,6 +11,7 @@ import { IsoCountry } from 'helpers/internationalisation/country';
 import { ContributionType } from 'helpers/contributions';
 import { PaymentMethod, Stripe } from 'helpers/forms/paymentMethods';
 import AnimatedDots from 'components/spinners/animatedDots';
+import StripeCardForm from './StripeCardForm';
 import './stripeCardForm.scss';
 // ----- Types -----//
 

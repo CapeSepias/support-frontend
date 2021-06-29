@@ -13,6 +13,7 @@ import {
 import { supportedPaymentMethods } from 'helpers/subscriptionsForms/countryPaymentMethods';
 import { IsoCurrency } from 'helpers/internationalisation/currency';
 import { ErrorMessage } from 'helpers/subscriptionsForms/validation';
+
 type PropTypes = {
 	currencyId: IsoCurrency;
 	paymentMethod: Option<PaymentMethod>;
@@ -51,7 +52,7 @@ function PaymentMethodSelector(props: PropTypes) {
 			<RadioGroup
 				id="payment-methods"
 				label="How would you like to pay?"
-				hideLabel
+				hideLabel={true}
 				error={props.validationError}
 				role="radiogroup"
 			>

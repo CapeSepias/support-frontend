@@ -54,7 +54,8 @@ export const getForm: (arg0: string) => Record<string, any> | null = (
 const getInvalidReason = (validityState: ValidityState) => {
 	if (validityState.valueMissing) {
 		return '-value-missing';
-	} else if (validityState.patternMismatch) {
+	}
+	if (validityState.patternMismatch) {
 		return '-pattern-mismatch';
 	}
 

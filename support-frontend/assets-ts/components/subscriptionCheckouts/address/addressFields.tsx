@@ -23,8 +23,8 @@ import {
 } from 'components/subscriptionCheckouts/address/addressFieldsStore';
 import { canShow } from 'hocs/canShow';
 import { Option } from 'helpers/types/option';
-import { IsoCountry } from 'helpers/internationalisation/country';
 import {
+	IsoCountry,
 	auStates,
 	caStates,
 	usStates,
@@ -144,7 +144,7 @@ class AddressFields<GlobalState> extends Component<PropTypes<GlobalState>> {
 					css={marginBottom}
 					id={`${scope}-lineTwo`}
 					label="Address Line 2"
-					optional
+					optional={true}
 					type="text"
 					value={props.lineTwo}
 					onChange={(e) => props.setAddressLineTwo(e.target.value)}
@@ -181,7 +181,7 @@ class AddressFields<GlobalState> extends Component<PropTypes<GlobalState>> {
 					value={props.state}
 					onChange={(e) => props.setState(e.target.value)}
 					error={firstError('state', props.formErrors)}
-					optional
+					optional={true}
 					isShown={AddressFields.shouldShowStateInput(props.country)}
 				/>
 				<TextInput

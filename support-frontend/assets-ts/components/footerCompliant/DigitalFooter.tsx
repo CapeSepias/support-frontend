@@ -17,6 +17,7 @@ import { NoProductOptions } from 'helpers/productPrice/productOptions';
 import { Option } from 'helpers/types/option';
 import Footer from './Footer';
 import { footerTextHeading } from './footerStyles';
+
 type PropTypes = {
 	productPrices: ProductPrices;
 	country: IsoCountry;

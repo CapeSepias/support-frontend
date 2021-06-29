@@ -5,25 +5,35 @@ import { combineReducers } from 'redux';
 import {
 	ContributionType,
 	ThirdPartyPaymentLibraries,
+	OtherAmounts,
+	SelectedAmounts,
 } from 'helpers/contributions';
-import csrf from 'helpers/csrf/csrfReducer';
+import csrf, { Csrf as CsrfState } from 'helpers/csrf/csrfReducer';
 import { CommonState } from 'helpers/page/commonReducer';
-import { StateProvince } from 'helpers/internationalisation/country';
+import {
+	StateProvince,
+	IsoCountry,
+} from 'helpers/internationalisation/country';
 import { createUserReducer, User as UserState } from 'helpers/user/userReducer';
-import { DirectDebitState } from 'components/directDebit/directDebitReducer';
-import { directDebitReducer as directDebit } from 'components/directDebit/directDebitReducer';
+import {
+	DirectDebitState,
+	directDebitReducer as directDebit,
+} from 'components/directDebit/directDebitReducer';
+
 import { StripePaymentMethod } from 'helpers/forms/paymentIntegrations/readerRevenueApis';
-import { OtherAmounts, SelectedAmounts } from 'helpers/contributions';
-import { Csrf as CsrfState } from 'helpers/csrf/csrfReducer';
+
 import { getContributionTypeFromSession } from 'helpers/forms/checkouts';
 import * as storage from 'helpers/storage/storage';
 import { UserTypeFromIdentityResponse } from 'helpers/identityApis';
-import { Action } from './contributionsLandingActions';
-import { State as MarketingConsentState } from '../../components/marketingConsent/marketingConsentReducer';
-import { marketingConsentReducerFor } from '../../components/marketingConsent/marketingConsentReducer';
 import { PaymentMethod } from 'helpers/forms/paymentMethods';
+import { Action } from './contributionsLandingActions';
+import {
+	State as MarketingConsentState,
+	marketingConsentReducerFor,
+} from '../../components/marketingConsent/marketingConsentReducer';
+
 import { RecentlySignedInExistingPaymentMethod } from '../../helpers/forms/existingPaymentMethods/existingPaymentMethods';
-import { IsoCountry } from '../../helpers/internationalisation/country';
+
 // ----- Types ----- //
 export type UserFormData = {
 	firstName: string | null;

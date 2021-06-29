@@ -1,4 +1,5 @@
 import { Option } from 'helpers/types/option';
+
 export type User = {
 	firstName: Option<string>;
 	lastName: Option<string>;

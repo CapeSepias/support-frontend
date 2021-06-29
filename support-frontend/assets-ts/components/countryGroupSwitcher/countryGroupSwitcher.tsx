@@ -36,6 +36,7 @@ class CountryGroupSwitcher extends Component<
 			left: 0,
 		},
 	};
+
 	buttonRef: Element | null | undefined;
 
 	render() {

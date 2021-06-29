@@ -349,7 +349,8 @@ function postRegularPaymentRequest(
 					paymentStatus: 'failure',
 					error: 'internal_error',
 				};
-			} else if (response.status === 400) {
+			}
+			if (response.status === 400) {
 				logException(`Bad request error while trying to post to ${uri}`);
 				return {
 					paymentStatus: 'failure',

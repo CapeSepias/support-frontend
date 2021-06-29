@@ -4,22 +4,29 @@ import { combineReducers } from 'redux';
 import { createFormReducer } from 'helpers/subscriptionsForms/formReducer';
 import { SubscriptionProduct } from 'helpers/productPrice/subscriptions';
 import { createUserReducer } from 'helpers/user/userReducer';
-import { directDebitReducer as directDebit } from 'components/directDebit/directDebitReducer';
+import {
+	directDebitReducer as directDebit,
+	DirectDebitState,
+} from 'components/directDebit/directDebitReducer';
 import {
 	FormFields as AddressFormFields,
 	State as AddressState,
+	addressReducerFor,
 } from 'components/subscriptionCheckouts/address/addressFieldsStore';
-import { addressReducerFor } from 'components/subscriptionCheckouts/address/addressFieldsStore';
-import { Csrf as CsrfState } from 'helpers/csrf/csrfReducer';
-import csrf from 'helpers/csrf/csrfReducer';
-import { State as MarketingConsentState } from 'components/marketingConsent/marketingConsentReducer';
-import { marketingConsentReducerFor } from 'components/marketingConsent/marketingConsentReducer';
+
+import csrf, { Csrf as CsrfState } from 'helpers/csrf/csrfReducer';
+
+import {
+	State as MarketingConsentState,
+	marketingConsentReducerFor,
+} from 'components/marketingConsent/marketingConsentReducer';
+
 import { ReduxState } from 'helpers/page/page';
 import { Option } from 'helpers/types/option';
 import { FormState } from 'helpers/subscriptionsForms/formFields';
 import { ProductOptions } from 'helpers/productPrice/productOptions';
 import { FulfilmentOptions } from 'helpers/productPrice/fulfilmentOptions';
-import { DirectDebitState } from 'components/directDebit/directDebitReducer';
+
 export type CheckoutState = ReduxState<{
 	checkout: FormState;
 	csrf: CsrfState;

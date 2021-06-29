@@ -4,12 +4,11 @@ import {
 	PaymentResult,
 	RegularPaymentRequest,
 	SubscriptionProductFields,
-} from 'helpers/forms/paymentIntegrations/readerRevenueApis';
-import {
 	PaymentAuthorisation,
 	postRegularPaymentRequest,
 	regularPaymentFieldsFromAuthorisation,
 } from 'helpers/forms/paymentIntegrations/readerRevenueApis';
+
 import {
 	Action,
 	setFormSubmitted,
@@ -20,11 +19,10 @@ import {
 	AnyCheckoutState,
 	CheckoutState,
 	WithDeliveryCheckoutState,
-} from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
-import {
 	getBillingAddressFields,
 	getDeliveryAddressFields,
 } from 'helpers/subscriptionsForms/subscriptionCheckoutReducer';
+
 import {
 	finalPrice,
 	getCurrency,
@@ -34,8 +32,13 @@ import { getOphanIds, getSupportAbTests } from 'helpers/tracking/acquisitions';
 import { routes } from 'helpers/urls/routes';
 import { IsoCurrency } from 'helpers/internationalisation/currency';
 import { Option } from 'helpers/types/option';
-import { PaymentMethod } from 'helpers/forms/paymentMethods';
-import { DirectDebit, PayPal, Stripe } from 'helpers/forms/paymentMethods';
+import {
+	PaymentMethod,
+	DirectDebit,
+	PayPal,
+	Stripe,
+} from 'helpers/forms/paymentMethods';
+
 import {
 	validateCheckoutForm,
 	validateWithDeliveryForm,
@@ -48,16 +51,16 @@ import {
 	SubscriptionProduct,
 } from 'helpers/productPrice/subscriptions';
 import { Quarterly } from 'helpers/productPrice/billingPeriods';
-import { trackCheckoutSubmitAttempt } from '../tracking/behaviour';
-import { IsoCountry } from '../internationalisation/country';
-import { Promotion } from 'helpers/productPrice/promotions';
-import { getAppliedPromo } from 'helpers/productPrice/promotions';
+import { Promotion, getAppliedPromo } from 'helpers/productPrice/promotions';
+
 import { DirectDebitState } from 'components/directDebit/directDebitReducer';
 import { Direct, Gift } from 'helpers/productPrice/readerType';
 import {
 	ProductOptions,
 	NoProductOptions,
 } from 'helpers/productPrice/productOptions';
+import { IsoCountry } from '../internationalisation/country';
+import { trackCheckoutSubmitAttempt } from '../tracking/behaviour';
 
 // ----- Functions ----- //
 function getAddresses(state: AnyCheckoutState) {
@@ -99,7 +102,8 @@ const getProduct = (
 			billingPeriod,
 			readerType,
 		};
-	} else if (product === GuardianWeekly) {
+	}
+	if (product === GuardianWeekly) {
 		return {
 			productType: GuardianWeekly,
 			currency: currencyId || state.common.internationalisation.currencyId,

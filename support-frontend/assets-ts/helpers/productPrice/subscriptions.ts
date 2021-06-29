@@ -5,15 +5,16 @@ import {
 	Monthly,
 	Quarterly,
 } from 'helpers/productPrice/billingPeriods';
-import { trackComponentEvents } from '../tracking/ophan';
+import { isTestSwitchedOn } from 'helpers/globalsAndSwitches/globals';
+import { PaperProductOptions } from 'helpers/productPrice/productOptions';
 import {
+	trackComponentEvents,
 	OphanAction,
 	OphanComponentEvent,
 	OphanComponentType,
 } from '../tracking/ophan';
+
 import { currencies, detect } from '../internationalisation/currency';
-import { isTestSwitchedOn } from 'helpers/globalsAndSwitches/globals';
-import { PaperProductOptions } from 'helpers/productPrice/productOptions';
 // ----- Types ------ //
 const DigitalPack: 'DigitalPack' = 'DigitalPack';
 const PremiumTier: 'PremiumTier' = 'PremiumTier';

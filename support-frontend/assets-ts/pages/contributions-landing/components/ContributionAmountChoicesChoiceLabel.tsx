@@ -1,6 +1,7 @@
 import React from 'react';
 import { ContributionType } from 'helpers/contributions';
 import { css } from '@emotion/core';
+
 type ContributionAmountLabelProps = {
 	formattedAmount: string;
 	shouldShowFrequencyButtons: boolean;

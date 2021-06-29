@@ -21,8 +21,6 @@ import {
 	RegularPaymentRequest,
 	StripePaymentIntentAuthorisation,
 	StripePaymentMethod,
-} from 'helpers/forms/paymentIntegrations/readerRevenueApis';
-import {
 	AmazonPayAuthorisation,
 	PaymentAuthorisation,
 	PaymentResult,
@@ -30,18 +28,18 @@ import {
 	postRegularPaymentRequest,
 	regularPaymentFieldsFromAuthorisation,
 } from 'helpers/forms/paymentIntegrations/readerRevenueApis';
+
 import {
 	StripeChargeData,
 	CreateStripePaymentIntentRequest,
 	AmazonPayData,
-} from 'helpers/forms/paymentIntegrations/oneOffContributions';
-import {
 	CreatePaypalPaymentData,
 	CreatePayPalPaymentResponse,
 	postOneOffPayPalCreatePaymentRequest,
 	processStripePaymentIntentRequest,
 	postOneOffAmazonPayExecutePaymentRequest,
 } from 'helpers/forms/paymentIntegrations/oneOffContributions';
+
 import { routes } from 'helpers/urls/routes';
 import * as storage from 'helpers/storage/storage';
 import {
@@ -62,24 +60,16 @@ import {
 	setPayPalHasLoaded,
 	Action as PayPalAction,
 } from 'helpers/forms/paymentIntegrations/payPalActions';
-import { setFormSubmissionDependentValue } from './checkoutFormIsSubmittableActions';
-import {
-	State,
-	ThankYouPageStage,
-	UserFormData,
-	Stripe3DSResult,
-} from './contributionsLandingReducer';
 import {
 	AmazonPay,
 	DirectDebit,
 	Stripe,
 	PaymentMethod,
-} from 'helpers/forms/paymentMethods';
-import { RecentlySignedInExistingPaymentMethod } from 'helpers/forms/existingPaymentMethods/existingPaymentMethods';
-import {
 	ExistingCard,
 	ExistingDirectDebit,
 } from 'helpers/forms/paymentMethods';
+import { RecentlySignedInExistingPaymentMethod } from 'helpers/forms/existingPaymentMethods/existingPaymentMethods';
+
 import {
 	getStripeKey,
 	stripeAccountForContributionType,
@@ -89,6 +79,14 @@ import { Option } from 'helpers/types/option';
 import { loadPayPalRecurring } from 'helpers/forms/paymentIntegrations/payPalRecurringCheckout';
 import { setupAmazonPay } from 'helpers/forms/paymentIntegrations/amazonPay';
 import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
+import {
+	State,
+	ThankYouPageStage,
+	UserFormData,
+	Stripe3DSResult,
+} from './contributionsLandingReducer';
+import { setFormSubmissionDependentValue } from './checkoutFormIsSubmittableActions';
+
 export type Action =
 	| {
 			type: 'UPDATE_CONTRIBUTION_TYPE';

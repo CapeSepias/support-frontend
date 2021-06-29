@@ -5,6 +5,7 @@ import {
 import { isProd } from 'helpers/urls/url';
 import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
 import { logException } from 'helpers/utilities/logger';
+
 const amazonPaySupportedCountryGroups = ['UnitedStates'];
 
 const getAmazonRegion = (

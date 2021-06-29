@@ -11,6 +11,7 @@ import {
 	setDirectDebitFormError,
 	resetDirectDebitFormError,
 } from '../directDebitActions';
+
 describe('actions', () => {
 	it('should create an action to open the direct debit pop up', () => {
 		const expectedAction = {

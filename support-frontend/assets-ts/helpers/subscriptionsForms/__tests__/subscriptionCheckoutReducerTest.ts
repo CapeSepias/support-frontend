@@ -4,6 +4,7 @@ import {
 	setFormErrors,
 	setStage,
 } from 'helpers/subscriptionsForms/formActions';
+
 jest.mock('ophan', () => () => ({}));
 jest.mock('helpers/rendering/fontLoader', () => () => ({}));
 // ----- Tests ----- //

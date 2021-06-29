@@ -1,16 +1,17 @@
 // ----- Imports ----- //
 import { Settings } from 'helpers/globalsAndSwitches/settings';
+import { pageUrlRegexes } from 'helpers/abTests/abtestDefinitions';
 import {
 	getVariantsAsString,
 	init as abInit,
 	targetPageMatches,
+	Participations,
 } from '../abtest';
-import { Participations } from '../abtest';
+
 import {
 	GBPCountries,
 	UnitedStates,
 } from '../../internationalisation/countryGroup';
-import { pageUrlRegexes } from 'helpers/abTests/abtestDefinitions';
 
 const { subsShowcaseAndDigiSubPages } = pageUrlRegexes.subscriptions;
 jest.mock('ophan', () => ({

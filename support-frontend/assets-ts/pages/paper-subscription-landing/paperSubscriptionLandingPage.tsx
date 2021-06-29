@@ -17,11 +17,12 @@ import PaperHero from './components/hero/hero';
 import Tabs from './components/tabs';
 import Prices from './components/paperPrices';
 import reducer from './paperSubscriptionLandingPageReducer';
-import { PaperFulfilmentOptions } from 'helpers/productPrice/fulfilmentOptions';
 import {
+	PaperFulfilmentOptions,
 	Collection,
 	HomeDelivery,
 } from 'helpers/productPrice/fulfilmentOptions';
+
 import { GBPCountries } from 'helpers/internationalisation/countryGroup';
 // ----- Collection or delivery ----- //
 const fulfilment: PaperFulfilmentOptions = window.location.pathname.includes(
@@ -63,7 +64,7 @@ const content = (
 					</Block>
 				</CentredContainer>
 			</FullWidthContainer>
-			<FullWidthContainer theme="dark" hasOverlap>
+			<FullWidthContainer theme="dark" hasOverlap={true}>
 				<CentredContainer>
 					<Prices />
 				</CentredContainer>

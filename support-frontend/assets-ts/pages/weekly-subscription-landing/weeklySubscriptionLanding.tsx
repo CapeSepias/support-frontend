@@ -82,7 +82,7 @@ const content = (
 		<Page
 			id={pageQaId}
 			header={<Header />}
-			footer={<WeeklyFooter centred promoTermsLink={promoTermsLink} />}
+			footer={<WeeklyFooter centred={true} promoTermsLink={promoTermsLink} />}
 		>
 			<WeeklyHero
 				orderIsAGift={orderIsAGift}
@@ -94,7 +94,7 @@ const content = (
 					<Block>{orderIsAGift ? <GiftBenefits /> : <Benefits />}</Block>
 				</CentredContainer>
 			</FullWidthContainer>
-			<FullWidthContainer theme="dark" hasOverlap>
+			<FullWidthContainer theme="dark" hasOverlap={true}>
 				<CentredContainer>
 					<WeeklyPrices />
 				</CentredContainer>

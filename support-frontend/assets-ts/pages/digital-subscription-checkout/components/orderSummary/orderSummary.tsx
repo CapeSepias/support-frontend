@@ -6,12 +6,13 @@ import {
 	Annual,
 	Quarterly,
 } from 'helpers/productPrice/billingPeriods';
-type GridImageType = typeof import('components/gridImage/gridImage').default;
 import { GridImg } from 'components/gridImage/gridImage';
 import { getBillingDescription } from 'helpers/productPrice/priceDescriptionsDigital';
 import EndSummary from 'pages/digital-subscription-checkout/components/endSummary/endSummary';
 import * as styles from './orderSummaryStyles';
 import { getGiftOrderSummaryText } from '../helpers';
+
+type GridImageType = typeof import('components/gridImage/gridImage').default;
 type PropTypes = {
 	billingPeriod: DigitalBillingPeriod;
 	// eslint-disable-next-line react/no-unused-prop-types

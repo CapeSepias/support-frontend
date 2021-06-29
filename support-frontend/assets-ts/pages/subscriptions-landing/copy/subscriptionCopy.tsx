@@ -16,12 +16,13 @@ import GuardianWeeklyPackShotHero from 'components/packshots/guardian-weekly-pac
 import DigitalPackshotHero from 'components/packshots/digital-packshot-hero';
 import DigitalPackshot from 'components/packshots/digital-packshot';
 import PrintFeaturePackshot from 'components/packshots/print-feature-packshot';
-import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
 import {
+	CountryGroupId,
 	AUDCountries,
 	GBPCountries,
 	EURCountries,
 } from 'helpers/internationalisation/countryGroup';
+
 import { Option } from 'helpers/types/option';
 import {
 	Monthly,
@@ -34,14 +35,14 @@ import {
 	fromCountryGroupId,
 	glyph,
 } from 'helpers/internationalisation/currency';
-import { State } from '../subscriptionsLandingReducer';
-import { PriceCopy } from '../subscriptionsLandingReducer';
 import {
 	digitalSubscriptionLanding,
 	guardianWeeklyLanding,
 	paperSubsUrl,
 } from 'helpers/urls/routes';
 import PaperPackshot from 'components/packshots/paper-packshot';
+import { State, PriceCopy } from '../subscriptionsLandingReducer';
+
 // types
 export type ProductButton = {
 	ctaButtonText: string;
@@ -300,7 +301,8 @@ const orderedProducts = (state: State): ProductCopy[] => {
 			// paperAndDigital(countryGroupId, state.common.referrerAcquisitionData, state.common.abParticipations),
 			premiumApp(countryGroupId),
 		];
-	} else if (countryGroupId === EURCountries) {
+	}
+	if (countryGroupId === EURCountries) {
 		return [
 			guardianWeekly(
 				countryGroupId,

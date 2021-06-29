@@ -2,6 +2,7 @@ import * as React from 'react';
 import { css } from '@emotion/core';
 import { body } from '@guardian/src-foundations/typography';
 import { from } from '@guardian/src-foundations/mq';
+
 const bodyContainer = css`
 	p,
 	li {

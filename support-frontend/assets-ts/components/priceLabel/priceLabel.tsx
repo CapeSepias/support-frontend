@@ -4,6 +4,7 @@ import { ProductPrice, showPrice } from 'helpers/productPrice/productPrices';
 import { BillingPeriod } from 'helpers/productPrice/billingPeriods';
 import { getPriceDescription } from 'helpers/productPrice/priceDescriptions';
 import { getAppliedPromo, hasDiscount } from 'helpers/productPrice/promotions';
+
 export type PropTypes = {
 	productPrice: ProductPrice;
 	billingPeriod: BillingPeriod;

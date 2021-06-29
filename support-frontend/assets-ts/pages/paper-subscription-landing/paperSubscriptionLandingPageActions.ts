@@ -1,7 +1,10 @@
 // ----- Imports ----- //
 import { sendTrackingEventsOnClick } from 'helpers/productPrice/subscriptions';
-import { PaperFulfilmentOptions } from 'helpers/productPrice/fulfilmentOptions';
-import { HomeDelivery } from 'helpers/productPrice/fulfilmentOptions';
+import {
+	PaperFulfilmentOptions,
+	HomeDelivery,
+} from 'helpers/productPrice/fulfilmentOptions';
+
 import { paperSubsUrl } from 'helpers/urls/routes';
 import { getQueryParameter } from 'helpers/urls/url';
 // ----- Types ----- //

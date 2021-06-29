@@ -8,6 +8,7 @@ import ProductInfoChip from 'components/product/productInfoChip';
 import SvgGift from 'components/svgs/gift';
 import FlexContainer from 'components/containers/flexContainer';
 import ProductOption, { Product } from 'components/product/productOption';
+
 export type PropTypes = {
 	orderIsAGift: boolean;
 	products: Product[];

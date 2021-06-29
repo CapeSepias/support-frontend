@@ -3,6 +3,7 @@ import { invalidReason } from 'helpers/checkoutForm/checkoutForm';
 import { UserTypeFromIdentityResponse } from 'helpers/identityApis';
 import { trackCheckoutSubmitAttempt } from 'helpers/tracking/behaviour';
 import { PaymentMethod } from 'helpers/forms/paymentMethods';
+
 type OldFlowOrNewFlow = 'opf' | 'npf';
 export type FormSubmitParameters = {
 	flowPrefix: OldFlowOrNewFlow;

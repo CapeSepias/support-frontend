@@ -9,6 +9,7 @@ import {
 	neutral,
 } from '@guardian/src-foundations/palette';
 import { from, between, until } from '@guardian/src-foundations/mq';
+
 export const wrapper = css`
 	background-color: ${background.primary};
 	color: ${text.primary};

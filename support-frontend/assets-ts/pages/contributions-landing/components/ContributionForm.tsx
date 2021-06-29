@@ -15,11 +15,6 @@ import { PaymentAuthorisation } from 'helpers/forms/paymentIntegrations/readerRe
 import { CreatePaypalPaymentData } from 'helpers/forms/paymentIntegrations/oneOffContributions';
 import { IsoCurrency } from 'helpers/internationalisation/currency';
 import { payPalCancelUrl, payPalReturnUrl } from 'helpers/urls/routes';
-import {
-	setCurrencyId,
-	setUseLocalAmounts,
-	setUseLocalCurrencyFlag,
-} from '../../../helpers/page/commonActions';
 import ProgressMessage from 'components/progressMessage/progressMessage';
 import { openDirectDebitPopUp } from 'components/directDebit/directDebitActions';
 import TermsPrivacy from 'components/legal/termsPrivacy/termsPrivacy';
@@ -31,6 +26,23 @@ import {
 	SelectedAmounts,
 } from 'helpers/contributions';
 import { CampaignSettings } from 'helpers/campaigns/campaigns';
+import { State } from 'pages/contributions-landing/contributionsLandingReducer';
+import {
+	paymentWaiting,
+	setCheckoutFormHasBeenSubmitted,
+	createOneOffPayPalPayment,
+	selectAmount,
+} from 'pages/contributions-landing/contributionsLandingActions';
+import { RecentlySignedInExistingPaymentMethod } from 'helpers/forms/existingPaymentMethods/existingPaymentMethods';
+import {
+	DirectDebit,
+	ExistingCard,
+	ExistingDirectDebit,
+	AmazonPay,
+	PaymentMethod,
+} from 'helpers/forms/paymentMethods';
+import { logException } from 'helpers/utilities/logger';
+import { Checkbox, CheckboxGroup } from '@guardian/src-checkbox';
 import {
 	ContributionFormFields,
 	EmptyContributionFormFields,
@@ -51,26 +63,14 @@ import {
 	ContributionSubmit,
 	EmptyContributionSubmit,
 } from './ContributionSubmit';
-import { State } from 'pages/contributions-landing/contributionsLandingReducer';
-import {
-	paymentWaiting,
-	setCheckoutFormHasBeenSubmitted,
-	createOneOffPayPalPayment,
-	selectAmount,
-} from 'pages/contributions-landing/contributionsLandingActions';
 import ContributionErrorMessage from './ContributionErrorMessage';
 import StripePaymentRequestButtonContainer from './StripePaymentRequestButton/StripePaymentRequestButtonContainer';
 import StripeCardFormContainer from './StripeCardForm/StripeCardFormContainer';
-import { RecentlySignedInExistingPaymentMethod } from 'helpers/forms/existingPaymentMethods/existingPaymentMethods';
 import {
-	DirectDebit,
-	ExistingCard,
-	ExistingDirectDebit,
-	AmazonPay,
-	PaymentMethod,
-} from 'helpers/forms/paymentMethods';
-import { logException } from 'helpers/utilities/logger';
-import { Checkbox, CheckboxGroup } from '@guardian/src-checkbox';
+	setCurrencyId,
+	setUseLocalAmounts,
+	setUseLocalCurrencyFlag,
+} from '../../../helpers/page/commonActions';
 import { LocalCurrencyCountry } from '../../../helpers/internationalisation/localCurrencyCountry';
 // ----- Types ----- //
 
@@ -322,7 +322,7 @@ function withProps(props: PropTypes) {
 		<form
 			onSubmit={onSubmit(props)}
 			className={classNameWithModifiers(baseClass, classModifiers)}
-			noValidate
+			noValidate={true}
 		>
 			<h2 className="hidden-heading">Make a contribution</h2>
 			<div className="contributions-form-selectors">

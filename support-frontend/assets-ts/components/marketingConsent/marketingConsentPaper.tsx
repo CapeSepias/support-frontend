@@ -17,6 +17,7 @@ import { getEmail } from 'helpers/subscriptionsForms/formFields';
 import GeneralErrorMessage from 'components/generalErrorMessage/generalErrorMessage';
 import { checkEmail } from 'helpers/forms/formValidation';
 import { logException } from 'helpers/utilities/logger';
+
 const subHeading = css`
 	margin-bottom: ${space[1]}px;
 	${headline.xxsmall({
@@ -104,7 +105,7 @@ function MarketingButton(props: ButtonPropTypes) {
 					css={marginForButton}
 					iconSide="right"
 					icon={<SvgEnvelope />}
-					disabled
+					disabled={true}
 				>
 					{confirmedOptIn ? 'Signed up' : 'Pending...'}
 				</Button>

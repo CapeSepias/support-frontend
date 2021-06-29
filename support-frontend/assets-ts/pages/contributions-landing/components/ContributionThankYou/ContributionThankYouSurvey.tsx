@@ -3,16 +3,17 @@ import { css } from '@emotion/core';
 import { space } from '@guardian/src-foundations';
 import { LinkButton } from '@guardian/src-button';
 import { SvgArrowRightStraight } from '@guardian/src-icons';
+import {
+	trackComponentClick,
+	trackComponentLoad,
+} from 'helpers/tracking/behaviour';
 import ActionContainer from './components/ActionContainer';
 import ActionHeader from './components/ActionHeader';
 import ActionBody from './components/ActionBody';
 import SvgSpeechBubbleWithPlus from './components/SvgSpeechBubbleWithPlus';
 import styles from './styles';
 import { OPHAN_COMPONENT_ID_SURVEY } from './utils/ophan';
-import {
-	trackComponentClick,
-	trackComponentLoad,
-} from 'helpers/tracking/behaviour';
+
 const buttonContainer = css`
 	margin-top: ${space[6]}px;
 `;
@@ -68,7 +69,7 @@ const ContributionThankYouSurvey = () => {
 							size="default"
 							icon={<SvgArrowRightStraight />}
 							iconSide="right"
-							nudgeIcon
+							nudgeIcon={true}
 						>
 							Provide feedback
 						</LinkButton>

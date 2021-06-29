@@ -14,6 +14,7 @@ import {
 import LinkTo from './linkTo';
 import { setTab } from '../../paperSubscriptionLandingPageActions';
 import { ActiveTabState } from '../../paperSubscriptionLandingPageReducer';
+
 export type PropTypes = {
 	activeTab: ActiveTabState;
 	setTabAction: typeof setTab;

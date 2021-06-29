@@ -1,13 +1,17 @@
 import { $Keys } from 'utility-types';
 // ----- Imports ----- //
 import { roundDp } from 'helpers/utilities/utilities';
-import { CountryGroupId } from 'helpers/internationalisation/countryGroup';
-import { countryGroups } from 'helpers/internationalisation/countryGroup';
-import { IsoCurrency } from 'helpers/internationalisation/currency';
 import {
+	CountryGroupId,
+	countryGroups,
+} from 'helpers/internationalisation/countryGroup';
+
+import {
+	IsoCurrency,
 	currencies,
 	spokenCurrencies,
 } from 'helpers/internationalisation/currency';
+
 import { Radio } from 'components/radioToggle/radioToggle';
 import { logException } from 'helpers/utilities/logger';
 import {
@@ -267,7 +271,8 @@ function validateContribution(
 ): ValidationError | null | undefined {
 	if (input < config[countryGroupId][contributionType].min) {
 		return 'TooLittle';
-	} else if (input > config[countryGroupId][contributionType].max) {
+	}
+	if (input > config[countryGroupId][contributionType].max) {
 		return 'TooMuch';
 	}
 
@@ -384,7 +389,8 @@ function getContributionTypeClassName(
 ): string {
 	if (contributionType === 'ONE_OFF') {
 		return 'one-off';
-	} else if (contributionType === 'ANNUAL') {
+	}
+	if (contributionType === 'ANNUAL') {
 		return 'annual';
 	}
 
@@ -394,7 +400,8 @@ function getContributionTypeClassName(
 function getSpokenType(contributionType: ContributionType): string {
 	if (contributionType === 'ONE_OFF') {
 		return 'single';
-	} else if (contributionType === 'ANNUAL') {
+	}
+	if (contributionType === 'ANNUAL') {
 		return 'annual';
 	}
 
@@ -404,7 +411,8 @@ function getSpokenType(contributionType: ContributionType): string {
 function getFrequency(contributionType: ContributionType): string {
 	if (contributionType === 'ONE_OFF') {
 		return '';
-	} else if (contributionType === 'MONTHLY') {
+	}
+	if (contributionType === 'MONTHLY') {
 		return 'per month';
 	}
 
@@ -438,7 +446,8 @@ function getAmountA11yHint(
 
 	if (contributionType === 'ONE_OFF') {
 		return `make a single contribution of ${spokenAmount} ${spokenCurrency}`;
-	} else if (contributionType === 'MONTHLY') {
+	}
+	if (contributionType === 'MONTHLY') {
 		return `contribute ${spokenAmount} ${spokenCurrency} a month`;
 	}
 

@@ -2,17 +2,22 @@ import { $Call } from 'utility-types';
 import React, { Component } from 'react';
 import { ProductPrice } from 'helpers/productPrice/productPrices';
 import { BillingPeriod } from 'helpers/productPrice/billingPeriods';
-import styles from './summary.module.scss';
 import { PriceLabel } from 'components/priceLabel/priceLabel';
-type GridImageType = typeof import('components/gridImage/gridImage').default;
 import { GridImg } from 'components/gridImage/gridImage';
-import SvgDropdownArrowUp from './dropDownArrowUp.svg';
 import {
 	GuardianWeekly,
 	SubscriptionProduct,
 } from 'helpers/productPrice/subscriptions';
-import { Promotion } from 'helpers/productPrice/promotions';
-import { getAppliedPromo, hasDiscount } from 'helpers/productPrice/promotions';
+import {
+	Promotion,
+	getAppliedPromo,
+	hasDiscount,
+} from 'helpers/productPrice/promotions';
+
+import SvgDropdownArrowUp from './dropDownArrowUp.svg';
+import styles from './summary.module.scss';
+
+type GridImageType = typeof import('components/gridImage/gridImage').default;
 // Types
 export type DataListItem = {
 	title: string;
@@ -247,6 +252,7 @@ export default class Summary extends Component<PropTypes, StateTypes> {
 	getDeliveryMethod = () =>
 		this.props.dataList.filter((item) => item.title === 'Delivery method').pop()
 			.value;
+
 	toggleDetails = () => {
 		this.setState({
 			showDropDown: !this.state.showDropDown,

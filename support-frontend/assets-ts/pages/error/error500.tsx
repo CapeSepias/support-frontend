@@ -16,7 +16,7 @@ const content = (
 			'your request',
 		]}
 		copy="Please try again. If the problem persists, "
-		reportLink
+		reportLink={true}
 	/>
 );
 renderPage(content, 'error-500-page');

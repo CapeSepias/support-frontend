@@ -11,6 +11,7 @@ import {
 	sport,
 } from '@guardian/src-foundations/palette';
 import { from, until } from '@guardian/src-foundations/mq';
+
 const headshotSize = 68;
 const quoteFigure = css`
 	background-color: ${neutral[100]};
