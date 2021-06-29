@@ -1,7 +1,7 @@
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withOptions } from '@storybook/addon-options';
 import { viewports } from "./viewports";
-import loadStories from '../stories-ts/_index';
+import loadStories from '../stories/_index';
 
 addDecorator(
   withOptions({

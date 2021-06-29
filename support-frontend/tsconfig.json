@@ -23,10 +23,10 @@
     "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
     "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
     "noImplicitAny": true, // Enable error reporting for expressions and declarations with an implied any type
-    "baseUrl": "./assets-ts" // The baseUrl to be used when resolving absolute module paths
+    "baseUrl": "./assets" // The baseUrl to be used when resolving absolute module paths
   },
   "include": [
-    "./assets-ts" // The files to type check
+    "./assets" // The files to type check
   ],
   "exclude": ["node_modules"] // The files to not type check
  }
