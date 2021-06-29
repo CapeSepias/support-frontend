@@ -121,29 +121,29 @@ function ThankYouContent({
 	const whatHappensNextItems = orderIsGift
 		? [
 				<span>
-				Look out for an email from us confirming your subscription.
+					Look out for an email from us confirming your subscription.
 				</span>,
 				<span>
-				We&apos;re unable to contact the gift recipient directly - make sure
-				to let them know the gift is on its way.
+					We&apos;re unable to contact the gift recipient directly - make sure
+					to let them know the gift is on its way.
 				</span>,
 				<span>
-				Each copy will be delivered to the gift recipient&apos;s door.{' '}
-				<a className="thank-you-link" href={homeDeliveryUrl}>
+					Each copy will be delivered to the gift recipient&apos;s door.{' '}
+					<a className="thank-you-link" href={homeDeliveryUrl}>
 						Here&apos;s a reminder of how home delivery works
 					</a>
-				.
+					.
 				</span>,
 		  ]
 		: [
 				<span>
-				Look out for an email from us confirming your subscription. It will
-				contain everything you need to know.
+					Look out for an email from us confirming your subscription. It will
+					contain everything you need to know.
 				</span>,
 				<span>
-				Your magazine will be delivered to your door. Please allow 1 to 7 days
-				after publication date for your magazine to arrive, depending on
-				national post services.
+					Your magazine will be delivered to your door. Please allow 1 to 7 days
+					after publication date for your magazine to arrive, depending on
+					national post services.
 				</span>,
 		  ];
 	return (

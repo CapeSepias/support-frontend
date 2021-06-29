@@ -144,13 +144,13 @@ function withProps(props: PropTypes) {
 			(props.paymentMethod !== AmazonPay ||
 				(amazonPayEnabled() && props.amazonPayData.hasAccessToken)) ? (
 				<Button
-						type="submit"
-						aria-label={submitButtonCopy}
-						disabled={props.isWaiting}
-						postDeploymentTestID="contributions-landing-submit-contribution-button"
+					type="submit"
+					aria-label={submitButtonCopy}
+					disabled={props.isWaiting}
+					postDeploymentTestID="contributions-landing-submit-contribution-button"
 				>
-						{submitButtonCopy}
-					</Button>
+					{submitButtonCopy}
+				</Button>
 			) : null}
 		</div>
 	);
