@@ -150,6 +150,7 @@ function DigitalCheckoutForm(props: PropTypes) {
   const submissionErrorHeading = props.submissionError === 'personal_details_incorrect' ? 'Sorry there was a problem' :
     'Sorry we could not process your payment';
   const paymentMethods = supportedPaymentMethods(props.currencyId);
+  const isUsingGuestCheckout = props.participations.subscriptionsGuestCheckoutTest === 'variant';
 
   return (
     <Content>
@@ -188,6 +189,7 @@ function DigitalCheckoutForm(props: PropTypes) {
               setTelephone={props.setTelephone}
               formErrors={props.formErrors}
               signOut={props.signOut}
+              isInGuestCheckout={isUsingGuestCheckout}
             />
           </FormSection>
           <FormSection title="Address">
