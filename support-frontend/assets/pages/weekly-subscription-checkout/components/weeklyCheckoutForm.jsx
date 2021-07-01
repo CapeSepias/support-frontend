@@ -79,6 +79,7 @@ import { titles } from 'helpers/user/details';
 import { Select, Option as OptionForSelect } from '@guardian/src-select';
 import { options } from 'components/forms/customFields/options';
 import { currencyFromCountryCode } from 'helpers/internationalisation/currency';
+import type { Participations } from 'helpers/abTests/abtest';
 
 
 // ----- Styles ----- //
@@ -109,6 +110,7 @@ type PropTypes = {|
   payPalHasLoaded: boolean,
   formIsValid: Function,
   setupRecurringPayPalPayment: Function,
+  participations: Participations,
 |};
 
 // ----- Map State/Props ----- //
@@ -129,6 +131,7 @@ function mapStateToProps(state: WithDeliveryCheckoutState) {
     csrf: state.page.csrf,
     currencyId: currencyFromCountryCode(deliveryAddress.fields.country),
     payPalHasLoaded: state.page.checkout.payPalHasLoaded,
+    participations: state.common.abParticipations,
   };
 }
 
@@ -170,6 +173,7 @@ function WeeklyCheckoutForm(props: PropTypes) {
     props.setBillingCountry(props.deliveryCountry);
   };
   const paymentMethods = supportedPaymentMethods(props.currencyId);
+  const isUsingGuestCheckout = props.participations.subscriptionsGuestCheckoutTest === 'variant';
 
   return (
     <Content modifierClasses={['your-details']}>
@@ -216,10 +220,13 @@ function WeeklyCheckoutForm(props: PropTypes) {
               lastName={props.lastName}
               setLastName={props.setLastName}
               email={props.email}
+              setEmail={props.setEmail}
+              isSignedIn={props.isSignedIn}
               telephone={props.telephone}
               setTelephone={props.setTelephone}
               formErrors={props.formErrors}
               signOut={props.signOut}
+              isUsingGuestCheckout={isUsingGuestCheckout}
             />
           </FormSection>
           <FormSection title="Where should we deliver your magazine?">
