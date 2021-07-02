@@ -68,9 +68,11 @@ exec(tscCmd, (error, stdout) => {
 
   const filesWithErrors = Object.keys(typescriptErrors).map(errorCode => {
     return typescriptErrors[errorCode].map(errorInstance => errorInstance.path);
-  }).flat();
+  }).flat().map(filePath => `./${filePath}`);
 
-  [...new Set(filesWithErrors)].forEach(filePath => {
-    console.log(`"./${filePath}",`)
+  const filesWithErrorsMinusDuplicates = [...new Set(filesWithErrors)];
+
+  filesWithErrorsMinusDuplicates.forEach(filePath => {
+    console.log(`"${filePath}",`)
   });
 });
