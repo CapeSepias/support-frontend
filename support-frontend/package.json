@@ -109,6 +109,7 @@
     "@types/lodash.debounce": "4.0.6",
     "@types/marked" : "1.1.0",
     "@types/react": "17.0.11",
+    "@types/react-redux": "^7.1.16",
     "@types/seedrandom": "2.4.27",
     "classnames": "^2.2.6",
     "dompurify": "^2.2.8",

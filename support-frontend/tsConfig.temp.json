@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+      "./assets/components/asyncronously/asyncronously.ts"
+  ]
+}
