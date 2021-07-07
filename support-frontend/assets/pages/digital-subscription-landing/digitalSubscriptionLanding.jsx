@@ -195,6 +195,7 @@ function DigitalLandingPage({
             currencyId={currencyId}
             productPrices={productPrices}
             orderIsAGift={isGift}
+            isUsingGuestCheckout={isUsingGuestCheckout}
           />
         </CentredContainer>
       </FullWidthContainer>
