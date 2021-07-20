@@ -61,7 +61,8 @@
       "assets"
     ],
     "modulePathIgnorePatterns": [
-      "target"
+      "target",
+      "assets copy"
     ],
     "moduleNameMapper": {
       "ophan(.*)": "<rootDir>/node_modules/ophan-tracker-js/build/ophan.support",
@@ -194,7 +195,6 @@
     "tsc-files": "^1.1.2",
     "typescript": "^4.3.2",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "utility-types": "^3.10.0",
     "webpack": "^4.44.2",
     "webpack-bundle-analyzer": "^4.4.2",
     "webpack-cli": "^3.3.12",
